@@ -13,12 +13,14 @@
 <body>
 
 	<ul id="slide-out" class="sidenav sidenav-fixed">	 
-		<li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-		<li><a href="#!">Second Link</a></li>
+		<li></li>
+		<li><a href="#!">Logo Assid</a></li>
 		<li><div class="divider"></div></li>
-		<li><a class="subheader">Subheader</a></li>
-		<li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+		<li><a href="jogos/home.php"><i class="material-icons">games</i>Jogos</a></li>
+		<li><a href=""><i class="material-icons">assignment</i> Sobre</a></li>
+		<li><a href=""><i class="material-icons">close</i>Sair</a></li>
 	</ul>
+	
 	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="js/materialize.js"></script>
 	<script type="text/javascript" >
