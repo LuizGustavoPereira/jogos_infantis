@@ -1,3 +1,12 @@
+<?php
+   require_once "config.php";
+   require_once "classes/autoload.php";
+   require_once "classes/AltoRouter.php";
+
+   $menu = new MenuAdm;
+   $sys = new Sistema;
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
