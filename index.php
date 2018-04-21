@@ -1,22 +1,16 @@
 <?php 
 
-require_once("vendor/autoload.php");
+	require_once "rotas.php";
+	require_once "config.php";
 
-use \Slim\Slim;
-use \JogosInfantis\Page;
+	 
+	if( $match && is_callable( $match['target'] ) ) {
+		call_user_func_array( $match['target'], $match['params'] ); 
+	} else {
+	  header( $_SERVER["SERVER_PROTOCOL"]." 404 Not Found");
+	  require '404.php';
+	}
 
-$app = new Slim();
 
-$app->config('debug', true);
-
-$app->get('/', function() {
-    
-	$page = new Page();
-
-	$page->setTpl("index");
-
-});
-
-$app->run();
 
  ?>
