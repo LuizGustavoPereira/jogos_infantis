@@ -1,16 +1,10 @@
 <?php
 	session_start();
 	require_once "config.php";
-	require_once "conexao/Conexao.Class.php";
 	require_once "classes/autoload.php";
+	require_once "classes/Menu.Class.php";
 	$menu = new Menu;
-	$sys = new Sistema;
-	$user = new Usuario();
 	
-	$sys->verifica_sessao(@$_SESSION["usuario_peloggia"]["usuLogin"],@$_SESSION["usuario_peloggia"]["usuSenha"]);
-
-	$usuario = @$_SESSION["usuario_peloggia"]["usuNome"] ?? "";
-
 	$imgTexture = "img/bkg-texture-". COR . ".jpg";
 	$styleCss   = "css/style-" . COR . ".css";
 ?>
