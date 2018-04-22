@@ -6,7 +6,7 @@
 	$router->setBasePath(BASE_ROUTE);
 	
 
-	$router->map('GET','/',         function(){ require __DIR__ .'/menu.php';}, 'home');
+	$router->map('GET','/',         function(){ require __DIR__ .'/menu.php';}, 'menu');
 	$router->map('GET','/home',     function(){ require __DIR__ .'/menu.php';});
 	$router->map('GET','/home/[*]',    function(){ require __DIR__ .'/menu.php';});
 	

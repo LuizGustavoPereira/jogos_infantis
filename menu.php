@@ -5,8 +5,7 @@
 	require_once "classes/Menu.Class.php";
 	$menu = new Menu;
 	
-	$imgTexture = "img/bkg-texture-". COR . ".jpg";
-	$styleCss   = "css/style-" . COR . ".css";
+	$imgTexture = "img/bkg-texture-". COR . ".jpg";	
 ?>
 
 <!DOCTYPE html>
@@ -18,11 +17,11 @@
 	<title>Peloggia</title>
 	<base href="<?php print INCLUDE_PATH; ?>/">
 
-    <link rel="icon" type="image/ico" sizes="96x96" href="img/favicon.ico">
+    <!-- <link rel="icon" type="image/ico" sizes="96x96" href="img/favicon.ico"> -->
 	<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons" > -->
 	<link type="text/css" rel="stylesheet" href="css/materialize-fonts.css" media="screen,projection"/>
 	<link type="text/css" rel="stylesheet" href="css/materialize-customized.css" media="screen,projection"/>
-	<link type="text/css" rel="stylesheet" href="<?php print $styleCss;?>"  media="screen,projection"/>
+	<link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
 	<link type="text/css" rel="stylesheet" href="css/font-awesome.min.css">
 	<link type="text/css" rel="stylesheet" href="css/dataTables.material.css"/>
 	<link type="text/css" rel="stylesheet" href="css/buttons.dataTables.min.css"/>
@@ -63,7 +62,7 @@
 	</style>
 </head>
 
-<div class="versionamento"><?php print AMBIENTE.VERSION;?></div>
+
 <body class="grey lighten-3">
 <aside>
 	<ul id="slide-out" class="side-nav fixed">
@@ -71,12 +70,12 @@
 			<div class="userView">
 
 				<div style='text-align: center;'>
-					<p style='padding:0;margin:0;line-height: 20px;font-weight:bold;'><?php print $usuario; ?></p>
-					<img src="<?php print 'img/img001.png' ?>" style='height:70px;margin:0 auto'>
+					<!-- <p style='padding:0;margin:0;line-height: 20px;font-weight:bold;'><?php #print $usuario; ?></p> -->
+					<!-- <img src="<?php #print 'img/img001.png' ?>" style='height:70px;margin:0 auto'> -->
 				</div>
 				
 				<div class="background">
-					<img src="<?php print $imgTexture; ?>" style='width:125%'>
+					<!-- <img src="<?php #print $imgTexture; ?>" style='width:125%'> -->
 				</div>
 
 			</div>
@@ -91,6 +90,9 @@
 	<?php
 		require_once "classes/Menu.Class.php";
         $menu->renderLink('Home', './home/', 'home');
+        $menu = new Menu('Jogos', '');
+        $menu->append('principal',  '', true);
+        $menu->render();
 	?>
 	</ul>
 </aside>
@@ -119,17 +121,10 @@
 
 		$routerContent->addRoutes(array(
 
-			array('GET','/home',  								          '/paginaInicial.php', ''),
-			array('GET','/home/',  								          '/paginaInicial.php', ''),
-			array('GET','/cadastros/[*]',  								  '/cadastros/subrotas.php', ''),
-			array('GET','/consulta/[*]',  								  '/consulta/subrotas.php', ''),
-			array('GET','/pedidos/[*]',  								  '/pedidos/subrotas.php', ''),
-			array('GET','/relatorios/[*]',                                '/relatorios/subrotas.php',  ''),
-			array('GET','/alterar-senha/',                                '/alterarSenha.php', 'alterarSenha'),
-			array('GET','/alterar-senha',                                 '/alterarSenha.php', ''),
-			array('GET','/alterar-senha/[*]',                             '/alterarSenha.php', ''),
-            array('GET','/home',  							              '/paginaInicial.php', ''),
-            array('GET','/',  							                  '/paginaInicial.php', ''),
+			// array('GET','/home',  								          '/paginaInicial.php', ''),
+			// array('GET','/home/',  								          '/paginaInicial.php', ''),
+   //          array('GET','/home',  							              '/paginaInicial.php', ''),
+   //          array('GET','/',  							                  '/paginaInicial.php', ''),
 
 		));	
 

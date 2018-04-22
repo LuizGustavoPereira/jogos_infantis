@@ -4,13 +4,11 @@ class Menu{
 
 	private $links = array();
 
-	public function append($nomeLink, $href, $aceso = false, $ident = false){
-        if(@$_SESSION['usuario_peloggia']["usuAdmin"] == 1 || $aceso == true) {
-            array_push($this->links, array(
-                'nomeLink' => $nomeLink,
-                'href' => $href,
-                'ident' => $ident));
-        }
+	public function append($nomeLink, $href, $aceso = false, $ident = false){        
+        array_push($this->links, array(
+            'nomeLink' => $nomeLink,
+            'href' => $href,
+            'ident' => $ident));       
 	}
 
 	public function appendTitle($title){
