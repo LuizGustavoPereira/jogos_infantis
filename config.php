@@ -20,7 +20,7 @@
 	}else{
 
 		$portServer = ":80";
-		$cfg["BASE_ROUTE"] = "/jogos_infantis/";
+		$cfg["BASE_ROUTE"] = "/jogos_infantis";
 		$cfg["AMBIENTE"]   = "Ambiente de Desenvolvimento";
 		$cfg["VERSION"]    = " - 1.0";		
 	}
