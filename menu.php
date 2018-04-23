@@ -64,7 +64,7 @@
 
 <body class="grey lighten-3">
 <aside>
-	<ul id="slide-out" class="side-nav fixed">
+	<ul id="slide-out" class="side-nav">
 		<li class='logo-li'>
 			<div class="userView">
 
@@ -90,12 +90,9 @@
 		require_once "classes/Menu.Class.php";
         $menu->renderLink('Home', './home/', 'home');
 
-        $menu = new Menu('Jogos', 'games');
-       		$menu->append('Tabuada',  './jogos/tabuada/');
-       		$menu->append('Matemática', '');
-       		$menu->append('Jogo Brasileiro', '');
-       		$menu->append('Animais', '');
-        $menu->render();
+		$menu = new Menu('Jogos', 'games');
+			$menu->append('Tabuada',                  './jogos/tabuada/');
+		$menu->render();
 	?>
 	</ul>
 </aside>
@@ -111,8 +108,8 @@
 	<nav class='background'>
 
 		<div class="nav-wrapper">
-			<ul class="right" style='margin-right:20px'>
-				<li><a class="dropdown-button" href="#!" data-activates="dropdown1">Menu<i class="material-icons right">menu</i></a></li>
+			<ul class="left" style='margin-right:20px'>
+				<li><a data-activates="slide-out" class="button-menu"><i class="material-icons right">menu</i></a></li>
 			</ul>
 	  </div>
 	</nav>
@@ -121,19 +118,16 @@
 	<?php
 		$routerContent = new AltoRouter();
 		$routerContent->setBasePath( BASE_ROUTE );
+
+
 		$routerContent->addRoutes(array(
 
-			// array('GET','/home',  				'/paginaInicial.php', ''),
-			// array('GET','/home/',  				'/paginaInicial.php', ''),
-   // 			array('GET','/home',  				'/paginaInicial.php', ''),
-   // 			array('GET','/',  					'/paginaInicial.php', ''),
-
-   			array('GET', '/jogos/[*]',			'/jogos/subrotas.php', ''),
+			
+			array('GET','/jogos/[*]',  								  '/jogos/subrotas.php', ''),
 
 		));	
 
 		$matchContent = $routerContent->match();
-
 		if( is_array($matchContent)  ) {
 			require __DIR__. $matchContent['target'];
 
@@ -146,6 +140,7 @@
 
 <script>
 	$(document).ready(function($) {
+		 $(".button-menu").sideNav();
 		$( ".tooltipped" ).each(function(index) {
 			// console.log($(this).text());
 			$(this).tooltip({tooltip: $(this).text().replace("keyboard_arrow_right", ""), position: "right", delay: 100});

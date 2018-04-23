@@ -4,11 +4,11 @@ class Menu{
 
 	private $links = array();
 
-	public function append($nomeLink, $href, $aceso = false, $ident = false){        
-        array_push($this->links, array(
-            'nomeLink' => $nomeLink,
-            'href' => $href,
-            'ident' => $ident));       
+	public function append($nomeLink, $href, $ident = false){
+            array_push($this->links, array(
+                'nomeLink' => $nomeLink,
+                'href' => $href,
+                'ident' => $ident));
 	}
 
 	public function appendTitle($title){
@@ -24,7 +24,7 @@ class Menu{
 			<li class=\"no-padding\">
 				<ul class=\"collapsible collapsible-accordion\">
 				  <li>
-				    <a class=\"collapsible-header\" style='border:1px solid #FAFAFA'><i class=\"material-icons\">".$this->materialIcon."</i>".$this->nomeMenu."<i class=\"material-icons right no-margin\">arrow_drop_down</i></a>
+				    <a class=\"collapsible-header\" style='border:1px solid #FAFAFA'><i class=\"material-icons\">".$this->materialIcon."</i>".$this->nomeMenu."</a>
 				    <div class=\"collapsible-body no-padding\">
 						<ul>";
 
@@ -36,7 +36,7 @@ class Menu{
 					if($value["ident"] == true){
 						$padding = "padding-left:56px";
 					}
-					print "<li class=\"tooltipped\" ><a href=\"".$value['href']."\" style='$padding'><i class=\"material-icons\" style='margin:0;line-height:35px; height:35px; '>keyboard_arrow_right</i>&nbsp;".$value['nomeLink']."</a></li>";
+					print "<li class=\"tooltipped\" ><a href=\"".$value['href']."\" style='$padding'>&nbsp;".$value['nomeLink']."</a></li>";
 				}
 			}
 
