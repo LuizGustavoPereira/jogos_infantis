@@ -14,7 +14,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<title>Peloggia</title>
+	<title>Jogos Educacionais</title>
 	<base href="<?php print INCLUDE_PATH; ?>/">
 
     <!-- <link rel="icon" type="image/ico" sizes="96x96" href="img/favicon.ico"> -->
@@ -40,13 +40,12 @@
 	<script type="text/javascript" src="js/materialize.min.js"  charset="utf-8" ></script> 
 	<script type="text/javascript" src="js/route.js" ></script>
 	<script src="js/jquery-confirm.js"></script>
-	<script src="js/arcaDialog.js"></script>
 	<style type="text/css">
-		body{
+		/*body{
 			background: url("img/fundo.png") no-repeat right 50px,
 						url("img/fundod.png") no-repeat 300px bottom;
 			background-attachment: fixed;
-		}
+		}*/
 		.btntour{
 		    padding: 4px 6px;
 		}
@@ -90,8 +89,12 @@
 	<?php
 		require_once "classes/Menu.Class.php";
         $menu->renderLink('Home', './home/', 'home');
-        $menu = new Menu('Jogos', '');
-        $menu->append('principal',  '', true);
+
+        $menu = new Menu('Jogos', 'games');
+       		$menu->append('Tabuada',  './jogos/tabuada/');
+       		$menu->append('Matemática', '');
+       		$menu->append('Jogo Brasileiro', '');
+       		$menu->append('Animais', '');
         $menu->render();
 	?>
 	</ul>
@@ -118,17 +121,19 @@
 	<?php
 		$routerContent = new AltoRouter();
 		$routerContent->setBasePath( BASE_ROUTE );
-
 		$routerContent->addRoutes(array(
 
-			// array('GET','/home',  								          '/paginaInicial.php', ''),
-			// array('GET','/home/',  								          '/paginaInicial.php', ''),
-   //          array('GET','/home',  							              '/paginaInicial.php', ''),
-   //          array('GET','/',  							                  '/paginaInicial.php', ''),
+			// array('GET','/home',  				'/paginaInicial.php', ''),
+			// array('GET','/home/',  				'/paginaInicial.php', ''),
+   // 			array('GET','/home',  				'/paginaInicial.php', ''),
+   // 			array('GET','/',  					'/paginaInicial.php', ''),
+
+   			array('GET', '/jogos/[*]',			'/jogos/subrotas.php', ''),
 
 		));	
 
 		$matchContent = $routerContent->match();
+
 		if( is_array($matchContent)  ) {
 			require __DIR__. $matchContent['target'];
 
@@ -272,18 +277,18 @@
 	}
 
 	
-	function logout(){
-		if(confirm("Deseja realmente sair do sistema?")){
-			$.ajax({
-				type: "POST",
-				url: "php/frmLogin.php",
-				data: "processo=logout&usuLogin=<?php print $_SESSION["usuario_peloggia"]["usuLogin"];?>",
-				success: function(resposta){
-					window.location.href = "login/";
-				}	
-			});
-		}
-	}
+	// function logout(){
+	// 	if(confirm("Deseja realmente sair do sistema?")){
+	// 		$.ajax({
+	// 			type: "POST",
+	// 			url: "php/frmLogin.php",
+	// 			data: "processo=logout&usuLogin=<?php #print $_SESSION["usuario_peloggia"]["usuLogin"];?>",
+	// 			success: function(resposta){
+	// 				window.location.href = "login/";
+	// 			}	
+	// 		});
+	// 	}
+	// }
 
 </script>
 <!-- <script src="js/tour.js" type="text/javascript" charset="utf-8" ></script>  -->
