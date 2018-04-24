@@ -6,6 +6,10 @@ function comecarJogo(){
 
 	$(".tituloJogo").html("<h3>Tabuada do "+tabuada+"</h3>");
 
+	if(tabuada === 2){
+		
+	}
+
 	$(".priResultados").html(
 							"<p> "+tabuada+" x 0 = 0 </p>"+
 							"<p> "+tabuada+" x 1 = "+(tabuada*1)+ "</p>"

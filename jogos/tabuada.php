@@ -62,8 +62,9 @@
 
 				</div>
 				<div class="row">
-					<div class="col l8">
-						
+
+					<div class="col l8 center-align">
+						<h4>Uma bicicleta tem 2 rodas</h4>					
 					</div>
 					<div class="col l2">
 						<fieldset>
