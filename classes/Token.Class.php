@@ -15,7 +15,7 @@
 		public function generate($user, $db){
 
 			$token = array(
-			    "aud" => 'JWT ArcaSistemas',
+			    "aud" => 'Jogos',
 			    "iss"=> $user,
 			    "alg" => "HS256",
 			    "exp" => time() + 300,

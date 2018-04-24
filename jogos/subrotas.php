@@ -2,7 +2,7 @@
 print "oi";die;
 
 $routerContent = new AltoRouter();
-$routerContent->setBasePath( BASE_ROUTE ."/jogos" );
+$routerContent->setBasePath( BASE_ROUTE ."/jogos/" );
 
 $routerContent->addRoutes(array(
 	

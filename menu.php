@@ -1,5 +1,5 @@
 <?php
-	session_start();
+	#session_start();
 	require_once "config.php";
 	require_once "classes/autoload.php";
 	require_once "classes/Menu.Class.php";
@@ -64,7 +64,7 @@
 
 <body class="grey lighten-3">
 <aside>
-	<ul id="slide-out" class="side-nav">
+	<ul id="slide-out" class="side-nav fixed">
 		<li class='logo-li'>
 			<div class="userView">
 
@@ -87,12 +87,19 @@
 		</li>
 		
 	<?php
-		require_once "classes/Menu.Class.php";
-        $menu->renderLink('Home', './home/', 'home');
+		try{
+			require_once "classes/Menu.Class.php";
+	        $menu->renderLink('Home', './home/', 'home');
 
-		$menu = new Menu('Jogos', 'games');
-			$menu->append('Tabuada',                  './jogos/tabuada/');
-		$menu->render();
+			$menu = new Menu('Jogos', 'games');
+				$menu->append('Ver Todos', './jogos/menu-principal/');
+				$menu->append('Tabuada',  './jogos/tabuada/');
+			$menu->render();
+
+			$menu->renderLink('Sair', './logOut/', '');
+		}catch(Excepition $e){
+			print $e->getMessage();
+		}
 	?>
 	</ul>
 </aside>
@@ -104,35 +111,29 @@
 	<li><a onClick="logout()">Sair</a></li>
 </ul>
 
-<div class="navbar-fixed">
-	<nav class='background'>
-
-		<div class="nav-wrapper">
-			<ul class="left" style='margin-right:20px'>
-				<li><a data-activates="slide-out" class="button-menu"><i class="material-icons right">menu</i></a></li>
-			</ul>
-	  </div>
-	</nav>
-</div>
 <section class="main-content" style='padding:15px; z-index: 1'>
 	<?php
-		$routerContent = new AltoRouter();
-		$routerContent->setBasePath( BASE_ROUTE );
+		try{
+			$routerContent = new AltoRouter();
+			$routerContent->setBasePath( BASE_ROUTE );
 
 
-		$routerContent->addRoutes(array(
+			$routerContent->addRoutes(array(
 
-			
-			array('GET','/jogos/[*]',  								  '/jogos/subrotas.php', ''),
+				
+				array('GET','/jogos/[*]',  								  '/jogos/subrotas.php', ''),
 
-		));	
+			));	
 
-		$matchContent = $routerContent->match();
-		if( is_array($matchContent)  ) {
-			require __DIR__. $matchContent['target'];
+			$matchContent = $routerContent->match();
+			if( is_array($matchContent)  ) {
+				require __DIR__. $matchContent['target'];
 
-		}else{
-			require "bloqueio.php";
+			}else{
+				require "bloqueio.php";
+			}
+		}catch(Exception $e){
+			print $e->getMessage();
 		}
 	?>
 	
