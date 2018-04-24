@@ -270,3 +270,12 @@
 	.jc-bs3-container.container{
 			width:500px;
 		}
+
+	.titulo{
+		width: 100%
+	}
+	.titulo h3{
+		font-family: 'Gaegu', cursive; 
+		font-weight: bolder; 
+		float: left;
+	}

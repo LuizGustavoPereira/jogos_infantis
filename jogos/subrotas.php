@@ -8,6 +8,9 @@ $routerContent->addRoutes(array(
 	array('GET','/tabuada/',    '/tabuada.php', 'tabuada'),
 	array('GET','/tabuada',     '/tabuada.php', ''),
 	array('GET','/tabuada/[*]', '/tabuada.php', ''),
+	array('GET','/brasileiro/',    '/brasileiro.php', 'brasileiro'),
+	array('GET','/brasileiro',     '/brasileiro.php', ''),
+	array('GET','/brasileiro/[*]', '/brasileiro.php', ''),
 
 ));	
 

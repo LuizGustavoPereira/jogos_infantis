@@ -94,6 +94,7 @@
 			$menu = new Menu('Jogos', 'games');
 				$menu->append('Ver Todos', './jogos/menu-principal/');
 				$menu->append('Tabuada',  './jogos/tabuada/');
+				$menu->append('Brasileiro',  './jogos/brasileiro/');
 			$menu->render();
 
 			$menu->renderLink('Sair', './logOut/', '');
