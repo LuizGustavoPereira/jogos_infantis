@@ -5078,7 +5078,7 @@ small {
 
 .tabs .tab a:hover, .tabs .tab a.active {
   background-color: transparent;
-  color: #ee6e73;
+  color: #0d47a1;
 }
 
 .tabs .tab.disabled a,
