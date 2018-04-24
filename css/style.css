@@ -1,13 +1,20 @@
 
 		html,body{width:100%}
 		.side-nav{width:300px;}
-		.side-nav > .logo-li{height:150px}
+		.side-nav > .logo-li{height:75px}
 
-		body{
 			
+		body {
+		    display: flex;
+		    min-height: 100vh;
+		    flex-direction: column;
 		}
 
-		.userView{height:150px; }
+		main {
+		    flex: 1 0 auto;
+		}
+
+		.userView{height:75px; }
 		.side-nav .userView{
 			padding: 8px 40px 0;
 		}

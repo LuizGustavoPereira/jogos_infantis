@@ -63,83 +63,70 @@
 
 
 <body class=" lighten-3">
-<aside>
-	<ul id="slide-out" class="side-nav fixed">
-		<li class='logo-li'>
-			<div class="userView">
-
-				<div style='text-align: center;'>
-					<!-- <p style='padding:0;margin:0;line-height: 20px;font-weight:bold;'><?php #print $usuario; ?></p> -->
-					<!-- <img src="<?php #print 'img/img001.png' ?>" style='height:70px;margin:0 auto'> -->
-				</div>
+	<main>
+		<aside>
+			<ul id="slide-out" class="side-nav fixed">
+				<li class='logo-li'>
+					<div class="topSideNav"></div>
+				</li>
 				
-				<div class="background">
-					<!-- <img src="<?php #print $imgTexture; ?>" style='width:125%'> -->
-				</div>
+			<?php
+				try{
+					require_once "classes/Menu.Class.php";
+			        $menu->renderLink('Home', './home/', 'home');
 
-			</div>
-			<div class='logo-user' style='color:#FFF'>
-				<p></p>
-				<p style='padding:0;margin:0;line-height: 20px;'><?php print @$_SESSION["timeLogin"]; ?></p>
-			</div>
+					$menu = new Menu('Jogos', 'games');
+						$menu->append('Ver Todos', './jogos/menu-principal/');
+						$menu->append('Tabuada',  './jogos/tabuada/');
+						$menu->append('Brasileiro',  './jogos/brasileiro/');
+					$menu->render();
 
+					$menu->renderLink('Sair', './logOut/', '');
+				}catch(Excepition $e){
+					print $e->getMessage();
+				}
+			?>
+			</ul>
+		</aside>
 
-		</li>
-		
-	<?php
-		try{
-			require_once "classes/Menu.Class.php";
-	        $menu->renderLink('Home', './home/', 'home');
+		<ul id="dropdown1" class="dropdown-content navbar-dropdown">
+			<div class="arrow-up"></div>
+			<li><a href="alterar-senha">Alterar senha</a></li>
+			<li class="divider"></li>
+			<li><a onClick="logout()">Sair</a></li>
+		</ul>
 
-			$menu = new Menu('Jogos', 'games');
-				$menu->append('Ver Todos', './jogos/menu-principal/');
-				$menu->append('Tabuada',  './jogos/tabuada/');
-				$menu->append('Brasileiro',  './jogos/brasileiro/');
-			$menu->render();
-
-			$menu->renderLink('Sair', './logOut/', '');
-		}catch(Excepition $e){
-			print $e->getMessage();
-		}
-	?>
-	</ul>
-</aside>
-
-<ul id="dropdown1" class="dropdown-content navbar-dropdown">
-	<div class="arrow-up"></div>
-	<li><a href="alterar-senha">Alterar senha</a></li>
-	<li class="divider"></li>
-	<li><a onClick="logout()">Sair</a></li>
-</ul>
-
-<section class="main-content" style='padding:15px; z-index: 1'>
-	<?php
-		try{
-			$routerContent = new AltoRouter();
-			$routerContent->setBasePath( BASE_ROUTE );
+		<section class="main-content" style='padding:15px; z-index: 1'>
+			<?php
+				try{
+					$routerContent = new AltoRouter();
+					$routerContent->setBasePath( BASE_ROUTE );
 
 
-			$routerContent->addRoutes(array(
+					$routerContent->addRoutes(array(
 
+						
+						array('GET','/jogos/[*]',  								  '/jogos/subrotas.php', ''),
+
+					));	
+
+					$matchContent = $routerContent->match();
+					if( is_array($matchContent)  ) {
+						require __DIR__. $matchContent['target'];
+
+					}else{
+						require "bloqueio.php";
+					}
+				}catch(Exception $e){
+					print $e->getMessage();
+				}
+			?>
 				
-				array('GET','/jogos/[*]',  								  '/jogos/subrotas.php', ''),
-
-			));	
-
-			$matchContent = $routerContent->match();
-			if( is_array($matchContent)  ) {
-				require __DIR__. $matchContent['target'];
-
-			}else{
-				require "bloqueio.php";
-			}
-		}catch(Exception $e){
-			print $e->getMessage();
-		}
+		</section>
+	</main>	
+	<?php
+		require __DIR__ ."/pages/footer.html";
 	?>
-	
-</section>
-
 <script>
 	$(document).ready(function($) {
 		 $(".button-menu").sideNav();
