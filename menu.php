@@ -41,11 +41,11 @@
 	<script type="text/javascript" src="js/route.js" ></script>
 	<script src="js/jquery-confirm.js"></script>
 	<style type="text/css">
-		/*body{
-			background: url("img/fundo.png") no-repeat right 50px,
-						url("img/fundod.png") no-repeat 300px bottom;
-			background-attachment: fixed;
-		}*/
+		body{
+			/*background: url("imagens/imgFundo.BMP");						
+			background-attachment: fixed;*/
+			background: #fafafa;
+		}
 		.btntour{
 		    padding: 4px 6px;
 		}
@@ -62,7 +62,7 @@
 </head>
 
 
-<body class="grey lighten-3">
+<body class=" lighten-3">
 <aside>
 	<ul id="slide-out" class="side-nav fixed">
 		<li class='logo-li'>
