@@ -30,11 +30,11 @@
 
 						    <div class="row">
 						    	<div class="col l12 xl12 input-field">
-								    <input type="radio" name="entrada" id="teclado" checked>
+								    <input type="radio" name="entrada" id="teclado" val="num" checked>
 								    <label for="teclado">Teclado numérico</label>
 							    </div>
 							    <div class="col l12 xl12 input-field">
-								    <input type="radio" name="entrada" id="tecla">
+								    <input type="radio" name="entrada" id="tecla" val="enter">
 								    <label for="tecla">Tecla Enter</label>
 							    </div>
 
@@ -69,7 +69,7 @@
 					<div class="col l2 offset-l1 center-align">
 						<fieldset>
 							<legend>Pontuação</legend>
-							<h5><b>0</b></h5>
+							<h5><b id="pontuacao">0</b></h5>
 						</fieldset>
 						<fieldset>
 							<legend>Tabuada</legend>
