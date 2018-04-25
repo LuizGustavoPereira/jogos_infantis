@@ -1,11 +1,11 @@
 <!-- Tela antes de começar o jogo -->
 <div class="row" id="inicio" display>
     <div class="col l10 offset-l1 " >
+		<div class="center-align blue-text">
+			<h3>Jogo da Tabuada</h3>
+		</div>
 		<div class="card transparent darken-1">
 			<div class="card-content blue-text">
-				<div class="center-align">
-					<h3>Jogo da Tabuada</h3>
-				</div>
 				<div class="row">
 					<div class="col l5 xl5 offset-l1 offset-xl1 ">
 						<fieldset>
@@ -56,24 +56,31 @@
 <!-- Tela do jogo  -->
 <div class="row" id="jogo" display>
     <div class="col l10 offset-l1 " >
+		<div id="tituloJogo" class="blue-text titulo">
+		
+		</div>
 		<div class="card transparent darken-1">
 			<div class="card-content blue-text">
-				<div class="center-align tituloJogo">
-
-				</div>
 				<div class="row">
 
-					<div class="col l8 center-align">
-						<h4>Uma bicicleta tem 2 rodas</h4>					
+					<div class="col l8 center-align" id="enunciado">
+						
 					</div>
-					<div class="col l2">
+					<div class="col l2 offset-l1 center-align">
+						<fieldset>
+							<legend>Pontuação</legend>
+							<h5><b>0</b></h5>
+						</fieldset>
 						<fieldset>
 							<legend>Tabuada</legend>
-							<div class="priResultados">
+							<div id="priResultados">
 								
 							</div>
 						</fieldset>
 					</div>
+				</div>
+				<div class="row" id="respJogo">
+
 				</div>
 				<div class="row left-align">
 					<div class="col l12 ">

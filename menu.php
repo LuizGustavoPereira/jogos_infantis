@@ -19,6 +19,7 @@
 
     <!-- <link rel="icon" type="image/ico" sizes="96x96" href="img/favicon.ico"> -->
 	<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons" > -->
+	<link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="css/materialize-fonts.css" media="screen,projection"/>
 	<link type="text/css" rel="stylesheet" href="css/materialize-customized.css" media="screen,projection"/>
 	<link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
