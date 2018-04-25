@@ -7,9 +7,9 @@ function comecarJogo(){
 
 	$("#tituloJogo").html("<h3>Tabuada do "+tabuada+"</h3>");
 	if(tabuada == 2){
-		$("#enunciado").html("<h4>Uma <img src='imagens/bicicleta.png' class='img-tabuada'> tem 2 rodas</h4>");
+		$("#enunciado").html("<h4>Uma <img src='imagens/bicicleta.png' class='img-tabuada-bicicleta'> tem 2 rodas</h4>");
 	}else if(tabuada == 4){
-		$("#enunciado").html("<h4>Uma <img src='imagens/girafa.png' class='img-tabuada'> tem 4 patas</h4>");
+		$("#enunciado").html("<h4>Uma <img src='imagens/girafa.png' class='img-tabuada-girafa'> tem 4 patas</h4>");
 	}
 
 	$("#priResultados").html(

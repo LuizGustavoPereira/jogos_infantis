@@ -294,11 +294,21 @@
 		float: left;
 	}
 
-	.img-tabuada {
+	.img-tabuada-bicicleta {
 		width: 250px;
-		height: 225px;
+		height: 197px;
 	}
 
+	.img-tabuada-girafa{
+	    width: 152px;
+	    height: 200px;
+	}
+
+	.img-brasileiro-bandeira{
+		width: 441px;
+    	height: 300px;
+	}
+	
 	.input-tabuada{
 		width: 7% !important;
 		font-size: 2rem !important;
