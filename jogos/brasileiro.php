@@ -23,16 +23,16 @@
             <div class="card-content blue-text"> 
 	            <div class="row">
 	            	<div class="center-align col l12">
-	            		<img src='imagens/bandeira_colorida.png' class='img-brasileiro-bandeira'>
+	            		<img src='imagens/brasileiro/bandeira-preta-branca.png' class='img-brasileiro-bandeira'>
             		</div>  
             		<div class="center-align  col l4" >
-        				<img src='imagens/tinta-amarelo.png' class="img-brasileiro-tinta">
+        				<img src='imagens/brasileiro/tinta-amarelo.png' class="img-brasileiro-tinta">
         			</div>
         			<div class="center-align col l4">
-        				<img src='imagens/tinta-azul.png' class="img-brasileiro-tinta">	
+        				<img src='imagens/brasileiro/tinta-azul.png' class="img-brasileiro-tinta">	
         			</div>
         			<div class="center-align col l4">
-        				<img src='imagens/tinta-verde.png' class="img-brasileiro-tinta">   
+        				<img src='imagens/brasileiro/tinta-verde.png' class="img-brasileiro-tinta">   
         			</div>
             	</div>            	
             </div>            

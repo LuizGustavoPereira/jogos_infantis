@@ -30,11 +30,11 @@
 
 						    <div class="row">
 						    	<div class="col l12 xl12 input-field">
-								    <input type="radio" name="entrada" id="teclado" val="num" checked>
+								    <input type="radio" name="entrada" id="teclado" value="num" checked>
 								    <label for="teclado">Teclado numérico</label>
 							    </div>
 							    <div class="col l12 xl12 input-field">
-								    <input type="radio" name="entrada" id="tecla" val="enter">
+								    <input type="radio" name="entrada" id="tecla" value="enter">
 								    <label for="tecla">Tecla Enter</label>
 							    </div>
 
@@ -83,8 +83,11 @@
 
 				</div>
 				<div class="row left-align">
-					<div class="col l12 ">
+					<div class="col l4 ">
 						<a class="waves-effect waves-light btn background btnControl" onClick="voltar()"><i class="material-icons"> arrow_back </i></a>
+					</div>
+					<div class="col l4">
+						<a class="waves-effect waves-light btn background btnControl" onClick="comecarJogo()" id="jogarNovamente" display="">Jogar Novamente</a>
 					</div>
 				</div>			
 			</div>            
