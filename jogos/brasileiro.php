@@ -20,14 +20,21 @@
 	</div>
     <div class="col l10 offset-l1">
         <div class="card transparent darken-1">
-            <div class="card-content blue-text">
-            	<div class="center-align">  
-	            	<div class="row">
-	            		<div class="center-align">
-	            			<img src='imagens/bandeira_colorida.png' class='img-brasileiro-bandeira'> 
-            			</div>    
-            		</div>
-            	</div>
+            <div class="card-content blue-text"> 
+	            <div class="row">
+	            	<div class="center-align col l12">
+	            		<img src='imagens/bandeira_colorida.png' class='img-brasileiro-bandeira'>
+            		</div>  
+            		<div class="center-align  col l4" >
+        				<img src='imagens/tinta-amarelo.png' class="img-brasileiro-tinta">
+        			</div>
+        			<div class="center-align col l4">
+        				<img src='imagens/tinta-azul.png' class="img-brasileiro-tinta">	
+        			</div>
+        			<div class="center-align col l4">
+        				<img src='imagens/tinta-verde.png' class="img-brasileiro-tinta">   
+        			</div>
+            	</div>            	
             </div>            
         </div>
     </div>
