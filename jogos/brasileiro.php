@@ -38,7 +38,7 @@
 <div class="row" id="jogo" display>
     <div class="col l10 offset-l1">
         <div class="card transparent darken-1">
-            <div class="card-content blue-text"> 
+            <div class="card-content blue-text text-darken-2"> 
 	            <div class="row">
 	            	<div class="center-align col l12" id="bandeira">
 	            		<img src='imagens/brasileiro/bandeira-preta-branca.png' class='img-brasileiro-bandeira'>
@@ -52,7 +52,12 @@
         			<div class="center-align col l4">
         				<img src='imagens/brasileiro/tinta-verde.png' class="img-brasileiro-tinta" onClick="pintaBandeira(3)">   
         			</div>
-            	</div>            	
+            	</div>  
+            	<div class="row">
+            		<div class="col l10 offset-l1 center-align" id="nomeCor">
+
+            		</div>
+            	</div>          	
 	            <div class="row left-align">
 					<div class="col l4 ">
 						<a class="waves-effect waves-light btn background btnControl" onClick="voltar()"><i class="material-icons"> arrow_back </i></a>
