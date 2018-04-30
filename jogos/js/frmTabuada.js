@@ -16,7 +16,7 @@ function comecarJogo(){
 	entradaTec = entrada;
 	valTabuada = tabuada;
 
-	$("#tituloJogo").html("<h3>Tabuada do "+valTabuada+"</h3>");
+	$("#tituloJogo").html("<h3>TABUADA DO "+valTabuada+"</h3>");
 	if(valTabuada == 2){
 		$("#enunciado").html("<h4>Uma <img src='imagens/tabuada/bicicleta.png' class='img-tabuada-bicicleta'> tem 2 rodas</h4>");
 	}else if(valTabuada == 4){

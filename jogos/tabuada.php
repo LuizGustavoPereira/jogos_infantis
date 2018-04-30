@@ -2,7 +2,7 @@
 <div class="row" id="inicio" display>
     <div class="col l10 offset-l1 " >
 		<div class="blue-text titulo">
-			<h3>Jogo da Tabuada</h3>
+			<h3>JOGO DA TABUADA</h3>
 		</div>
 		<div class="card transparent darken-1">
 			<div class="card-content blue-text">
