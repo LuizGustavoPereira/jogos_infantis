@@ -1,5 +1,5 @@
 
-<div class="row" id="telaInicial" display>
+<div class="row" >
 	<div class="col l10 offset-l1">
 		<div class="titulo ">
 			<h3 class="float-left" style="color: green">J</h3>
@@ -18,7 +18,7 @@
 			<h3 class="float-left" style="color: blue">O</h3>
 		</div> 
 	</div>
-	<div class="col l10 offset-l1">
+	<div class="col l10 offset-l1" id="telaInicial" display>
         <div class="card transparent darken-1">
             <div class="card-content blue-text"> 
 	            <div class="row">

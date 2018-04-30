@@ -3,7 +3,7 @@ var cor = 1;
 function comecarJogo(){
 	$("#jogo").show();
 	$("#telaInicial").hide();
-	$("#nomeCor").html("<h3 style='color: blue'>AZUL</h3>");
+	$("#nomeCor").html("<h3 style='color: blue' >AZUL</h3>");
 
 }
 
@@ -23,7 +23,7 @@ function pintaBandeira(chave){
 			break;
 			case 2:
 				$("#bandeira").html("<img src='imagens/brasileiro/bandeira-sem-verde.png' class='img-brasileiro-bandeira'>")
-				$("#nomeCor").html("<h3 style='color: green'>VERDE</h3>");
+				$("#nomeCor").html("<h3 style='color: green' >VERDE</h3>");
 			break;
 			case 3:
 				$("#bandeira").html("<img src='imagens/brasileiro/bandeira_colorida.png' class='img-brasileiro-bandeira'>")

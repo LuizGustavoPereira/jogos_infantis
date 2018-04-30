@@ -324,3 +324,20 @@
 		border-right: 1px solid !important;
 		border-top: 1px solid !important;
 	}
+
+	.card{
+		position: relative;
+	    margin: 0.5rem 0 1rem 0;
+	    background-color: #fff;
+	    -webkit-transition: -webkit-box-shadow .25s;
+	    transition: -webkit-box-shadow .25s;
+	    transition: box-shadow .25s;
+	    transition: box-shadow .25s, -webkit-box-shadow .25s;
+	    border-radius: 70px;
+	    -webkit-box-shadow: none;
+    	box-shadow: none;
+	}
+	
+	.card-ver-todos{
+		 border-radius: 50px !important;
+	}

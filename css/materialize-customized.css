@@ -4767,6 +4767,7 @@ small {
 
 .card.small {
   height: 300px;
+  width: 250px;
 }
 
 .card.medium {
