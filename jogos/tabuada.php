@@ -1,7 +1,7 @@
 <!-- Tela antes de começar o jogo -->
 <div class="row" id="inicio" display>
     <div class="col l10 offset-l1 " >
-		<div class="center-align blue-text">
+		<div class="blue-text titulo">
 			<h3>Jogo da Tabuada</h3>
 		</div>
 		<div class="card transparent darken-1">
@@ -61,7 +61,7 @@
 		</div>
 		<div class="card transparent darken-1">
 			<div class="card-content blue-text">
-				<div class="row">
+				<div class="row no-bottom">
 
 					<div class="col l8 center-align" id="enunciado">
 						
