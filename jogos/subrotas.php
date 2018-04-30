@@ -13,8 +13,12 @@ $routerContent->addRoutes(array(
 	array('GET','/brasileiro',     '/brasileiro.php', ''),
 	array('GET','/brasileiro/[*]', '/brasileiro.php', ''),
 
-	array('GET','/menu-principal',  '/paginaInicial.php', 'menu'),
-	array('GET','/menu-principal/',  '/paginaInicial.php', ''),
+	array('GET', '/times', 		'/times.php', 'times'),
+	array('GET', '/times/', 	'/times.php', ''),
+	array('GET', '/times/[*]', 	'/times.php', ''),
+
+	array('GET','/menu-principal',  	'/paginaInicial.php', 'menu'),
+	array('GET','/menu-principal/',  	'/paginaInicial.php', ''),
 	array('GET','/menu-principal/[*]',  '/paginaInicial.php', ''),
 
 ));	

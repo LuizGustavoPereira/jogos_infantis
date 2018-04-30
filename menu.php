@@ -77,9 +77,10 @@
 			        $menu->renderLink('Home', './home/', 'home');
 
 					$menu = new Menu('Jogos', 'games');
-						$menu->append('Ver Todos', './jogos/menu-principal/');
-						$menu->append('Brasileiro',  './jogos/brasileiro/');
-						$menu->append('Tabuada',  './jogos/tabuada/');
+						$menu->append('Ver Todos', 		'./jogos/menu-principal/');
+						$menu->append('Brasileiro',  	'./jogos/brasileiro/');
+						$menu->append('Tabuada',  		'./jogos/tabuada/');
+						$menu->append('Times', 	  		'./jogos/times/');
 					$menu->render();
 
 					$menu->renderLink('Sair', './logOut/', '');
