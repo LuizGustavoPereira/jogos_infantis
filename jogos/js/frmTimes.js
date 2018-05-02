@@ -1,9 +1,13 @@
 var resp = "",
-	sorteados = []
-	time = "";
+	sorteados = [],
+	time = "",
+	pontuacao = 0,
+	vidas = 3;
 
 function comecarJogo(){
+	$("#pontuacao").html(pontuacao)
 	$("#jogo").show();
+	$("#vidas").html(vidas);
 	$("#telaInicial").hide();
 	$("#nomeTime").focus();
 	sorteiaTime();
@@ -77,20 +81,38 @@ function verificaResposta(){
 	var resposta  = $("#nomeTime").val().toUpperCase();
 	$("#nomeTime").val("");
 	if( resposta == resp ){
+		pontuacao += 10;
+		$("#pontuacao").html(pontuacao)
 		alert("VOCÊ ACERTOU");
 		sorteiaTime();
 	}else{
+		vidas-=1;
+		$("#vidas").html(vidas);
+		verificaVidas();
 		alert("ERROU");
 	}
 
 }
+function verificaVidas(){
+	if (vidas < 0){
+		$("#jogarNovamente").show();
+		$("#nomeTime").prop('disabled', true);
+	}
+}
 function jogarNovamente(){
-		sorteados = [];
-		$("#jogarNovamente").hide();
-		$("#nomeTime").prop('disabled', false);
-		comecarJogo();
+	vidas = 3;
+	pontuacao = 0;
+	sorteados = [];	
+	$("#jogarNovamente").hide();
+	$("#nomeTime").prop('disabled', false);
+	comecarJogo();
 }
 function voltar(){
+	vidas = 3;
+	pontuacao = 0;
+	sorteados = [];
+	$("#jogarNovamente").hide();
+	$("#nomeTime").prop('disabled', false);
 	$("#jogo").hide();
 	$("#telaInicial").show();
 }

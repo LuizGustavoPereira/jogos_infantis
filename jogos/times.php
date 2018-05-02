@@ -29,13 +29,29 @@
         <div class="card transparent darken-1">
             <div class="card-content "> 
 	            <div class="row">
-	            	<div class="col l6 offset-l4 center-align" >
+	            	<div class="col l4 offset-l4 center-align" >
 	            		<div class="card card-imagens small " style="max-height: 100% !important">
 					        <div class="card-ver-todos" style="max-height: 100% !important" id="logoTime">			        	
 								
 					        </div>							
 			     		</div>
 	            	</div>
+	            	<div class="col l2 offset-l1 center-align">
+						<fieldset>
+							<legend>Pontuação</legend>
+							<h5><b id="pontuacao">0</b></h5>
+						</fieldset>
+						<fieldset>
+							<legend>Vidas</legend>
+							<h5><b class="red-text" id="vidas"></b><i class="material-icons red-text">favorite</i></h5>
+						</fieldset>
+						<fieldset>
+							<legend>Tempo</legend>
+							<div id="priResultados">
+								
+							</div>
+						</fieldset>
+					</div>
 	            	<div class="col l5 offset-l3">
 	            		<input type="text" name="nomeTime" id="nomeTime" value="" class="input-times">
 	            	</div>
