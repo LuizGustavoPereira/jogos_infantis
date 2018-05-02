@@ -328,7 +328,7 @@
 	.card-imagens{
 		position: relative;
 	    margin: 0.5rem 0 1rem 0;
-	    background-color: #fff;
+	    background-color: transparent !important;
 	    -webkit-transition: -webkit-box-shadow .25s;
 	    transition: -webkit-box-shadow .25s;
 	    transition: box-shadow .25s;
@@ -340,4 +340,15 @@
 	
 	.card-ver-todos{
 		 border-radius: 50px !important;
+	}
+
+	.input-times{
+		font-size: 3rem !important;
+		height: 50px !important;	
+		text-transform: uppercase;	
+		text-align: center;
+		border-bottom: 1px solid !important;
+		border-left: 1px solid !important;
+		border-right: 1px solid !important;
+		border-top: 1px solid !important;
 	}
