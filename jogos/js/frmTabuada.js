@@ -4,13 +4,15 @@ var numero = 0,
 	pontuacao = 0,
 	entradaTec = "",
 	valTabuada = 0,
+	vidas = 3,
 	tempo;	
 
 function comecarJogo(){
+	vidas = 3;
 	$("#jogarNovamente").hide();
 	$("#inicio").hide();
 	$("#jogo").show();
-
+	$("#vidas").html(vidas);
 	var entrada = $("input[name=entrada]:checked").val();
 	var tabuada = $("input[name=tabuada]:checked").val();
 	entradaTec = entrada;
@@ -20,6 +22,12 @@ function comecarJogo(){
 	if(valTabuada == 2){
 		$("#enunciado").html("<h4>Uma <img src='imagens/tabuada/bicicleta.png' class='img-tabuada-bicicleta'> tem 2 rodas</h4>");
 	}else if(valTabuada == 4){
+		$("#enunciado").html("<h4>Uma <img src='imagens/tabuada/girafa.png' class='img-tabuada-girafa'> tem 4 patas</h4>");
+	}else if(valTabuada == 6){
+		$("#enunciado").html("<h4>Uma <img src='imagens/tabuada/arvore.png' class='img-tabuada-girafa'> tem 6 maçãs</h4>");
+	}else if(valTabuada == 8){
+		$("#enunciado").html("<h4>Uma <img src='imagens/tabuada/aranha.png' class='img-tabuada-girafa'> tem 8 patas</h4>");
+	}else if(valTabuada == 10){
 		$("#enunciado").html("<h4>Uma <img src='imagens/tabuada/girafa.png' class='img-tabuada-girafa'> tem 4 patas</h4>");
 	}
 
@@ -56,6 +64,30 @@ function calculaTabuada(valor = ""){
 								);
 		}
 		else if(valTabuada == 4){
+			$("#respJogo").html(
+								"<div class='col l8 center-align'>"+
+									"<h3> "+vetNumeros[numero]+" GIRAFAS tem "+
+										"<input class='input-tabuada resposta' type='text' value='"+valor+"' data-tabuada = "+valTabuada+"> patas</h3>"+
+								"</div>"
+								);
+		}
+		else if(valTabuada == 6){
+			$("#respJogo").html(
+								"<div class='col l8 center-align'>"+
+									"<h3> "+vetNumeros[numero]+" ARVORES tem "+
+										"<input class='input-tabuada resposta' type='text' value='"+valor+"' data-tabuada = "+valTabuada+"> maçãs</h3>"+
+								"</div>"
+								);
+		}
+		else if(valTabuada == 8){
+			$("#respJogo").html(
+								"<div class='col l8 center-align'>"+
+									"<h3> "+vetNumeros[numero]+" ARANHA tem "+
+										"<input class='input-tabuada resposta' type='text' value='"+valor+"' data-tabuada = "+valTabuada+"> patas</h3>"+
+								"</div>"
+								);
+		}
+		else if(valTabuada == 10){
 			$("#respJogo").html(
 								"<div class='col l8 center-align'>"+
 									"<h3> "+vetNumeros[numero]+" GIRAFAS tem "+
@@ -103,12 +135,21 @@ function verificaResposta(){
 		calculaTabuada();
 	}else{
 		valor = 0;
+		vidas-=1;
+		$("#vidas").html(vidas);
 		alert("Você errou, tente novamente.");
 		$(".resposta").val("");
 		chave = 0;
+
+		if( vidas < 0 ){
+			$(".resposta").prop('disabled', true);
+			clearTimeout(tempo);
+			$("#jogarNovamente").show();
+		}
 	}
 	if(multiplicador > 10 && chave == 1){
 		alert("Parabéns! Você conseguiu.");
+		$(".resposta").prop('disabled', true);
 		clearTimeout(tempo);
 		$("#jogarNovamente").show();		
 		numero = 0;

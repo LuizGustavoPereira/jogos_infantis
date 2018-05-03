@@ -4,7 +4,7 @@ var resp = "",
 	pontuacao = 0,
 	vidas = 3;
 
-function comecarJogo(){
+function comecarJogo(){	
 	$("#pontuacao").html(pontuacao)
 	$("#jogo").show();
 	$("#vidas").html(vidas);

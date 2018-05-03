@@ -44,19 +44,19 @@
 	            		<img src='imagens/brasileiro/bandeira-preta-branca.png' class='img-brasileiro-bandeira'>
             		</div>  
             		<div class="center-align  col l2 offset-l1" >
-        				<img src='imagens/brasileiro/tinta-amarelo.png' class="img-brasileiro-tinta" onClick="pintaBandeira(2)">
+        				<img src='imagens/brasileiro/tinta-amarelo.png' class="img-brasileiro-tinta tinta" onClick="pintaBandeira(2)">
         			</div>
         			<div class="center-align  col l2" >
-        				<img src='imagens/brasileiro/tinta-roxa.png' class="img-brasileiro-tinta" onClick="pintaBandeira(0)">
+        				<img src='imagens/brasileiro/tinta-roxa.png' class="img-brasileiro-tinta tinta" onClick="pintaBandeira(0)">
         			</div>
         			<div class="center-align col l2">
-        				<img src='imagens/brasileiro/tinta-azul.png' class="img-brasileiro-tinta" onClick="pintaBandeira(1)">	
+        				<img src='imagens/brasileiro/tinta-azul.png' class="img-brasileiro-tinta tinta" onClick="pintaBandeira(1)">	
         			</div>
         			<div class="center-align col l2">
-        				<img src='imagens/brasileiro/tinta-vermelha.png' class="img-brasileiro-tinta" onClick="pintaBandeira(0)">	
+        				<img src='imagens/brasileiro/tinta-vermelha.png' class="img-brasileiro-tinta tinta" onClick="pintaBandeira(0)">	
         			</div>
         			<div class="center-align col l2">
-        				<img src='imagens/brasileiro/tinta-verde.png' class="img-brasileiro-tinta" onClick="pintaBandeira(3)">   
+        				<img src='imagens/brasileiro/tinta-verde.png' class="img-brasileiro-tinta tinta" onClick="pintaBandeira(3)">   
         			</div>
             	</div>  
             	<div class="row">

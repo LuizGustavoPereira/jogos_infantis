@@ -19,6 +19,18 @@
 								    <input type="radio" name="tabuada" id="tabDo4" value="4">
 								    <label for="tabDo4">Tabuada do 4</label>
 							    </div>
+							    <div class="col l12 input-field">
+								    <input type="radio" name="tabuada" id="tabDo6" value="6">
+								    <label for="tabDo6">Tabuada do 6</label>
+							    </div>
+							    <div class="col l12 input-field">
+								    <input type="radio" name="tabuada" id="tabDo8" value="8">
+								    <label for="tabDo8">Tabuada do 8</label>
+							    </div>
+							    <div class="col l12 input-field">
+								    <input type="radio" name="tabuada" id="tabDo10" value="10">
+								    <label for="tabDo10">Tabuada do 10</label>
+							    </div>
 
 						    </div>
 
@@ -70,6 +82,10 @@
 						<fieldset>
 							<legend>Pontuação</legend>
 							<h5><b id="pontuacao">0</b></h5>
+						</fieldset>
+						<fieldset>
+							<legend>Vidas</legend>
+							<h5><b class="red-text" id="vidas"></b><i class="material-icons red-text">favorite</i></h5>
 						</fieldset>
 						<fieldset>
 							<legend>Tabuada</legend>

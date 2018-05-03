@@ -15,6 +15,7 @@ function voltar(){
 }
 
 function pintaBandeira(chave){
+	
 	if(chave == cor){
 		switch(cor){
 			case 1:
@@ -30,12 +31,13 @@ function pintaBandeira(chave){
 			break;			
 		}
 		cor+=1;		
-	}else{
-		alert("VOCÊ ERROU, TENTE NOVAMENTE.")
-	}
-	if(cor > 3){
+	}else if(cor >= 3){
 		alert("PARABÉNS! VOCÊ CONSEGUIU.");
 	}
+	else{
+		alert("VOCÊ ERROU, TENTE NOVAMENTE.")
+	}
+	
 }
 
 $(document).ready(function(){
