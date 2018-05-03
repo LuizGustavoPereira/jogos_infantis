@@ -2,9 +2,12 @@ var resp = "",
 	sorteados = [],
 	time = "",
 	pontuacao = 0,
-	vidas = 3;
+	vidas = 3,
+	count = 0,
+	tempo;
 
-function comecarJogo(){	
+function comecarJogo(){
+	tempo = setInterval("atualizaTempo()", 1000);	
 	$("#pontuacao").html(pontuacao)
 	$("#jogo").show();
 	$("#vidas").html(vidas);
@@ -115,6 +118,30 @@ function voltar(){
 	$("#nomeTime").prop('disabled', false);
 	$("#jogo").hide();
 	$("#telaInicial").show();
+}
+
+function atualizaTempo(){
+	if(count < 6 ){
+		color = "green";
+	}else if(count < 12){
+		color = "blue";
+	}else if (count < 17){
+		color = "red";
+	}
+	else{
+		clearTimeout(tempo);
+	}
+	if(count == 6){
+		$("#min").append("&nbsp;&nbsp;&nbsp;<p>1 min</p>");
+	}
+	else if(count == 12){
+		$("#min").append("&nbsp;&nbsp;&nbsp;<p>2 min</p>");
+	}
+	else if(count == 17){
+		$("#min").append("&nbsp;&nbsp;&nbsp;<p>3 min</p>");
+	}
+	$("#countTempo").append("<div style='background-color:"+color+"'></div>");
+	count ++;	
 }
 
 $(document).ready(function(){

@@ -29,12 +29,15 @@
         <div class="card transparent darken-1">
             <div class="card-content "> 
 	            <div class="row">
-	            	<div class="col l4 offset-l4 center-align" >
-	            		<div class="card card-imagens small " style="max-height: 100% !important">
-					        <div class="card-ver-todos" style="max-height: 100% !important" id="logoTime">			        	
+	            	<div class="col l4 offset-l3 center-align" >
+	            		<div class="card card-imagens small  " style="max-height: 100% !important">
+					        <div class="card-ver-todos center-align" style="max-height: 100% !important" id="logoTime">			        	
 								
 					        </div>							
 			     		</div>
+			     		<div class="col l12 ">
+	            			<input type="text" name="nomeTime" id="nomeTime" value="" class="input-times">
+	            		</div>
 	            	</div>
 	            	<div class="col l2 offset-l1 center-align">
 						<fieldset>
@@ -47,14 +50,19 @@
 						</fieldset>
 						<fieldset>
 							<legend>Tempo</legend>
-							<div id="priResultados">
-								
-							</div>
+							<fieldset class="tempo">
+								<div class="row">
+									<div class="col l6" id="min">
+										<p>inicio</p>
+									</div>									
+									<div class="col l6" id="countTempo">
+										&nbsp;
+									</div>
+								</div>
+							</fieldset>
 						</fieldset>
 					</div>
-	            	<div class="col l5 offset-l3">
-	            		<input type="text" name="nomeTime" id="nomeTime" value="" class="input-times">
-	            	</div>
+	            	
             	</div> 
             	<div class="row left-align">
 					<div class="col l4 ">

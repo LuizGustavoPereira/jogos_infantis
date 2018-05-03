@@ -352,3 +352,14 @@
 		border-right: 1px solid !important;
 		border-top: 1px solid !important;
 	}
+
+	.tempo{
+		height: 160px;
+		width: 90%;
+		margin-left: 5%
+	}
+	#countTempo div{		
+		margin-bottom: 2px;
+		height: 5px;
+		width: 100%;
+	}
