@@ -7,7 +7,7 @@ var resp = "",
 	tempo;
 
 function comecarJogo(){
-	tempo = setInterval("atualizaTempo()", 1000);	
+	tempo = setInterval("atualizaTempo()", 10000);	
 	$("#pontuacao").html(pontuacao)
 	$("#jogo").show();
 	$("#vidas").html(vidas);
@@ -129,6 +129,8 @@ function atualizaTempo(){
 		color = "red";
 	}
 	else{
+		$("#nomeTime").prop('disabled', true);
+		$("#jogarNovamente").show();
 		clearTimeout(tempo);
 	}
 	if(count == 6){

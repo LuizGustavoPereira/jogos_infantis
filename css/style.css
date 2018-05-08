@@ -363,3 +363,17 @@
 		height: 5px;
 		width: 100%;
 	}
+	@media screen and (max-width: 1024px) {
+
+		.input-times{
+			font-size: 2rem !important;
+			height: 50px !important;	
+			text-transform: uppercase;	
+			text-align: center;
+			border-bottom: 1px solid !important;
+			border-left: 1px solid !important;
+			border-right: 1px solid !important;
+			border-top: 1px solid !important;
+		}
+
+	}

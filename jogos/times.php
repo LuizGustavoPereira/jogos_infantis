@@ -29,7 +29,7 @@
         <div class="card transparent darken-1">
             <div class="card-content "> 
 	            <div class="row">
-	            	<div class="col l7  xl6 offset-xl3 center-align" >
+	            	<div class="col l7  xl6 offset-xl2 center-align" >
 	            		<div class="col l12 center-align">
 		            		<div class="card card-imagens small">
 						        <div  id="logoTime">			        	
@@ -41,7 +41,7 @@
 	            			<input type="text" name="nomeTime" id="nomeTime" value="" class="input-times">
 	            		</div>
 	            	</div>
-	            	<div class="col l5 xl2 offset-xl1 center-align">
+	            	<div class="col l5 xl3 offset-xl1 center-align">
 						<fieldset>
 							<legend>Pontuação</legend>
 							<h5><b id="pontuacao">0</b></h5>
@@ -54,10 +54,10 @@
 							<legend>Tempo</legend>
 							<fieldset class="tempo">
 								<div class="row">
-									<div class="col l6" id="min">
+									<div class="col l7" id="min">
 										<p>inicio</p>
 									</div>									
-									<div class="col l6" id="countTempo">
+									<div class="col l5" id="countTempo">
 										&nbsp;
 									</div>
 								</div>
