@@ -9,7 +9,7 @@
 				<div class="row">
 					<div class="col l5 xl5 offset-l1 offset-xl1 ">
 						<fieldset>
-						    <legend>Selecione a tabuada:</legend>
+						    <legend>Selecione a tabuada</legend>
 						    <div class="row">
 						    	<div class="col l12 xl12 input-field">
 								    <input type="radio" name="tabuada" id="tabDo2" value="2" checked>
