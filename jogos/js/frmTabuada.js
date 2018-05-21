@@ -57,7 +57,7 @@ function calculaTabuada(valor = ""){
 	if(numero < vetNumeros.length){
 		if(valTabuada == 2){
 			$("#respJogo").html(
-								"<div class='col l8 center-align'>"+
+								"<div class='col l12 center-align'>"+
 									"<h3> "+vetNumeros[numero]+" BICICLETAS tem "+
 										"<input class='input-tabuada resposta' type='text' value='"+valor+"' data-tabuada = "+valTabuada+"> rodas</h3>"+
 								"</div>"
@@ -65,7 +65,7 @@ function calculaTabuada(valor = ""){
 		}
 		else if(valTabuada == 4){
 			$("#respJogo").html(
-								"<div class='col l8 center-align'>"+
+								"<div class='col l12 center-align'>"+
 									"<h3> "+vetNumeros[numero]+" GIRAFAS tem "+
 										"<input class='input-tabuada resposta' type='text' value='"+valor+"' data-tabuada = "+valTabuada+"> patas</h3>"+
 								"</div>"
@@ -73,7 +73,7 @@ function calculaTabuada(valor = ""){
 		}
 		else if(valTabuada == 6){
 			$("#respJogo").html(
-								"<div class='col l8 center-align'>"+
+								"<div class='col l12 center-align'>"+
 									"<h3> "+vetNumeros[numero]+" ARVORES tem "+
 										"<input class='input-tabuada resposta' type='text' value='"+valor+"' data-tabuada = "+valTabuada+"> maçãs</h3>"+
 								"</div>"
@@ -81,7 +81,7 @@ function calculaTabuada(valor = ""){
 		}
 		else if(valTabuada == 8){
 			$("#respJogo").html(
-								"<div class='col l8 center-align'>"+
+								"<div class='col l12 center-align'>"+
 									"<h3> "+vetNumeros[numero]+" ARANHA tem "+
 										"<input class='input-tabuada resposta' type='text' value='"+valor+"' data-tabuada = "+valTabuada+"> patas</h3>"+
 								"</div>"
@@ -89,7 +89,7 @@ function calculaTabuada(valor = ""){
 		}
 		else if(valTabuada == 10){
 			$("#respJogo").html(
-								"<div class='col l8 center-align'>"+
+								"<div class='col l12 center-align'>"+
 									"<h3> "+vetNumeros[numero]+" GIRAFAS tem "+
 										"<input class='input-tabuada resposta' type='text' value='"+valor+"' data-tabuada = "+valTabuada+"> patas</h3>"+
 								"</div>"

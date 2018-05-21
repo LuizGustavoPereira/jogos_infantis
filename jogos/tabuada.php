@@ -75,7 +75,15 @@
 			<div class="card-content blue-text">
 				<div class="row no-bottom">
 
-					<div class="col l8 center-align" id="enunciado">
+					<div class="col l8 center-align" >
+						<div class="row">
+							<div class="col l12" id="enunciado">
+								
+							</div>
+							<div class="col l12" style="margin-top: 15px">
+								<div class="row" id="respJogo"></div>
+							</div>
+						</div>
 						
 					</div>
 					<div class="col l2 offset-l1 center-align">
@@ -94,10 +102,7 @@
 							</div>
 						</fieldset>
 					</div>
-				</div>
-				<div class="row" id="respJogo">
-
-				</div>
+				</div>			
 				<div class="row left-align">
 					<div class="col l4 ">
 						<a class="waves-effect waves-light btn background btnControl" onClick="voltar()"><i class="material-icons"> arrow_back </i></a>
