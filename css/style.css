@@ -342,14 +342,15 @@
 		 border-radius: 50px !important;
 	}
 
-	.input-times{
-		font-size: 3rem !important;
-		height: 50px !important;	
+	.input-times{		
+		height: 50px !important;		
+		width: 7% !important;
+		font-size: 2rem !important;			
 		text-transform: uppercase;	
 		text-align: center;
 		border-bottom: 1px solid !important;
-		border-left: 1px solid !important;
-		border-right: 1px solid !important;
+		border-left:   1px solid !important;
+		border-right:  1px solid !important;
 		border-top: 1px solid !important;
 	}
 

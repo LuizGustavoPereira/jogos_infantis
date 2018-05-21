@@ -9,7 +9,7 @@
         <div class="card transparent darken-1">
             <div class="card-content blue-text"> 
 	            <div class="row">
-	            	<div class="col l10 offset-l1">
+	            	<div class="col l10 offset-l1 center-align">
 						<img src="imagens/times/futebol.png">
 	            	</div>
             	</div> 
@@ -37,8 +37,10 @@
 						        </div>							
 				     		</div>
 			     		</div>
-			     		<div class="col l12 ">
-	            			<input type="text" name="nomeTime" id="nomeTime" value="" class="input-times">
+			     		<div class="col l12" id="divResp">
+	            			
+	            		</div>
+	            		<div class="col l12">	            			
 	            			<h5 id="dica"></h5>
 	            		</div>
 	            	</div>

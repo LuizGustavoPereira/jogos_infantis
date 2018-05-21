@@ -4,6 +4,8 @@ var resp = "",
 	pontuacao = 0,
 	vidas = 3,
 	count = 0,
+	letras = 0,
+	posInput = 1,
 	tempo;
 
 function comecarJogo(){
@@ -27,56 +29,126 @@ function sorteiaTime(){
 	verificaTimes()	
 	switch (time){
 		case 1:
+			letras = 8;
+			$("#divResp").html("");
 			$("#logoTime").html("<img src='imagens/times/escudo-do-botafogo.png'>");
-			$("#dica").html("DICA: 8 letras");
+			for(var i=0; i < letras; i++){
+				$("#divResp").append("<input type=\"text\" name=\"nomeTime\" id=\"nomeTime"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
+			}
+			$("#dica").html("DICA: "+letras+" letras");
 			resp = "BOTAFOGO";
 		break;
 		case 2:
+			letras = 11;
+			$("#divResp").html("");
 			$("#logoTime").html("<img src='imagens/times/escudo-do-corinthians.png'>");
-			$("#dica").html("DICA: 12 letras");
+			for(var i=0; i < letras; i++){
+				$("#divResp").append("<input type=\"text\" name=\"nomeTime\" id=\"nomeTime"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
+			}
+			$("#dica").html("DICA: "+letras+" letras");
 			resp = "CORINTHIANS";
 		break;
 		case 3:
+			letras = 8;
+			$("#divResp").html("");
 			$("#logoTime").html("<img src='imagens/times/escudo-do-flamengo.png'>");
-			$("#dica").html("DICA: 8 letras");
+			for(var i=0; i < letras; i++){
+				$("#divResp").append("<input type=\"text\" name=\"nomeTime\" id=\"nomeTime"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
+			}
+			$("#dica").html("DICA: "+letras+" letras");
 			resp = "FLAMENGO";
 		break;
 		case 4:
+			letras = 10;
+			$("#divResp").html("");
 			$("#logoTime").html("<img src='imagens/times/escudo-do-fluminense.png'>");
-			$("#dica").html("DICA: 10 letras");
+			for(var i=0; i < letras; i++){
+				$("#divResp").append("<input type=\"text\" name=\"nomeTime\" id=\"nomeTime"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
+			}
+			$("#dica").html("DICA: "+letras+" letras");
 			resp = "FLUMINENSE";
 		break;
 		case 5:
+			letras = 6;
+			$("#divResp").html("");
 			$("#logoTime").html("<img src='imagens/times/escudo-do-gremio.png'>");
-			$("#dica").html("DICA: 6 letras");
+			for(var i=0; i < letras; i++){
+				$("#divResp").append("<input type=\"text\" name=\"nomeTime\" id=\"nomeTime"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
+			}
+			$("#dica").html("DICA: "+letras+" letras");
 			resp = "GRÊMIO";
 		break;
 		case 6:
+			letras = 13;
+			$("#divResp").html("");
 			$("#logoTime").html("<img src='imagens/times/escudo-do-internacional.png'>");
-			$("#dica").html("DICA: 13 letras");
+			for(var i=0; i < letras; i++){
+				$("#divResp").append("<input type=\"text\" name=\"nomeTime\" id=\"nomeTime"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
+			}
+			$("#dica").html("DICA: "+letras+" letras");
 			resp = "INTERNACIONAL";
 		break;
 		case 7:
+			letras = 9;
+			$("#divResp").html("");
 			$("#logoTime").html("<img src='imagens/times/escudo-do-palmeiras.png'>");
-			$("#dica").html("DICA: 9 letras");
+			for(var i=0; i < letras; i++){
+				$("#divResp").append("<input type=\"text\" name=\"nomeTime\" id=\"nomeTime"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
+			}
+			$("#dica").html("DICA: "+letras+" letras");
 			resp = "PALMEIRAS";
 		break;
 		case 8:
+			letras = 6;
+			$("#divResp").html("");
 			$("#logoTime").html("<img src='imagens/times/escudo-do-santos.png'>");
-			$("#dica").html("DICA: 6 letras");
+			for(var i=0; i < letras; i++){
+				$("#divResp").append("<input type=\"text\" name=\"nomeTime\" id=\"nomeTime"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
+			}
+			$("#dica").html("DICA: "+letras+" letras");
 			resp = "SANTOS";
 		break;
 		case 9:
+			letras = 8;
+			$("#divResp").html("");
 			$("#logoTime").html("<img src='imagens/times/escudo-do-sao-paulo.png'>");
-			$("#dica").html("DICA: 8 letras");
+			for(var i=0; i < letras; i++){
+				$("#divResp").append("<input type=\"text\" name=\"nomeTime\" id=\"nomeTime"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
+			}
+			$("#dica").html("DICA: "+letras+" letras");
 			resp = "SÃO PAULO";
 		break;
 		case 10:
+			letras = 5;
+			$("#divResp").html("");
 			$("#logoTime").html("<img src='imagens/times/escudo-do-vasco.png'>");
-			$("#dica").html("DICA: 5 letras");
+			for(var i=0; i < letras; i++){
+				$("#divResp").append("<input type=\"text\" name=\"nomeTime\" id=\"nomeTime"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
+			}
+			$("#dica").html("DICA: "+letras+" letras");
 			resp = "VASCO";
 		break;
-	}
+	}	
+	$("input[type='text']").bind('keyup',function(e) {
+		var nomeTime = [];
+		if(e.keyCode == '13'){
+			for(var i = 0; i<letras; i++){
+				nomeTime.push( $("#nomeTime"+i).val() );
+			}
+			nomeTime = nomeTime.toString();
+
+			for(var i = 0; i<nomeTime.length; i++){
+				nomeTime = nomeTime.replace(",", "")
+			}
+		
+			verificaResposta(nomeTime);
+		}else{
+			if(posInput <= letras){				
+				$("#nomeTime"+posInput).focus();
+				posInput++;
+			}
+		}
+	});
 		
 	
 }
@@ -84,6 +156,7 @@ function sorteiaTime(){
 function verificaTimes(){
 	if(sorteados.length >= 10){
 		alert("PARABENS! VOCÊ CONSEGUIU");
+		clearTimeout(tempo);
 		$("#jogarNovamente").show();
 		$("#nomeTime").prop('disabled', true);
 
@@ -97,8 +170,9 @@ function verificaTimes(){
 	}
 }
 
-function verificaResposta(){
-	var resposta  = $("#nomeTime").val().toUpperCase();
+function verificaResposta(nomeTime){
+	var resposta  = nomeTime.toUpperCase();
+	console.log(resposta)
 	$("#nomeTime").val("");
 	if( resposta == resp ){
 		pontuacao += 10;
@@ -161,9 +235,5 @@ $(document).ready(function(){
 	$("#jogo").hide();
 	$("#jogarNovamente").hide();
 
-	$("input[type='text']").bind('keydown',function(e) {
-		if(e.keyCode == '13'){
-			verificaResposta( );
-		}
-	});
+	
 });
