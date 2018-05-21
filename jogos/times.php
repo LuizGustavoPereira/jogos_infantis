@@ -30,7 +30,7 @@
             <div class="card-content "> 
 	            <div class="row">
 	            	<div class="col l7  xl6 offset-xl2 center-align" >
-	            		<div class="col l12 center-align">
+	            		<div class="col l6 center-align" style="margin-left: 27%;">
 		            		<div class="card card-imagens small">
 						        <div  id="logoTime">			        	
 									
@@ -39,6 +39,7 @@
 			     		</div>
 			     		<div class="col l12 ">
 	            			<input type="text" name="nomeTime" id="nomeTime" value="" class="input-times">
+	            			<h5 id="dica"></h5>
 	            		</div>
 	            	</div>
 	            	<div class="col l5 xl3 offset-xl1 center-align">
@@ -55,7 +56,7 @@
 							<fieldset class="tempo">
 								<div class="row">
 									<div class="col l7" id="min">
-										<p>inicio</p>
+										
 									</div>									
 									<div class="col l5" id="countTempo">
 										&nbsp;
