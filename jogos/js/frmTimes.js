@@ -6,6 +6,7 @@ var resp = "",
 	count = 0,
 	letras = 0,
 	posInput = 1,
+	nomeTime = [],
 	tempo;
 
 function comecarJogo(){
@@ -26,6 +27,8 @@ function comecarJogo(){
 }
 
 function sorteiaTime(){
+	nomeTime = [];
+	posInput = 1;
 	verificaTimes()	
 	switch (time){
 		case 1:
@@ -33,7 +36,7 @@ function sorteiaTime(){
 			$("#divResp").html("");
 			$("#logoTime").html("<img src='imagens/times/escudo-do-botafogo.png'>");
 			for(var i=0; i < letras; i++){
-				$("#divResp").append("<input type=\"text\" name=\"nomeTime\" id=\"nomeTime"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
+				$("#divResp").append("<input type=\"text\" name=\"nomeTime\" id=\"nomeTime"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\" data-next=\"#nomeTime"+(i+1)+"\" >");			
 			}
 			$("#dica").html("DICA: "+letras+" letras");
 			resp = "BOTAFOGO";
@@ -128,9 +131,9 @@ function sorteiaTime(){
 			$("#dica").html("DICA: "+letras+" letras");
 			resp = "VASCO";
 		break;
-	}	
-	$("input[type='text']").bind('keyup',function(e) {
-		var nomeTime = [];
+	}
+	$("#nomeTime0").focus();
+	$("input[type='text']").bind('keyup',function(e) {				
 		if(e.keyCode == '13'){
 			for(var i = 0; i<letras; i++){
 				nomeTime.push( $("#nomeTime"+i).val() );
