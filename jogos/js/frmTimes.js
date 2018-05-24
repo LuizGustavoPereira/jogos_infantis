@@ -6,7 +6,7 @@ var resp = "",
 	count = 0,
 	letras = 0,
 	posInput = 1,
-	nomeTime = [],
+	nomeTime = "",
 	tempo;
 
 function comecarJogo(){
@@ -136,14 +136,8 @@ function sorteiaTime(){
 	$("input[type='text']").bind('keyup',function(e) {				
 		if(e.keyCode == '13'){
 			for(var i = 0; i<letras; i++){
-				nomeTime.push( $("#nomeTime"+i).val() );
+				nomeTime += $("#nomeTime"+i).val() ;
 			}
-			nomeTime = nomeTime.toString();
-
-			for(var i = 0; i<nomeTime.length; i++){
-				nomeTime = nomeTime.replace(",", "")
-			}
-		
 			verificaResposta(nomeTime);
 		}else{
 			if(posInput <= letras){				
