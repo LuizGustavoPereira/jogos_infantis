@@ -381,7 +381,12 @@
 
 
 
-#DivDestino { width:100%; height:100%; border:1px solid #aaaaaa; }
+#DivDestino {  
+	width: 19%;
+    margin-left: 40%;
+    margin-top: 60%;
+    height: 60px; 
+			}
 
 #palhaco {
 	
