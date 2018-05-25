@@ -17,15 +17,9 @@ $routerContent->addRoutes(array(
 	array('GET', '/times/', 	'/times.php', ''),
 	array('GET', '/times/[*]', 	'/times.php', ''),
 
-<<<<<<< HEAD
-	array('GET', '/monteiro-lobato', 		'/monteiroLobato.php', 'monteiroLobato'),
-	array('GET', '/monteiro-lobato/', 		'/monteiroLobato.php', ''),
-	array('GET', '/monteiro-lobato/[*]', 	'/monteiroLobato.php', ''),
-=======
 	array('GET', '/rosto', 		'/rosto.php', 'rosto'),
 	array('GET', '/rosto/', 	'/rosto.php', ''),
 	array('GET', '/rosto/[*]', 	'/rosto.php', ''),
->>>>>>> 08b19785c2516806ff823c9292b0a106b32dd615
 
 	array('GET','/menu-principal',  	'/paginaInicial.php', 'menu'),
 	array('GET','/menu-principal/',  	'/paginaInicial.php', ''),
