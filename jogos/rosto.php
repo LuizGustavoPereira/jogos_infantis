@@ -4,15 +4,16 @@
             <div class="card-content blue-text text-darken-2"> 
 	            <div class="row"> 					
 					<br />
-					<div style="background:  url(imagens/rosto/palhaco.jpg); width: 370px; height: 400px">						
-						<div class="col l10 offset-l1" id="DivDestino" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-					</div>
-					<img ondrop="drop(event)" ondragover="allowDrop(event)" />
-					<img id="LogoDrag" src="imagens/rosto/emoticon.png" draggable="true" ondragstart="drag(event)"  />
+					
+					
             	</div>  
             	<div class="row">
             		<div class="col l10 offset-l1 center-align" id="nomeCor">
-
+            			<div style="background:  url(imagens/rosto/palhaco.jpg); width: 370px; height: 400px">					
+						<div id="DivDestino" ondrop="drop(event)" ondragover="allowDrop(event)"></div>						
+					</div>
+					<img ondrop="drop(event)" ondragover="allowDrop(event)" />
+						<img style="width: 7%" id="LogoDrag" src="imagens/rosto/emoticon.png" draggable="true" ondragstart="drag(event)"  />
             		</div>
             	</div>          	
 	            <div class="row left-align">
