@@ -381,4 +381,10 @@
 
 
 
-#DivDestino { width:350px; height:70px; padding:10px; border:1px solid #aaaaaa; }
+#DivDestino { width:100%; height:100%; border:1px solid #aaaaaa; }
+
+#palhaco {
+	
+    background:  url(imagens/rosto/palhaco.jpg);
+
+}
