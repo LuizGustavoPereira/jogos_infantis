@@ -35,6 +35,16 @@
 			     	</div>
 			    </a>
 	    	</div>
+		    <div class="col l3 ">
+		    	<a href="./jogos/monteiro-lobato">
+			      	<div class="card card-imagens small ">
+				        <div class="card-image card-ver-todos" >			        	
+							<img src="imagens/monteiroLobato/monteiroLobato.png">
+				        </div>		        
+						<span class="card-title amber-text">Brincando com Monteiro Lobato</span>
+			     	</div>
+			    </a>
+	    	</div>
   		</div>
     </div>
 </div>
