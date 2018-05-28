@@ -1,6 +1,24 @@
 var cor = 1;
 
+audio = document.getElementById('audio');
+var bool = true
+
+function musica(){	
+	if(bool == true){
+		$("#icone-musica").html("<i class='material-icons'>volume_off</i>")
+		audio.pause();
+		bool = false
+	}
+	else{
+		$("#icone-musica").html("<i class='material-icons'>volume_up</i>")
+		audio.play();
+		bool = true
+	}
+}
+
+
 function comecarJogo(){
+	audio.play()
 	$("#jogo").show();
 	$("#telaInicial").hide();
 	$("#nomeCor").html("<h3 style='color: blue' >AZUL</h3>");

@@ -40,6 +40,15 @@
         <div class="card transparent darken-1">
             <div class="card-content blue-text text-darken-2"> 
 	            <div class="row">
+
+	            	<audio id="audio">
+					    <source src="sons/brasileiro/musica1.mp3" type="audio/mpeg">
+					    Seu navegador não possui suporte ao elemento audio
+					</audio>					
+					<a class="icon-sound"  onclick="musica()" id="icone-musica"><i class="material-icons">volume_up</i></a>
+					
+
+
 	            	<div class="center-align col l12" id="bandeira">
 	            		<img src='imagens/brasileiro/bandeira-preta-branca.png' class='img-brasileiro-bandeira'>
             		</div>  
@@ -63,7 +72,7 @@
             		<div class="col l10 offset-l1 center-align" id="nomeCor">
 
             		</div>
-            	</div>          	
+            	</div>      	
 	            <div class="row left-align">
 					<div class="col l4 ">
 						<a class="waves-effect waves-light btn background btnControl" onClick="voltar()"><i class="material-icons"> arrow_back </i></a>
