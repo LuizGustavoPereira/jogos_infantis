@@ -7,8 +7,9 @@
             		<div class="col l10 offset-l1 center-align" id="nomeCor">
                         <div>
                             <img style="width: 50%"  src="imagens/rosto/1.png">
-                            <div id="DivDestino" ondrop="drop(event)" ondragover="allowDrop(event)"></div>          
-                        </div>            			
+
+                        </div> 
+                        <div id="DivDestino" ondrop="drop(event)" ondragover="allowDrop(event)"></div>                   			
 								
             		</div>	
             	</div> 
