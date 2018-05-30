@@ -1,15 +1,13 @@
 <div class="row" id="jogo" display>
     <div class="col l10 offset-l1">
         <div class="card transparent darken-1">
-            <div class="card-content blue-text text-darken-2"> 
-	            
-            	<div class="row">
-            		<div class="col l10 offset-l1 center-align" id="nomeCor">
-                        <div>
-                            <img style="width: 50%"  src="imagens/rosto/1.png">
 
-                        </div> 
-                        <div id="DivDestino" ondrop="drop(event)" ondragover="allowDrop(event)"></div>                   			
+            	<div class="row">
+            		<div class="col l10 offset-l1 center-align row" id="nomeCor">
+                         
+                        <img style="width: 50%"  src="imagens/rosto/1.png">
+                        <div class="col-md-8" id="DivDestino" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        </div>                                   			
 								
             		</div>	
             	</div> 

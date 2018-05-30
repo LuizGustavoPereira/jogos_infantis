@@ -81,6 +81,7 @@
 						$menu->append('Brasileiro',  	'./jogos/brasileiro/');
 						$menu->append('Tabuada',  		'./jogos/tabuada/');
 						$menu->append('Times', 	  		'./jogos/times/');
+						$menu->append('Brincando com Monteiro Lobato', 	  		'./jogos/monteiro-lobato/');
 					$menu->render();
 
 					$menu->renderLink('Sair', './logOut/', '');
