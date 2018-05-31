@@ -47,20 +47,9 @@
 					</audio>					
 					<a class="icon-sound"  onclick="musica()" id="icone-musica"><i class="material-icons">volume_up</i></a>
 					 -->
-					 
-					 	<div style="float: left; margin-top: 10%" class="col-md-8">
-					 		<p style="font-size: 3vw">Será que o pedrinho tem medo do</i>
-					 	</div>
-					 	<img style="width: 10%; float: left;" src="imagens/monteiro-lobato/saci.png">
-					 	<div style="float: left; margin-top: 10%" class="col-md-8">
-					 		<p style="font-size: 3vw">?</p>
-					 	</div>
-					 
-
-
-	            	
-            		
-        			
+					<div class="col l12" id="perguntas">
+						
+					</div>					 					 						 	                    		
             	</div>  
             	   	
 	            <div class="row left-align">
