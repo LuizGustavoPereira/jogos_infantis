@@ -29,6 +29,10 @@ $routerContent->addRoutes(array(
 	array('GET','/monteiro-lobato/',  	'/monteiroLobato.php', ''),
 	array('GET','/monteiro-lobato/[*]',  '/monteiroLobato.php', ''),
 
+	array('GET','/antes-depois',  		'/antesDepois.php', 'antesDepois'),
+	array('GET','/antes-depois/',  		'/antesDepois.php', ''),
+	array('GET','/antes-depois/[*]',	'/antesDepois.php', ''),
+
 ));	
 
 $matchContent = $routerContent->match();

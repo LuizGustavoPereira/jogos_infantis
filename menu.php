@@ -77,11 +77,12 @@
 			        $menu->renderLink('Home', './home/', 'home');
 
 					$menu = new Menu('Jogos', 'games');
-						$menu->append('Ver Todos', 		'./jogos/menu-principal/');
-						$menu->append('Brasileiro',  	'./jogos/brasileiro/');
-						$menu->append('Tabuada',  		'./jogos/tabuada/');
-						$menu->append('Times', 	  		'./jogos/times/');
+						$menu->append('Ver Todos', 								'./jogos/menu-principal/');
+						$menu->append('Antes e Depois', 						'./jogos/antes-depois/');
+						$menu->append('Brasileiro',  							'./jogos/brasileiro/');
 						$menu->append('Brincando com Monteiro Lobato', 	  		'./jogos/monteiro-lobato/');
+						$menu->append('Tabuada',  								'./jogos/tabuada/');
+						$menu->append('Times', 	  								'./jogos/times/');
 					$menu->render();
 
 					$menu->renderLink('Sair', './logOut/', '');
