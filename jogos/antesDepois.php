@@ -2,15 +2,15 @@
 <div class="row" >
 	<div class="col l10 offset-l1">
 		<div class="titulo ">
-			<h3 class="float-left amber-text" >ADIVINHE OS TIMES</h3>			
+			<h3 class="float-left deep-purple-text" >ANTES E DEPOIS</h3>			
 		</div> 
 	</div>
 	<div class="col l10 offset-l1" id="telaInicial" display>
         <div class="card transparent darken-1">
             <div class="card-content blue-text"> 
 	            <div class="row">
-	            	<div class="col l10 offset-l1 center-align">
-						<img src="imagens/times/futebol.png">
+	            	<div class="col l10 offset-l1 center-align ">
+						<h3 class=" deep-purple-text" >ADIVINHE O QUE VEM ANTES E DEPOIS</h3>
 	            	</div>
             	</div> 
             	<div class="row center-align">
@@ -29,44 +29,7 @@
         <div class="card transparent darken-1">
             <div class="card-content "> 
 	            <div class="row">
-	            	<div class="col l7  xl6 offset-xl2 center-align" >
-	            		<div class="col l6 center-align" style="margin-left: 27%;">
-		            		<div class="card card-imagens small">
-						        <div  id="logoTime">			        	
-									
-						        </div>							
-				     		</div>
-			     		</div>
-			     		<div class="col l12" id="divResp">
-	            			
-	            		</div>
-	            		<div class="col l12">	            			
-	            			<h5 id="dica"></h5>
-	            		</div>
-	            	</div>
-	            	<div class="col l5 xl3 offset-xl1 center-align">
-						<fieldset>
-							<legend>Pontuação</legend>
-							<h5><b id="pontuacao">0</b></h5>
-						</fieldset>
-						<fieldset>
-							<legend>Vidas</legend>
-							<h5><b class="red-text" id="vidas"></b><i class="material-icons red-text">favorite</i></h5>
-						</fieldset>
-						<fieldset>
-							<legend>Tempo</legend>
-							<fieldset class="tempo">
-								<div class="row">
-									<div class="col l7" id="min">
-										
-									</div>									
-									<div class="col l5" id="countTempo">
-										&nbsp;
-									</div>
-								</div>
-							</fieldset>
-						</fieldset>
-					</div>
+		            	
 	            	
             	</div> 
             	<div class="row left-align">
