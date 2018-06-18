@@ -390,8 +390,35 @@
     height: 60px; 
 			}
 
-#palhaco {
-	
+#palhaco {	
     background:  url(imagens/rosto/palhaco.jpg);
-
 }
+
+	.pergunta-monteiro{
+		width: 100%;
+	}
+
+	.pergunta-monteiro p{
+		font-size: 3vw
+	}
+
+	.pergunta-monteiro img{
+		width: 10%
+	}
+
+	.resposta-monteiro{
+		margin-top: 5%
+	}
+
+	.resposta-monteiro p{
+		font-weight: bolder;
+		color:	saddlebrown !important;
+		cursor: pointer;
+		float: left;
+		font-size: 2.5vw !important;
+		margin-right: 5% !important;
+	}
+
+	.resposta-monteiro p:hover{
+		color: black !important	
+	}

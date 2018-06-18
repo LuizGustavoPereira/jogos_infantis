@@ -47,15 +47,33 @@
 					</audio>					
 					<a class="icon-sound"  onclick="musica()" id="icone-musica"><i class="material-icons">volume_up</i></a>
 					 -->
-					<div class="col l12" id="perguntas">
+					<div class="col l10" id="perguntas">
 						
-					</div>					 					 						 	                    		
+					</div>	
+
+					<div class="col l2 center-align">
+						<fieldset>
+							<legend>Pontuação</legend>
+							<h5><b id="pontuacao">0</b></h5>
+						</fieldset>
+						<fieldset>
+							<legend>Vidas</legend>
+							<h5><b class="red-text" id="vidas"></b><i class="material-icons red-text">favorite</i></h5>
+						</fieldset>
+						
+					</div>
+
             	</div>  
+
+
             	   	
 	            <div class="row left-align">
 					<div class="col l4 ">
 						<a class="waves-effect waves-light btn background btnControl" onClick="voltar()"><i class="material-icons"> arrow_back </i></a>
-					</div>					
+					</div>	
+					<div class="col l4">
+						<a class="waves-effect waves-light btn background btnControl" onClick="comecarJogo()" id="jogarNovamente" display="">Jogar Novamente</a>
+					</div>				
 				</div>	            
             </div> 
         </div>
