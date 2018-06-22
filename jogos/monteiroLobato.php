@@ -38,12 +38,12 @@
 	    <div class="card transparent darken-1">
 	        <div class="card-content blue-text text-darken-2"> 
 		        <div class="row">
-		            	<!-- <audio id="audio">
-						    <source src="sons/brasileiro/musica1.mp3" type="audio/mpeg">
-						    Seu navegador não possui suporte ao elemento audio
-						</audio>					
-						<a class="icon-sound"  onclick="musica()" id="icone-musica"><i class="material-icons">volume_up</i></a>
-						 -->
+		            <audio id="audio">
+						<source src="sons/monteiro-lobato/sitio.mp3" type="audio/mpeg">
+						   	Seu navegador não possui suporte ao elemento audio
+					</audio>					
+					<a class="icon-sound"  onclick="musica()" id="icone-musica"><i class="material-icons">volume_up</i></a>
+						
 					<div class="col l10" id="perguntas">
 							
 					</div>	
@@ -63,10 +63,7 @@
 		        <div class="row left-align">
 					<div class="col l4 ">
 						<a class="waves-effect waves-light btn background btnControl" onClick="voltar()"><i class="material-icons"> arrow_back </i></a>
-					</div>	
-					<div class="col l4">
-						<a class="waves-effect waves-light btn background btnControl" onClick="comecarJogo()" id="jogarNovamente" display="">Jogar Novamente</a>
-					</div>				
+					</div>					
 				</div>	            
 	        </div>
 	    </div>

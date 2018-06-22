@@ -6,8 +6,14 @@ var cor = 1,
 	vidas = 3;
 
 
+audio = document.getElementById('audio');
+var bool = true
 
-function comecarJogo(){	
+
+function comecarJogo(){		
+	audio.play()
+	$("#ganhou-jogo").hide();
+	$("#fim-do-jogo").hide();
 	$("#jogo").show();	
 	$("#telaInicial").hide();
 	$("#jogarNovamente").hide();
@@ -190,8 +196,14 @@ function formularPergunta(){
 
 function sorteiaPergunta(){	
 	if(perguntasFeitas.length >= 10){
+		pontuacao = 0,
+		perguntasFeitas = [],
+		vidas = 3;		
+		bool = true;
+		musica();
 		$("#jogo").hide();
 		$("#ganhou-jogo").show();
+
 	}else{
 		pergunta = Math.floor((Math.random() * 10) + 1);		
 		if(perguntasFeitas.indexOf(pergunta) > -1){
@@ -208,10 +220,24 @@ function voltar(){
 	$("#telaInicial").show();
 }
 
+function musica(){	
+	if(bool == true){
+		$("#icone-musica").html("<i class='material-icons'>volume_off</i>")
+		audio.pause();
+		bool = false
+	}
+	else{
+		$("#icone-musica").html("<i class='material-icons'>volume_up</i>")
+		audio.play();
+		bool = true
+	}
+}
+
 $(document).ready(function(){
 	$("#ganhou-jogo").hide();
 	$("#fim-do-jogo").hide();
 	$("#jogo").hide();
 	$("#vidas").html(vidas)
+
 });
 
