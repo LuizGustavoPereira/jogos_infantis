@@ -8,10 +8,9 @@ var cor = 1,
 
 
 function comecarJogo(){	
-	$("#jogo").show();
+	$("#jogo").show();	
 	$("#telaInicial").hide();
 	$("#jogarNovamente").hide();
-	$("#nomeCor").html("<h3 style='color: blue' >AZUL</h3>");
 	formularPergunta();
 }
 
@@ -27,8 +26,9 @@ function verificaResposta(valor) {
 		$("#vidas").html(vidas);
 		alert("resposta errada")
 
-		if( vidas < 0 ){	
-			$("#jogarNovamente").show();
+		if( vidas < 0 ){
+			$("#jogo").hide();
+			$("#fim-do-jogo").show();
 		}
 	}
 
@@ -36,12 +36,12 @@ function verificaResposta(valor) {
 
 function formularPergunta(){
 	sorteiaPergunta();
-	switch(1){
+	switch(pergunta){
 		case 1:
 			resposta = "SACI"
-			$("#perguntas").html("<div style='float: left;' class='center-align col-md-8 pergunta-monteiro'>"+
+			$("#perguntas").html("<div style='float: left; margin-top: 5%' class='col-md-8 pergunta-monteiro'>"+
 					 		"<p>Será que o pedrinho tem medo do "+
-					 		"<img style='width: 10%' src='imagens/monteiro-lobato/saci.png'> ?</p>"+
+					 		"<img style='width: 7%' src='imagens/monteiro-lobato/saci.png'> ?</p>"+
 					 	"</div>"+
 					 	"<div class='center-align col l9 offset-l2 xl10 offset-xl2 resposta-monteiro'>"+
 						 	"<p onClick=\"verificaResposta('SACI')\">SACI</p>"+
@@ -53,12 +53,12 @@ function formularPergunta(){
 		break;
 		case 2:
 			resposta = "BOLO"
-			$("#perguntas").html("<div style='float: left; font-size: 3vw' class='col-md-8 pergunta-monteiro'>"+
+			$("#perguntas").html("<div style='float: left; margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
 					 		"<p>A Tia Anastacia faz um "+
 					 		"<img src='imagens/monteiro-lobato/bolo.png'>"+
 					 		" muito gostoso.</p>"+
 				 		"</div>"+
-					 	"<div class='center-align col-md-8 resposta-monteiro'>"+
+					 	"<div class='center-align col l9 offset-l2 xl11 offset-xl1 resposta-monteiro'>"+
 						 	"<p onClick=\"verificaResposta('BOLA')\">BOLA</p>"+
 						 	"<p onClick=\"verificaResposta('BOLO')\">BOLO</p>"+
 						 	"<p onClick=\"verificaResposta('BALA')\">BALA</p>"+
@@ -68,13 +68,13 @@ function formularPergunta(){
 		break;
 		case 3:
 			resposta = "BONECA"
-			$("#perguntas").html("<div style='float: left;' class='col-md-8 pergunta-monteiro'>"+
+			$("#perguntas").html("<div style='float: left; margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
 				 		"<p style='font-size: 3vw'>Emilia é uma"+
 				 		"<img style='width: 10%' src='imagens/monteiro-lobato/emilia.png'>"+
 				 		" de pano.</p>"+
 				 	"</div>"+
-					 	"<div class='resposta-monteiro'>"+
-						 	"<p onClick=\"verificaResposta('MENINA')\">MENINA</p>"+
+					 	"<div class='center-align col l9 offset-l2 xl12 offset-xl0 resposta-monteiro'>"+
+						 	"<p onClick=\"verificaResposta('BOLA')\">BOLA</p>"+
 						 	"<p onClick=\"verificaResposta('BRUXA')\">BRUXA</p>"+
 						 	"<p onClick=\"verificaResposta('BONECA')\">BONECA</p>"+
 						 	"<p onClick=\"verificaResposta('BAILARINA')\">BAILARINA</p>"+
@@ -83,27 +83,27 @@ function formularPergunta(){
 		break;
 		case 4:
 			resposta = "PORCO"
-			$("#perguntas").html("<div style='float: left;' class='col-md-8 pergunta-monteiro'>"+
+			$("#perguntas").html("<div style='float: left; margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
 				 		"<p style='font-size: 3vw'>Marquês de Rabicó é um"+
 				 		"<img style='width: 10%' src='imagens/monteiro-lobato/porco.png'>"+
 				 		"</p>"+
 				 	"</div>"+
-					 	"<div class='resposta-monteiro'>"+
+					 	"<div class='center-align col l9 offset-l2 xl12 offset-xl0 resposta-monteiro'>"+
 						 	"<p onClick=\"verificaResposta('MENINO')\">MENINO</p>"+
 						 	"<p onClick=\"verificaResposta('HOMEM')\">HOMEM</p>"+
-						 	"<p onClick=\"verificaResposta('PRINCIPE')\">PRINCIPE</p>"+
+						 	"<p onClick=\"verificaResposta('BONECO')\">BONECO</p>"+
 						 	"<p onClick=\"verificaResposta('PORCO')\">PORCO</p>"+
 					 	"</div>"
 					);	
 		break;
 		case 5:
 			resposta = "BOLA"
-			$("#perguntas").html("<div style='float: left' class='col-md-8 pergunta-monteiro'>"+
+			$("#perguntas").html("<div style='float: left; margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
 				 		"<p style='font-size: 3vw'>Pedrinho gosta de jogar "+
 				 		"<img style='width: 10%' src='imagens/monteiro-lobato/bola.png'>"+
 				 		".</p>"+
 				 	"</div>"+
-					 	"<div class='resposta-monteiro'>"+
+					 	"<div class='center-align col l9 offset-l2 xl12 offset-xl0 resposta-monteiro'>"+
 						 	"<p onClick=\"verificaResposta('BOLA')\">BOLA</p>"+
 						 	"<p onClick=\"verificaResposta('XADREZ')\">XADREZ</p>"+
 						 	"<p onClick=\"verificaResposta('DAMA')\">DAMA</p>"+
@@ -113,12 +113,12 @@ function formularPergunta(){
 		break;
 		case 6:
 			resposta = "PATOS"
-			$("#perguntas").html("<div style='float: left' class='col-md-8 pergunta-monteiro'>"+
+			$("#perguntas").html("<div style='float: left; margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
 					 		"<p style='font-size: 3vw'>No sítio do Pica Pau Amarelo, tia Anastácia cuida dos "+
 					 		"<img style='width: 10%;' src='imagens/monteiro-lobato/pato.png'>"+
 					 		 ".</p>"+
 					 	"</div>"+
-					 	"<div class='resposta-monteiro'>"+
+					 	"<div class='center-align col l9 offset-l2 xl12 offset-xl0 resposta-monteiro'>"+
 						 	"<p onClick=\"verificaResposta('PORCOS')\">PORCOS</p>"+
 						 	"<p onClick=\"verificaResposta('CAVALOS')\">CAVALOS</p>"+
 						 	"<p onClick=\"verificaResposta('PATOS')\">PATOS</p>"+
@@ -128,12 +128,12 @@ function formularPergunta(){
 		break;
 		case 7:
 			resposta = "PIPA"
-			$("#perguntas").html("<div style='float: left' class='col-md-8 pergunta-monteiro'>"+
+			$("#perguntas").html("<div style='float: left; margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
 				 		"<p style='font-size: 3vw'>Pedrinho e Emilia brincam de "+
 				 		"<img style='width: 10%' src='imagens/monteiro-lobato/pipa.png'>"+
 				 		 ".</p>"+
 				 	"</div>"+
-					 	"<div class='resposta-monteiro'>"+
+					 	"<div class='center-align col l9 offset-l2 xl12 offset-xl0 resposta-monteiro'>"+
 						 	"<p onClick=\"verificaResposta('PEGA-PEGA')\">PEGA-PEGA</p>"+
 						 	"<p onClick=\"verificaResposta('PIPA')\">PIPA</p>"+
 						 	"<p onClick=\"verificaResposta('BOLA')\">BOLA</p>"+
@@ -147,7 +147,7 @@ function formularPergunta(){
 					 		"<p style='font-size: 3vw'>Visconde de Sabugosa é uma espiga de "+
 					 		"<img style='width: 10%' src='imagens/monteiro-lobato/milho.png'>.</p>"+
 					 	"</div>"+
-					 	"<div class='resposta-monteiro center-align'>"+
+					 	"<div class='center-align col l9 offset-l2 xl12 offset-xl0 resposta-monteiro'>"+
 						 	"<p onClick=\"verificaResposta('ARROZ')\">ARROZ</p>"+
 						 	"<p onClick=\"verificaResposta('MILHO')\">MILHO</p>"+
 						 	"<p onClick=\"verificaResposta('BANANA')\">BANANA</p>"+
@@ -159,11 +159,11 @@ function formularPergunta(){
 			resposta = "OCULOS"
 			$("#perguntas").html("<div style='float: left; margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
 					 		"<p style='font-size: 3vw'>Dona Benta usa "+
-					 		"<img style='width: 10%' src='imagens/monteiro-lobato/saci.png'>.</p>"+					 	
+					 		"<img style='width: 10%' src='imagens/monteiro-lobato/oculos.png'>.</p>"+					 	
 					 	"</div>"+
-					 		"<div class='resposta-monteiro'>"+
+					 		"<div class='center-align col l9 offset-l2 xl12 offset-xl0 resposta-monteiro'>"+
 						 	"<p onClick=\"verificaResposta('VESTIDO')\">VESTIDO</p>"+
-						 	"<p style='margin-left: 5%' onClick=\"verificaResposta('BOTA')\">BOTA</p>"+
+						 	"<p onClick=\"verificaResposta('BOTA')\">BOTA</p>"+
 						 	"<p onClick=\"verificaResposta('OCULOS')\">OCULOS</p>"+
 						 	"<p onClick=\"verificaResposta('CASACO')\">CASACO</p>"+
 					 	"</div>"
@@ -172,11 +172,11 @@ function formularPergunta(){
 		break;
 		case 10:
 			resposta = "PIPOCA"
-			$("#perguntas").html("<div style='float: left' class='col-md-8 pergunta-monteiro'>"+
+			$("#perguntas").html("<div style='float: left; margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
 					 		"<p style='font-size: 3vw'>Pedrinho e Narizinho pediram pra tia Anastácia fazer "+
 					 		"<img style='width: 10%' src='imagens/monteiro-lobato/pipoca.png'>.</p>"+
 					 	"</div>"+
-					 		"<div class='resposta-monteiro'>"+
+					 		"<div class='center-align col l9 offset-l2 xl12 offset-xl0 resposta-monteiro'>"+
 						 	"<p onClick=\"verificaResposta('BOLO')\">BOLO</p>"+
 						 	"<p onClick=\"verificaResposta('SUCO')\">SUCO</p>"+
 						 	"<p onClick=\"verificaResposta('TORTA')\">TORTA</p>"+
@@ -190,7 +190,8 @@ function formularPergunta(){
 
 function sorteiaPergunta(){	
 	if(perguntasFeitas.length >= 10){
-		alert("show");
+		$("#jogo").hide();
+		$("#ganhou-jogo").show();
 	}else{
 		pergunta = Math.floor((Math.random() * 10) + 1);		
 		if(perguntasFeitas.indexOf(pergunta) > -1){
@@ -208,6 +209,8 @@ function voltar(){
 }
 
 $(document).ready(function(){
+	$("#ganhou-jogo").hide();
+	$("#fim-do-jogo").hide();
 	$("#jogo").hide();
 	$("#vidas").html(vidas)
 });
