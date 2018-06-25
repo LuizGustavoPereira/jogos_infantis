@@ -25,7 +25,7 @@ function comecarJogo(){
 	formularPergunta();
 }
 
-function verificaResposta(resposta) {	
+function verificaResposta(resposta) {
 	if(index == 1){
 		if(resposta == respostaAntes){
 			$("#antes").val(resposta)

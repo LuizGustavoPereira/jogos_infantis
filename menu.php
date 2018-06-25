@@ -1,5 +1,4 @@
-<?php
-	#session_start();
+<?php	
 	require_once "config.php";
 	require_once "classes/autoload.php";
 	require_once "classes/Menu.Class.php";
@@ -16,9 +15,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>Jogos Educacionais</title>
 	<base href="<?php print INCLUDE_PATH; ?>/">
-
-    <!-- <link rel="icon" type="image/ico" sizes="96x96" href="img/favicon.ico"> -->
-	<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons" > -->
 	<link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="css/materialize-fonts.css" media="screen,projection"/>
 	<link type="text/css" rel="stylesheet" href="css/materialize-customized.css" media="screen,projection"/>
@@ -43,8 +39,6 @@
 	<script src="js/jquery-confirm.js"></script>
 	<style type="text/css">
 		body{
-			/*background: url("imagens/imgFundo.BMP");						
-			background-attachment: fixed;*/
 			background: #fafafa;
 		}
 		.btntour{
@@ -81,6 +75,7 @@
 						$menu->append('Antes e Depois', 						'./jogos/antes-depois/');
 						$menu->append('Brasileiro',  							'./jogos/brasileiro/');
 						$menu->append('Brincando com Monteiro Lobato', 	  		'./jogos/monteiro-lobato/');
+						$menu->append('Matemática', 							'./jogos/matematica/');
 						$menu->append('Tabuada',  								'./jogos/tabuada/');
 						$menu->append('Times', 	  								'./jogos/times/');
 					$menu->render();
@@ -265,20 +260,7 @@
 	}
 
 	
-	// function logout(){
-	// 	if(confirm("Deseja realmente sair do sistema?")){
-	// 		$.ajax({
-	// 			type: "POST",
-	// 			url: "php/frmLogin.php",
-	// 			data: "processo=logout&usuLogin=<?php #print $_SESSION["usuario_peloggia"]["usuLogin"];?>",
-	// 			success: function(resposta){
-	// 				window.location.href = "login/";
-	// 			}	
-	// 		});
-	// 	}
-	// }
 
 </script>
-<!-- <script src="js/tour.js" type="text/javascript" charset="utf-8" ></script>  -->
 </body>
 </html>
