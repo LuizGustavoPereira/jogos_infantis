@@ -422,3 +422,28 @@
 	.resposta-monteiro p:hover{
 		color: black !important	
 	}
+
+	.resposta-antes-depois{
+		margin-top: 5%
+	}
+
+	.resposta-antes-depois p{
+		font-weight: bolder;
+		color:	purple !important;
+		cursor: pointer;
+		float: left;
+		font-size: 1.5vw !important;
+		margin-right: 5% !important;
+	}
+
+	.resposta-antes-depois p:hover{
+		color: #551A8B !important	
+	}
+	
+	.antes-depois{
+		margin-top: 2%;
+	}
+	.antes-depois input{		
+		font-weight: bolder;
+		font-size: 1.5vw !important;		
+	}
