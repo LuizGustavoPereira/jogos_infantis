@@ -2,7 +2,7 @@
 	<!-- Pagína inicial -->
 	<div class="col l10 offset-l1">
 		<div class="titulo ">
-			<h3 class="float-left indigo-text" >ANTES E DEPOIS</h3>			
+			<h3 class="float-left indigo-text" >JOGO DA MATEMÁTICA</h3>			
 		</div> 
 	</div>
 	<div class="col l10 offset-l1" id="telaInicial" display>
@@ -18,10 +18,9 @@
 						<a class="waves-effect waves-light btn background btnControl" onClick="comecarJogo()">COMEÇAR</a>
 					</div>
 				</div>          	
-            </div>            
+            </div>
         </div>
     </div>
-
 
 	<!-- Pagína do jogo -->
 	<div class="col l10 offset-l1" id="jogo" display>
