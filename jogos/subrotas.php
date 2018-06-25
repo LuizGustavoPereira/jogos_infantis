@@ -33,6 +33,10 @@ $routerContent->addRoutes(array(
 	array('GET','/antes-depois/',  		'/antesDepois.php', ''),
 	array('GET','/antes-depois/[*]',	'/antesDepois.php', ''),
 
+	array('GET','/matematica',  		'/matematica.php', 'matematica'),
+	array('GET','/matematica/',  		'/matematica.php', ''),
+	array('GET','/matematica/[*]',		'/matematica.php', ''),
+
 ));	
 
 $matchContent = $routerContent->match();

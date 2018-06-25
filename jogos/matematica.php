@@ -2,15 +2,15 @@
 	<!-- Pagína inicial -->
 	<div class="col l10 offset-l1">
 		<div class="titulo ">
-			<h3 class="float-left deep-purple-text" >ANTES E DEPOIS</h3>			
+			<h3 class="float-left indigo-text" >JOGO DA MATEMÁTICA</h3>			
 		</div> 
 	</div>
 	<div class="col l10 offset-l1" id="telaInicial" display>
         <div class="card transparent darken-1">
             <div class="card-content blue-text"> 
 	            <div class="row">
-	            	<div class="col l10 offset-l1 center-align ">
-						<h3 class=" deep-purple-text" >ADIVINHE O QUE VEM ANTES E DEPOIS.</h3>
+	            	<div class="col l10 offset-l1 center-align">
+						<img src="imagens/times/futebol.png" >
 	            	</div>
             	</div> 
             	<div class="row center-align">
@@ -18,10 +18,9 @@
 						<a class="waves-effect waves-light btn background btnControl" onClick="comecarJogo()">COMEÇAR</a>
 					</div>
 				</div>          	
-            </div>            
+            </div>
         </div>
     </div>
-
 
 	<!-- Pagína do jogo -->
 	<div class="col l10 offset-l1" id="jogo" display>
@@ -85,4 +84,4 @@
 		</div>	
 	</div>
 </div>
-<script src="jogos/js/frmAntesDepois.js" type="text/javascript"></script>
+<script src="jogos/js/frmMatematica.js" type="text/javascript"></script>

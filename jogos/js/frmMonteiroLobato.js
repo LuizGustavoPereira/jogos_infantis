@@ -30,7 +30,7 @@ function verificaResposta(valor) {
 	else{
 		vidas-=1;
 		$("#vidas").html(vidas);
-		alert("resposta errada")
+		alert("resposta errada");
 
 		if( vidas < 0 ){
 			$("#jogo").hide();
