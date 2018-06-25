@@ -215,6 +215,8 @@ function sorteiaPergunta(){
 }
 
 function voltar(){
+	bool = true;
+	musica();
 	perguntasFeitas = [];
 	$("#jogo").hide();
 	$("#telaInicial").show();

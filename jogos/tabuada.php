@@ -75,7 +75,7 @@
 			<div class="card-content blue-text">
 				<div class="row no-bottom">
 
-					<div class="col l8 center-align" >
+					<div class="col l8 xl9 center-align" >
 						<div class="row">
 							<div class="col l12" id="enunciado">
 								

@@ -28,7 +28,7 @@ function comecarJogo(){
 	}else if(valTabuada == 8){
 		$("#enunciado").html("<h4>Uma <img src='imagens/tabuada/aranha.png' class='img-tabuada-girafa'> tem 8 patas</h4>");
 	}else if(valTabuada == 10){
-		$("#enunciado").html("<h4>Uma <img src='imagens/tabuada/girafa.png' class='img-tabuada-girafa'> tem 4 patas</h4>");
+		$("#enunciado").html("<h4>Uma <img src='imagens/tabuada/arvore10.png' class='img-tabuada-10'> tem 10 maçãs</h4>");
 	}
 
 	
@@ -90,8 +90,8 @@ function calculaTabuada(valor = ""){
 		else if(valTabuada == 10){
 			$("#respJogo").html(
 								"<div class='col l12 center-align'>"+
-									"<h3> "+vetNumeros[numero]+" GIRAFAS tem "+
-										"<input class='input-tabuada resposta' type='text' value='"+valor+"' data-tabuada = "+valTabuada+"> patas</h3>"+
+									"<h3> "+vetNumeros[numero]+" ÁRVORES tem "+
+										"<input class='input-tabuada resposta' type='text' value='"+valor+"' data-tabuada = "+valTabuada+"> maçãs</h3>"+
 								"</div>"
 								);
 		}
