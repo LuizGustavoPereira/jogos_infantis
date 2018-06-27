@@ -57,7 +57,8 @@ function verificaResposta(resposta) {
 }
 
 function formularPergunta(){
-	sorteiaPergunta();	
+	sorteiaPergunta();
+	pergunta = 1	
 	switch(pergunta){
 		case 1:
 			respostaAntes = "SABADO";
@@ -65,7 +66,7 @@ function formularPergunta(){
 			$("#perguntas").html(	"<div class='col l4 antes-depois'>"+
 					 					"<input type='text' disabled id='antes' class='center'>"+
 					 				"</div>"+
-					 				"<div class='col l2 center'>"+
+					 				"<div class='col l3 center'>"+
 					 					"<h4><b>DOMINGO</b></h4>"+
 					 				"</div>"+
 					 				"<div class='col l4 antes-depois'>"+

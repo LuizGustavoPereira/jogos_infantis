@@ -1,8 +1,9 @@
 var cor         	= 1,
 	pergunta        = 0,	
-	resposta        = "",
+	operacao        = "",
 	primeiroNumero  = 0,
-	segundoNumero   = 0, 			
+	segundoNumero   = 0,
+	valorFinal		= 0,			
 	pontuacao       = 0,
 	perguntasFeitas = [],
 	vidas           = 3;
@@ -27,7 +28,7 @@ function comecarJogo(){
 
 function verificaResposta(valor) {
 	
-	if(valor == resposta){
+	if(valor == operacao){
 		pontuacao += 10
 		$("#pontuacao").html(pontuacao);
 		$("#resp").val(valor)
@@ -51,13 +52,13 @@ function formularPergunta(){
 	sorteiaPergunta();		
 	$("#perguntas").html(	
 						"<div class='col l8 offset-l2 center'>"+
-		 					"<h4><b>3</b> <input type='text' disabled id='resp' class='center pergunta-matematica'> <b> 1 = 4</b> </h4>"+
+		 					"<h4><b>"+primeiroNumero+"</b> <input type='text' disabled id='resp' class='center pergunta-matematica'> <b> "+segundoNumero+" = "+valorFinal+"</b> </h4>"+
 		 				"</div>"+									
 					 	"<div class='center col l10 offset-l1 xl5 offset-xl5 resposta-antes-depois'>"+
-						 	"<p onClick=\"verificaResposta('+')\">+</p>"+
-						 	"<p onClick=\"verificaResposta('-')\">-</p>"+
-						 	"<p onClick=\"verificaResposta('/')\">/</p>"+
-						 	"<p onClick=\"verificaResposta('*')\">*</p>"+									 	
+						 	"<p onClick=\"verificaResposta('+')\"><i class='material-icons'>add</i></p>"+
+						 	"<p onClick=\"verificaResposta('-')\"><i class='material-icons'>remove</i></p>"+
+						 	"<p onClick=\"verificaResposta('/')\"><i class='material-icons'>add_box</i></p>"+
+						 	"<p onClick=\"verificaResposta('*')\"><i class='material-icons'>clear</i></p>"+									 	
 					 	"</div>"
 					);							
 
@@ -72,24 +73,29 @@ function sorteiaPergunta(){
 		$("#ganhou-jogo").show();
 
 	}else{
-		primeiroNumero  = parseInt( Math.floor((Math.random() * 20) + 1) );		
-		segundoNumero  = parseInt( Math.floor((Math.random() * 20) + 1) );
-		resposta = operacoes[Math.floor((Math.random() * 4))];
-		switch (resposta){
+		primeiroNumero  = parseInt( Math.floor((Math.random() * 10) + 1) );		
+		segundoNumero  = parseInt( Math.floor((Math.random() * 10) + 1) );
+		operacao = operacoes[Math.floor((Math.random() * 4))];
+		switch (operacao){
 			case "+":
 				valorFinal = primeiroNumero + segundoNumero;
+				valorFinal = parseFloat(valorFinal.toFixed(2));
 			break;
 			case "-":
 				valorFinal = primeiroNumero - segundoNumero;
+				valorFinal = parseFloat(valorFinal.toFixed(2));
 			break;
 			case "/":
 				valorFinal = primeiroNumero / segundoNumero;
+				valorFinal = parseFloat(valorFinal.toFixed(2));
 			break;
 			case "*":
 				valorFinal = primeiroNumero * segundoNumero;
+				valorFinal = parseFloat(valorFinal.toFixed(2));
 			break;
 
-		}			
+		}
+		var pergunta = primeiroNumero + operacao + segundoNumero +" = "+ valorFinal; 		
 		if(perguntasFeitas.indexOf(pergunta) > -1){
 			sorteiaPergunta();
 		}else{	
