@@ -37,6 +37,10 @@ $routerContent->addRoutes(array(
 	array('GET','/matematica/',  		'/matematica.php', ''),
 	array('GET','/matematica/[*]',		'/matematica.php', ''),
 
+	array('GET','/charadas',  			'charadas.php', 'charadas'),
+	array('GET','/charadas/',  			'charadas.php', ''),
+	array('GET','/charadas/[*]',		'charadas.php', ''),
+
 ));	
 
 $matchContent = $routerContent->match();
