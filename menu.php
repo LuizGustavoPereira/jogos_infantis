@@ -76,7 +76,7 @@
 						$menu->append('Brasileiro',  							'./jogos/brasileiro/');
 						$menu->append('Brincando com Monteiro Lobato', 	  		'./jogos/monteiro-lobato/');
 						$menu->append('Matemática', 							'./jogos/matematica/');
-						$menu->append('O que é o que é?', 						'./jogos/charadas')
+						$menu->append('O que é o que é?', 						'./jogos/charadas');
 						$menu->append('Tabuada',  								'./jogos/tabuada/');
 						$menu->append('Times', 	  								'./jogos/times/');
 					$menu->render();

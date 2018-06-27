@@ -2,7 +2,7 @@
 <div class="row" >
 	<div class="col l10 offset-l1">
 		<div class="titulo ">
-			<h3 class="float-left amber-text" >ADIVINHE OS TIMES</h3>			
+			<h3 class="float-left amber-text" >O QUE É O QUE É?</h3>			
 		</div> 
 	</div>
 	<div class="col l10 offset-l1" id="telaInicial" display>
@@ -82,4 +82,34 @@
     </div>
 </div>
 
-<script src="jogos/js/frmTimes.js" type="text/javascript"></script>
+<!-- GAME OVER -->
+<div class="row">
+	<div class="col l10 offset-l1" id="fim-do-jogo" display>
+		<div class="card transparent darken-1">
+	        <div class="card-content deep-purple-text text-darken-2"> 
+		        <div class="row">
+		        	<div class="titulo col l10 offset-l1 center-align">
+			        	<h3 style="font-size: 3vw; margin-top: 5%" class="amber-text">FIM DO JOGO</h3>
+			        	<a style="margin-top: 5%" class="waves-effect waves-light btn background btnControl" onClick="comecarJogo()" id="jogarNovamente" display="">Jogar Novamente</a>
+					</div>				
+		        </div>
+		    </div>
+		</div>	
+	</div>
+
+	<!-- GANHOU -->
+	<div class="col l10 offset-l1" id="ganhou-jogo" display>
+		<div class="card transparent darken-1">
+	        <div class="card-content deep-purple-text"> 
+		        <div class="row">
+		        	<div class="titulo col l10 offset-l1 center-align">
+			        	<h3 style="font-size: 3vw; margin-top: 5%" class="amber-text">PARABÉNS!!</h3>
+			        	<a style="margin-top: 5%" class="waves-effect waves-light btn background btnControl" onClick="comecarJogo()" id="jogarNovamente" display="">Jogar Novamente</a>
+					</div>				
+		        </div>
+		    </div>
+		</div>	
+	</div>
+</div>
+
+<script src="jogos/js/frmCharadas.js" type="text/javascript"></script>

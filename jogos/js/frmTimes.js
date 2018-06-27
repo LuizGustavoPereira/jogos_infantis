@@ -133,7 +133,8 @@ function sorteiaTime(){
 		break;
 	}
 	$("#nomeTime0").focus();
-	$("input[type='text']").bind('keyup',function(e) {				
+	$("input[type='text']").bind('keyup',function(e) {	
+		nomeTime = [];			
 		if(e.keyCode == '13'){
 			for(var i = 0; i<letras; i++){
 				nomeTime += $("#nomeTime"+i).val() ;

@@ -133,7 +133,8 @@ function sorteiaTime(){
 		break;
 	}
 	$("#nomeTime0").focus();
-	$("input[type='text']").bind('keyup',function(e) {				
+	$("input[type='text']").bind('keyup',function(e) {
+		nomeTime = [];				
 		if(e.keyCode == '13'){
 			for(var i = 0; i<letras; i++){
 				nomeTime += $("#nomeTime"+i).val() ;
@@ -154,7 +155,7 @@ function verificaTimes(){
 	if(sorteados.length >= 10){
 		alert("PARABENS! VOCÊ CONSEGUIU");
 		clearTimeout(tempo);
-		$("#jogarNovamente").show();
+		$("#ganhou-jogo").show();
 		$("#nomeTime").prop('disabled', true);
 
 	}else{		
@@ -169,7 +170,6 @@ function verificaTimes(){
 
 function verificaResposta(nomeTime){
 	var resposta  = nomeTime.toUpperCase();
-	console.log(resposta)
 	$("#nomeTime").val("");
 	if( resposta == resp ){
 		pontuacao += 10;
@@ -186,7 +186,7 @@ function verificaResposta(nomeTime){
 }
 function verificaVidas(){
 	if (vidas < 0){
-		$("#jogarNovamente").show();
+		$("#fim-do-jogo").show();
 		$("#nomeTime").prop('disabled', true);
 	}
 }
@@ -230,7 +230,6 @@ function atualizaTempo(){
 
 $(document).ready(function(){
 	$("#jogo").hide();
-	$("#jogarNovamente").hide();
-
-	
+	$("#fim-do-jogo").hide();
+	$("#ganhou-jogo").hide();
 });
