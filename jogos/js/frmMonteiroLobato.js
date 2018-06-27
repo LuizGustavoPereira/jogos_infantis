@@ -21,7 +21,6 @@ function comecarJogo(){
 }
 
 function verificaResposta(valor) {
-	console.log(valor) 
 	if (valor == resposta){
 		formularPergunta();
 		pontuacao += 10

@@ -9,7 +9,8 @@ var numero = 0,
 
 function comecarJogo(){
 	vidas = 3;
-	$("#jogarNovamente").hide();
+	$("#ganhou-jogo").hide();
+	$("#fim-do-jogo").hide();
 	$("#inicio").hide();
 	$("#jogo").show();
 	$("#vidas").html(vidas);
@@ -143,15 +144,15 @@ function verificaResposta(){
 
 		if( vidas < 0 ){
 			$(".resposta").prop('disabled', true);
-			clearTimeout(tempo);
-			$("#jogarNovamente").show();
+			clearTimeout(tempo);			
+			$("#fim-do-jogo").show();
+			$("#jogo").hide();
 		}
 	}
-	if(multiplicador > 10 && chave == 1){
-		alert("Parabéns! Você conseguiu.");
-		$(".resposta").prop('disabled', true);
+	if(multiplicador > 10 && chave == 1){		
 		clearTimeout(tempo);
-		$("#jogarNovamente").show();		
+		$("#ganhou-jogo").show();
+		$("#jogo").hide();		
 		numero = 0;
 		multiplicador = 2;
 		pontuacao = 0;
@@ -170,8 +171,9 @@ function voltar(){
 }
 
 $(document).ready(function(){
-	$("#jogo").hide();
-	$("#jogarNovamente").hide();
+	$("#jogo").hide();	
+	$("#ganhou-jogo").hide();
+	$("#fim-do-jogo").hide();
 
 	$("input[type='text']").bind('keydown',function(e) {
 		if(e.keyCode == '13'){

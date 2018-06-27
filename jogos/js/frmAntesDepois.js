@@ -30,6 +30,8 @@ function verificaResposta(resposta) {
 		if(resposta == respostaAntes){
 			$("#antes").val(resposta)
 			index = 2;
+			$("#depois").addClass("animation");
+			$("#antes").removeClass("animation");
 		}else{
 			vidas-=1;
 			$("#vidas").html(vidas);
@@ -57,14 +59,13 @@ function verificaResposta(resposta) {
 }
 
 function formularPergunta(){
-	sorteiaPergunta();
-	pergunta = 1	
+	sorteiaPergunta();	
 	switch(pergunta){
 		case 1:
 			respostaAntes = "SABADO";
 			respostaDepois = "SEGUNDA-FEIRA";
 			$("#perguntas").html(	"<div class='col l4 antes-depois'>"+
-					 					"<input type='text' disabled id='antes' class='center'>"+
+					 					"<input type='text' disabled id='antes' class='center animation'>"+
 					 				"</div>"+
 					 				"<div class='col l3 center'>"+
 					 					"<h4><b>DOMINGO</b></h4>"+
@@ -86,7 +87,7 @@ function formularPergunta(){
 			respostaAntes = "DOMINGO";
 			respostaDepois = "TERCA-FEIRA";
 			$("#perguntas").html(	"<div class='col l4 antes-depois'>"+
-					 					"<input type='text' disabled id='antes' class='center'>"+
+					 					"<input type='text' disabled id='antes' class='center animation'>"+
 					 				"</div>"+
 					 				"<div class='col l4 center'>"+
 					 					"<h4><b>SEGUNDA-FEIRA</b></h4>"+
@@ -108,7 +109,7 @@ function formularPergunta(){
 			respostaAntes = "SEGUNDA-FEIRA";
 			respostaDepois = "QUARTA-FEIRA";
 			$("#perguntas").html(	"<div class='col l4 antes-depois'>"+
-					 					"<input type='text' disabled id='antes' class='center'>"+
+					 					"<input type='text' disabled id='antes' class='center animation'>"+
 					 				"</div>"+
 					 				"<div class='col l4 center'>"+
 					 					"<h4><b>TERÇA-FEIRA</b></h4>"+
@@ -130,7 +131,7 @@ function formularPergunta(){
 			respostaAntes = "TERCA-FEIRA";
 			respostaDepois = "QUINTA-FEIRA";
 			$("#perguntas").html(	"<div class='col l4 antes-depois'>"+
-					 					"<input type='text' disabled id='antes' class='center'>"+
+					 					"<input type='text' disabled id='antes' class='center animation'>"+
 					 				"</div>"+
 					 				"<div class='col l4 center'>"+
 					 					"<h4><b>QUARTA-FEIRA</b></h4>"+
@@ -152,7 +153,7 @@ function formularPergunta(){
 			respostaAntes = "QUARTA-FEIRA";
 			respostaDepois = "SEXTA-FEIRA";
 			$("#perguntas").html(	"<div class='col l4 antes-depois'>"+
-					 					"<input type='text' disabled id='antes' class='center'>"+
+					 					"<input type='text' disabled id='antes' class='center animation'>"+
 					 				"</div>"+
 					 				"<div class='col l4 center'>"+
 					 					"<h4><b>QUINTA-FEIRA</b></h4>"+
@@ -174,7 +175,7 @@ function formularPergunta(){
 			respostaAntes = "QUINTA-FEIRA";
 			respostaDepois = "SABADO";
 			$("#perguntas").html(	"<div class='col l4 antes-depois'>"+
-					 					"<input type='text' disabled id='antes' class='center'>"+
+					 					"<input type='text' disabled id='antes' class='center animation'>"+
 					 				"</div>"+
 					 				"<div class='col l4 center'>"+
 					 					"<h4><b>SEXTA-FEIRA</b></h4>"+
@@ -196,7 +197,7 @@ function formularPergunta(){
 			respostaAntes = "SEXTA-FEIRA";
 			respostaDepois = "DOMINGO";
 			$("#perguntas").html(	"<div class='col l4 antes-depois'>"+
-					 					"<input type='text' disabled id='antes' class='center '>"+
+					 					"<input type='text' disabled id='antes' class='center animation'>"+
 					 				"</div>"+
 					 				"<div class='col l2 center'>"+
 					 					"<h4><b>SABADO</b></h4>"+

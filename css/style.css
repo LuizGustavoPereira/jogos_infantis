@@ -459,6 +459,12 @@
 	}
 
 	@keyframes animacao {
-    from {background-color: red;}
-    to {background-color: yellow;}
-}
+	    from {border-color: #4B0082;}
+	    to {border-color: #FF00FF;}
+	}	
+	.animation {
+	    width: 100px;
+	    height: 100px;
+	    background-color: red;
+	    animation: animacao 1s ease infinite;	    
+	}
