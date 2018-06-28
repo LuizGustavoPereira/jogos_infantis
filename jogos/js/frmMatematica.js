@@ -51,7 +51,7 @@ function verificaResposta(valor) {
 function formularPergunta(){
 	sorteiaPergunta();		
 	$("#perguntas").html(	
-						"<div class='col l8 offset-l2 center'>"+
+						"<div class='margin-top-5 col l8 offset-l2 center'>"+
 		 					"<h4><b>"+primeiroNumero+"</b> <input type='text' disabled id='resp' class='center pergunta-matematica'> <b> "+segundoNumero+" = "+valorFinal+"</b> </h4>"+
 		 				"</div>"+									
 					 	"<div class='center col l10 offset-l1 xl7 offset-xl4 resposta-antes-depois'>"+
