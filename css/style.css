@@ -390,17 +390,12 @@
 	}
 
 
-
-#DivDestino {
-    height: 60px; 
-			}
-
-#palhaco {	
-    background:  url(imagens/rosto/palhaco.jpg);
-}
+	.width-50{
+		width: 50%;
+	}
 
 	.margin-top-5{
-		margin-top: 5%;
+		margin-top: 5% !important;
 	}
 	
 	.pergunta-monteiro{
@@ -441,7 +436,7 @@
 		color:	purple !important;
 		cursor: pointer;
 		float: left;
-		font-size: 3vw !important;
+		font-size: 1.5vw !important;
 		margin-right: 9% !important;	
 		margin-top: 5%;		
 	    font-family: 'Open Sans', sans-serif; 
@@ -475,4 +470,15 @@
 	    height: 100px;
 	    background-color: red;
 	    animation: animacao 1s ease infinite;
+	}
+
+	.resposta-matematica p{
+		font-weight: bolder;
+		color:	purple !important;
+		cursor: pointer;
+		float: left;
+		font-size: 3vw !important;
+		margin-right: 9% !important;	
+		margin-top: 5%;		
+	    font-family: 'Open Sans', sans-serif; 
 	}
