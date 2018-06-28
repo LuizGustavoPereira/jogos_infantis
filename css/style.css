@@ -437,8 +437,10 @@
 		color:	purple !important;
 		cursor: pointer;
 		float: left;
-		font-size: 1.5vw !important;
-		margin-right: 5% !important;
+		font-size: 3vw !important;
+		margin-right: 9% !important;	
+		margin-top: 5%;		
+	    font-family: 'Open Sans', sans-serif; 
 	}
 
 	.resposta-antes-depois p:hover{
@@ -468,5 +470,5 @@
 	    width: 100px;
 	    height: 100px;
 	    background-color: red;
-	    animation: animacao 1s ease infinite;	    
+	    animation: animacao 1s ease infinite;
 	}

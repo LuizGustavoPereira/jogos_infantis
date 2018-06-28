@@ -54,11 +54,11 @@ function formularPergunta(){
 						"<div class='col l8 offset-l2 center'>"+
 		 					"<h4><b>"+primeiroNumero+"</b> <input type='text' disabled id='resp' class='center pergunta-matematica'> <b> "+segundoNumero+" = "+valorFinal+"</b> </h4>"+
 		 				"</div>"+									
-					 	"<div class='center col l10 offset-l1 xl5 offset-xl5 resposta-antes-depois'>"+
-						 	"<p onClick=\"verificaResposta('+')\"><i class='material-icons'>add</i></p>"+
-						 	"<p onClick=\"verificaResposta('-')\"><i class='material-icons'>remove</i></p>"+
-						 	"<p onClick=\"verificaResposta('/')\"><i class='material-icons'>add_box</i></p>"+
-						 	"<p onClick=\"verificaResposta('*')\"><i class='material-icons'>clear</i></p>"+									 	
+					 	"<div class='center col l10 offset-l1 xl7 offset-xl4 resposta-antes-depois'>"+
+						 	"<p onClick=\"verificaResposta('+')\">&#43;</p>"+
+						 	"<p onClick=\"verificaResposta('-')\">&#8722;</p>"+
+						 	"<p onClick=\"verificaResposta('/')\">&divide;</p>"+
+						 	"<p onClick=\"verificaResposta('*')\">&#215;</p>"+									 	
 					 	"</div>"
 					);							
 

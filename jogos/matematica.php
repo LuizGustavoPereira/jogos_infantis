@@ -85,3 +85,4 @@
 	</div>
 </div>
 <script src="jogos/js/frmMatematica.js" type="text/javascript"></script>
+<link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet">
