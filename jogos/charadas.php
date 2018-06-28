@@ -30,12 +30,10 @@
             <div class="card-content "> 
 	            <div class="row">
 	            	<div class="col l7  xl6 offset-xl2 center-align" >
-	            		<div class="col l6 center-align" style="margin-left: 27%;">
-		            		<div class="card card-imagens small">
-						        <div  id="logoTime">			        	
-									
-						        </div>							
-				     		</div>
+	            		<div class="col l12 center-align">		            		
+					        <div  id="pergunta">			        	
+								
+					        </div>					     		
 			     		</div>
 			     		<div class="col l12" id="divResp">
 	            			

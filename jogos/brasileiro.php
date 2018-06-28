@@ -45,7 +45,7 @@
 					    <source src="sons/brasileiro/musica1.mp3" type="audio/mpeg">
 					    Seu navegador não possui suporte ao elemento audio
 					</audio>					
-					<a class="icon-sound"  onclick="musica()" id="icone-musica"><i class="material-icons">volume_up</i></a>
+					<a class="icon-sound icone-musica"  onclick="musica()"><i class="material-icons">volume_up</i></a>
 					
 
 
@@ -53,19 +53,19 @@
 	            		<img src='imagens/brasileiro/bandeira-preta-branca.png' class='img-brasileiro-bandeira'>
             		</div>  
             		<div class="center-align  col l2 offset-l1" >
-        				<img src='imagens/brasileiro/tinta-amarelo.png' class="img-brasileiro-tinta tinta" onClick="pintaBandeira(2)">
+        				<img src='imagens/brasileiro/tinta-amarelo.png' class="img-brasileiro-tinta tinta" onClick="verificaResposta(2)">
         			</div>
         			<div class="center-align  col l2" >
-        				<img src='imagens/brasileiro/tinta-roxa.png' class="img-brasileiro-tinta tinta" onClick="pintaBandeira(0)">
+        				<img src='imagens/brasileiro/tinta-roxa.png' class="img-brasileiro-tinta tinta" onClick="verificaResposta(0)">
         			</div>
         			<div class="center-align col l2">
-        				<img src='imagens/brasileiro/tinta-azul.png' class="img-brasileiro-tinta tinta" onClick="pintaBandeira(1)">	
+        				<img src='imagens/brasileiro/tinta-azul.png' class="img-brasileiro-tinta tinta" onClick="verificaResposta(1)">	
         			</div>
         			<div class="center-align col l2">
-        				<img src='imagens/brasileiro/tinta-vermelha.png' class="img-brasileiro-tinta tinta" onClick="pintaBandeira(0)">	
+        				<img src='imagens/brasileiro/tinta-vermelha.png' class="img-brasileiro-tinta tinta" onClick="verificaResposta(0)">	
         			</div>
         			<div class="center-align col l2">
-        				<img src='imagens/brasileiro/tinta-verde.png' class="img-brasileiro-tinta tinta" onClick="pintaBandeira(3)">   
+        				<img src='imagens/brasileiro/tinta-verde.png' class="img-brasileiro-tinta tinta" onClick="verificaResposta(3)">   
         			</div>
             	</div>  
             	<div class="row">
@@ -81,5 +81,23 @@
             </div> 
         </div>
     </div>
+</div>
+<!-- GANHOU -->
+<div class="row">
+	<div class="col l10 offset-l1" id="ganhou-jogo" display>
+		<div class="card transparent darken-1">
+	        <div class="card-content deep-purple-text"> 
+		        <div class="row">
+		        	<div class="col l12 left">		        		
+		        		<a class="icon-sound icone-musica"  onclick="musica()" ><i class="material-icons">volume_up</i></a>
+		        	</div>
+		        	<div class="titulo col l10 offset-l1 center-align">
+			        	<h3 style="font-size: 3vw; margin-top: 5%" class="blue-text">PARABÉNS!!</h3>
+			        	<a style="margin-top: 5%" class="waves-effect waves-light btn background btnControl" onClick="comecarJogo()" id="jogarNovamente" display="">Jogar Novamente</a>
+					</div>				
+		        </div>
+		    </div>
+		</div>	
+	</div>
 </div>
 <script src="jogos/js/frmBrasileiro.js" type="text/javascript"></script>
