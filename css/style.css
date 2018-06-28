@@ -442,7 +442,7 @@
 	}
 
 	.resposta-antes-depois p:hover{
-		color: #551A8B !important	
+		color: #551A8B !important
 	}
 	
 	.antes-depois{
@@ -463,6 +463,8 @@
 	    to {border-color: #FF00FF;}
 	}	
 	.animation {
+		border-bottom: solid !important;
+		border-width: medium !important;
 	    width: 100px;
 	    height: 100px;
 	    background-color: red;
