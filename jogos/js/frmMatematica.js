@@ -31,7 +31,7 @@ function verificaResposta(valor) {
 	if(valor == operacao){
 		pontuacao += 10
 		$("#pontuacao").html(pontuacao);
-		$("#resp").val(valor)
+		$("#resp").html(resp)
 		index = 1;
 		setTimeout("formularPergunta()", 1000);
 		
@@ -52,7 +52,8 @@ function formularPergunta(){
 	sorteiaPergunta();		
 	$("#perguntas").html(	
 						"<div class='margin-top-5 col l8 offset-l2 center'>"+
-		 					"<h4><b>"+primeiroNumero+"</b> <input type='text' disabled id='resp' class='center pergunta-matematica'> <b> "+segundoNumero+" = "+valorFinal+"</b> </h4>"+
+
+		 					"<h4><b> "+primeiroNumero+" </b> <span id='resp' class='center pergunta-matematica'>&#63;</span> <b> "+segundoNumero+" = "+valorFinal+"</b> </h4>"+
 		 				"</div>"+									
 					 	"<div class='center col l10 offset-l1 xl7 offset-xl4 resposta-matematica'>"+
 						 	"<p onClick=\"verificaResposta('+')\">&#43;</p>"+
@@ -80,18 +81,22 @@ function sorteiaPergunta(){
 			case "+":
 				valorFinal = primeiroNumero + segundoNumero;
 				valorFinal = parseFloat(valorFinal.toFixed(2));
+				resp = "&#43;";
 			break;
 			case "-":
 				valorFinal = primeiroNumero - segundoNumero;
 				valorFinal = parseFloat(valorFinal.toFixed(2));
+				resp = "&#8722;";
 			break;
 			case "/":
 				valorFinal = primeiroNumero / segundoNumero;
 				valorFinal = parseFloat(valorFinal.toFixed(2));
+				resp = "&divide;";
 			break;
 			case "*":
 				valorFinal = primeiroNumero * segundoNumero;
 				valorFinal = parseFloat(valorFinal.toFixed(2));
+				resp = "&#215;";
 			break;
 
 		}

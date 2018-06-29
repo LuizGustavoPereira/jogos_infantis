@@ -32,74 +32,74 @@ function sorteiaPerguntas(){
 	resposta = [];
 	posInput = 2;
 	verificaSorteados();
-	index = 0;
+	index = 0;		
 	switch (pergunta){
 		case 1:
 			resp = "POLEGAR";	
-			$("#pergunta").html("<img src='imagens/times/escudo-do-corinthians.png'>");
+			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/polegar.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\" data-next=\"#resposta"+(i+1)+"\" >");			
 			}						
 		break;
 		case 2:			
 			resp = "PORCO";
-			$("#pergunta").html("<img src='imagens/times/escudo-do-corinthians.png'>");
+			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/porco.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}			
 		break;
 		case 3:
 			resp = "PINGO";
-			$("#pergunta").html("<img src='imagens/times/escudo-do-corinthians.png'>");
+			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/pingo.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}			
 		break;
 		case 4:
 			resp = "BERINJELA";
-			$("#pergunta").html("<img src='imagens/times/escudo-do-corinthians.png'>");
+			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/berinjela.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}			
 		break;
 		case 5:
 			resp = "BOLA";
-			$("#pergunta").html("<img src='imagens/times/escudo-do-corinthians.png'>");
+			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/bola.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}			
 		break;
 		case 6:
 			resp = "PIPA";
-			$("#pergunta").html("<img src='imagens/times/escudo-do-corinthians.png'>");
+			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/pipa.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}			
 		break;
 		case 7:
 			resp = "BANANA";
-			$("#pergunta").html("<img src='imagens/times/escudo-do-corinthians.png'>");
+			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/banana.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}			
 		break;
 		case 8:
 			resp = "BOLO";
-			$("#pergunta").html("<img src='imagens/times/escudo-do-corinthians.png'>");
+			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/bolo.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}			
 		break;
 		case 9:
 			resp = "PEIXE";
-			$("#pergunta").html("<img src='imagens/times/escudo-do-corinthians.png'>");
+			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/peixe.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}			
 		break;
 		case 10:
 			resp = "PENA";
-			$("#pergunta").html("<img src='imagens/times/escudo-do-corinthians.png'>");
+			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/pena.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");						
 			}			

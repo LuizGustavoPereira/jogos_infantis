@@ -10,7 +10,7 @@
             <div class="card-content blue-text"> 
 	            <div class="row">
 	            	<div class="col l10 offset-l1 center-align">
-						<img src="imagens/times/futebol.png">
+						<img class="width-50" src="imagens/alfabeto/alfabeto.png">
 	            	</div>
             	</div> 
             	<div class="row center-align">

@@ -22,6 +22,8 @@ function comecarJogo(){
 	$("#vidas").html(vidas);
 	$("#countTempo").html("&nbsp;");
 	$("#telaInicial").hide();
+	$("#fim-do-jogo").hide();
+	$("#ganhou-jogo").hide();
 	$("#resposta").focus();
 	sorteiaPerguntas();
 }
@@ -31,97 +33,97 @@ function sorteiaPerguntas(){
 	resposta = [];
 	posInput = 2;
 	verificaSorteados();
-	// time = 1;	
+	// pergunta = 10;	
 	switch (pergunta){
 		case 1:
-			letras = 8;
+			resp = "BONECA";			
+			letras = resp.length;
 			$("#pergunta").html("<h5>Tem pernas mas nao caminha.<br> Tem olhos mas nunca vê.<br> Tem braços mas nao abraça.<br> Tem boca não sei pra que.</h5>");
 			for(var i=0; i < letras; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\" data-next=\"#resposta"+(i+1)+"\" >");			
 			}
 			$("#dica").html("DICA: "+letras+" letras");
-			resp = "BOTAFOGO";			
 		break;
 		case 2:
-			letras = 5;
+			resp = "VENTO";
+			letras = resp.length;
 			$("#pergunta").html("<h5>Voa, voa não tem asa leva a vida a assobiar.<br> Sopra, sobra não tem boca.<br> Tem pé e vive no ar.</h5>");
 			for(var i=0; i < letras; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}
 			$("#dica").html("DICA: "+letras+" letras");
-			resp = "VENTO";
 		break;
 		case 3:
-			letras = 8;
-			$("#pergunta").html("<h5>Pode ser grossa ou bem fina. Anda sempre passo a passo. Existe de corpo inteiro, mas tem nome de pedaco.</h5>");
+			resp = "MEIA";
+			letras = resp.length;
+			$("#pergunta").html("<h5>Pode ser grossa ou bem fina<br> Anda sempre passo a passo<br> Existe de corpo inteiro, mas tem nome de pedaco.</h5>");
 			for(var i=0; i < letras; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}
 			$("#dica").html("DICA: "+letras+" letras");
-			resp = "FLAMENGO";
 		break;
 		case 4:
-			letras = 6;
+			resp = "SAPATO";
+			letras = resp.length;
 			$("#pergunta").html("<h5>Não consegue andar sozinho. <br>Corre até quando não quer. <br>Pode ser grande ou pequeno. <br>Mas tem o tamanho do pé.</h5>");
 			for(var i=0; i < letras; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}
 			$("#dica").html("DICA: "+letras+" letras");
-			resp = "SAPATO";
 		break;
 		case 5:
-			letras = 5;
+			resp = "PRATO";
+			letras = resp.length;
 			$("#pergunta").html("<h5>Vive em cima da mesa. <br>Costuma matar a fome. <br>Compra-se para comer. <br>Ninguém mastiga nem come</h5>");
 			for(var i=0; i < letras; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}
 			$("#dica").html("DICA: "+letras+" letras");
-			resp = "PRATO";
 		break;
 		case 6:
-			letras = 5;
-			$("#pergunta").html("<h5>Entre os vivos, vive morto Conta histórias sendo mudo Nunca estudou na escola Mas sabe um pouco de tudo.</h5>");
+			resp = "LIVRO";
+			letras = resp.length;
+			$("#pergunta").html("<h5>Entre os vivos, vive morto <br>Conta histórias sendo mudo <br>Nunca estudou na escola<br> Mas sabe um pouco de tudo.</h5>");
 			for(var i=0; i < letras; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}
 			$("#dica").html("DICA: "+letras+" letras");
-			resp = "LIVRO";
 		break;
 		case 7:
-			letras = 9;
-			$("#pergunta").html("<h5>Quando parte uma parte outra Quando chega uma chega outra.</h5>");
+			resp = "PERNA";
+			letras = resp.length;
+			$("#pergunta").html("<h5>Quando parte uma parte outra <br>Quando chega uma chega outra.</h5>");
 			for(var i=0; i < letras; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}
 			$("#dica").html("DICA: "+letras+" letras");
-			resp = "PALMEIRAS";
 		break;
 		case 8:
-			letras = 8;
-			$("#pergunta").html("<h5>Tem lombo de porco Tem orelha de porco Tem costela de porco Mas mesmo assim não é porco.</h5>");
+			resp = "FEIJOADA";
+			letras = resp.length;
+			$("#pergunta").html("<h5>Tem lombo de porco <br>Tem orelha de porco <br>Tem costela de porco <br>Mas mesmo assim não é porco.</h5>");
 			for(var i=0; i < letras; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}
 			$("#dica").html("DICA: "+letras+" letras");
-			resp = "FEIJOADA";
 		break;
 		case 9:
-			letras = 6;
+			resp = "LINGUA";
+			letras = resp.length;
 			$("#pergunta").html("<h5>Mesmo pertinho do céu.<br>Em casa vive trancada.<br>Quer chova, quer faça sol vive sozinha e molhada.</h5>");
 			for(var i=0; i < letras; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}
 			$("#dica").html("DICA: "+letras+" letras");
-			resp = "LINGUA";
 		break;
 		case 10:
-			letras = 5;
-			$("#pergunta").html("<h5>Tem pernas mas nao caminha.<br> Tem olhos mas nunca vê.<br> Tem braços mas nao abraça.<br> Tem boca não sei pra que.</h5>");
+			resp = "CEBOLA";
+			letras = resp.length;
+			$("#pergunta").html("<h5>Tenho capa sobre capa, mas quem as quiser tirar, não se escapa sem chorar</h5>");
 			for(var i=0; i < letras; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}
 			$("#dica").html("DICA: "+letras+" letras");
-			resp = "VASCO";
 		break;
 	}
 	$("#resposta0").val(resp[0]);
@@ -146,9 +148,9 @@ function sorteiaPerguntas(){
 
 function verificaSorteados(){
 	if(sorteados.length >= 10){
-		alert("PARABENS! VOCÊ CONSEGUIU");
 		clearTimeout(tempo);
 		$("#ganhou-jogo").show();
+		$("#jogo").hide();
 		$("#resposta").prop('disabled', true);
 
 	}else{		
@@ -183,6 +185,7 @@ function verificaResposta(resposta){
 function verificaVidas(){
 	if (vidas < 0){
 		$("#fim-do-jogo").show();
+		$("#jogo").hide();
 		$("#resposta").prop('disabled', true);
 	}
 }

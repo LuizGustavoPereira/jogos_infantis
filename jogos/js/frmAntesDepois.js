@@ -214,7 +214,7 @@ function formularPergunta(){
 									 	"<p onClick=\"verificaResposta('DOMINGO')\">DOMINGO</p>"+
 								 	"</div>"
 						);				
-		break;		
+		break;	
 	}
 
 }
