@@ -10,7 +10,7 @@
             <div class="card-content blue-text"> 
 	            <div class="row">
 	            	<div class="col l10 offset-l1 center-align">
-						<img src="imagens/times/futebol.png">
+						<img src="imagens/charada/duvidas.png">
 	            	</div>
             	</div> 
             	<div class="row center-align">
@@ -31,7 +31,7 @@
 	            <div class="row">
 	            	<div class="col l7  xl6 offset-xl2 center-align" >
 	            		<div class="col l12 center-align">		            		
-					        <div  id="pergunta">			        	
+					        <div class="pergunta-o-que-e"  id="pergunta">			        	
 								
 					        </div>					     		
 			     		</div>
