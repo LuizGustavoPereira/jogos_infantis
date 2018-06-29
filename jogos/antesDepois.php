@@ -28,7 +28,7 @@
         <div class="card transparent darken-1">
             <div class="card-content "> 
 	            <div class="row">
-		            <div class="col l10" id="perguntas">
+		            <div class="col l10 margin-top-5" id="perguntas">
 							
 					</div>	
 

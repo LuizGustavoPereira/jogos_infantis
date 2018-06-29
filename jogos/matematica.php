@@ -9,8 +9,8 @@
         <div class="card transparent darken-1">
             <div class="card-content blue-text"> 
 	            <div class="row">
-	            	<div class="col l10 offset-l1 center-align">
-						<img src="imagens/times/futebol.png" >
+	            	<div class="col l10 offset-l1 center-align ">
+						<img class="width-50" src="imagens/matematica/matematica.png" >
 	            	</div>
             	</div> 
             	<div class="row center-align">

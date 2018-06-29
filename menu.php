@@ -25,6 +25,10 @@
 	<link type="text/css" rel="stylesheet" href="css/datepicker.css"/>
 	<link type="text/css" rel="stylesheet" href="css/bootstrap-tour-standalone.min.css"/>
 	<link type="text/css" rel="stylesheet" href="css/jquery-confirm.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Acme|Quicksand|Varela+Round" rel="stylesheet">
 
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>

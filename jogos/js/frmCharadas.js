@@ -62,7 +62,7 @@ function sorteiaPerguntas(){
 		break;
 		case 4:
 			letras = 6;
-			$("#pergunta").html("<h5>Não consegue andar sozinho Corre até quando não quer Pode ser grande ou pequeno Mas tem o tamanho do pé.</h5>");
+			$("#pergunta").html("<h5>Não consegue andar sozinho. <br>Corre até quando não quer. <br>Pode ser grande ou pequeno. <br>Mas tem o tamanho do pé.</h5>");
 			for(var i=0; i < letras; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}
@@ -71,7 +71,7 @@ function sorteiaPerguntas(){
 		break;
 		case 5:
 			letras = 5;
-			$("#pergunta").html("<h5>Vive em cima da mesa Costuma matar a fome Compra-se para comer Ninguém mastiga nem come</h5>");
+			$("#pergunta").html("<h5>Vive em cima da mesa. <br>Costuma matar a fome. <br>Compra-se para comer. <br>Ninguém mastiga nem come</h5>");
 			for(var i=0; i < letras; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}
@@ -107,7 +107,7 @@ function sorteiaPerguntas(){
 		break;
 		case 9:
 			letras = 6;
-			$("#pergunta").html("<h5>Mesmo pertinho do céu Em casa vive trancada Quer chova, quer faça sol vive sozinha e molhada.</h5>");
+			$("#pergunta").html("<h5>Mesmo pertinho do céu.<br>Em casa vive trancada.<br>Quer chova, quer faça sol vive sozinha e molhada.</h5>");
 			for(var i=0; i < letras; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}
