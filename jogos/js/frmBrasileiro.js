@@ -30,6 +30,8 @@ function comecarJogo(){
 
 function voltar(){
 	cor = 1;
+	music = true;
+	musica();
 	$("#bandeira").html("<img src='imagens/brasileiro/bandeira-preta-branca.png' class='img-brasileiro-bandeira'>")
 	$("#jogo").hide();
 	$("#telaInicial").show();

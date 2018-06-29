@@ -73,7 +73,7 @@ function formularPergunta(){
 					 				"<div class='col l4 antes-depois'>"+
 					 					"<input type='text' disabled id='depois' class='center'>"+
 					 				"</div>"+
-								 	"<div class='center col l10 offset-l1 xl10 offset-xl1 resposta-antes-depois'>"+
+								 	"<div class='center col l9 offset-l2 xl10 offset-xl1 resposta-antes-depois'>"+
 									 	"<p onClick=\"verificaResposta('QUARTA-FEIRA')\">QUARTA-FEIRA</p>"+
 									 	"<p onClick=\"verificaResposta('SEGUNDA-FEIRA')\">SEGUNDA-FEIRA</p>"+
 									 	"<p onClick=\"verificaResposta('QUINTA-FEIRA')\">QUINTA-FEIRA</p>"+

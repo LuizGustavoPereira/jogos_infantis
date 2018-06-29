@@ -42,7 +42,7 @@
 	            <div class="row">
 
 	            	<audio id="audio">
-					    <source src="sons/brasileiro/musica1.mp3" type="audio/mpeg">
+					    <source src="sons/brasileiro/garota-de-ipanema.mp3" type="audio/mpeg">
 					    Seu navegador não possui suporte ao elemento audio
 					</audio>					
 					<a class="icon-sound icone-musica"  onclick="musica()"><i class="material-icons">volume_up</i></a>
