@@ -21,6 +21,8 @@ function comecarJogo(){
 	$("#vidas").html(vidas);
 	$("#telaInicial").hide();
 	$("#resposta").focus();
+	$("#fim-do-jogo").hide();
+	$("#ganhou-jogo").hide();
 	sorteiaPerguntas();
 }
 
@@ -99,7 +101,7 @@ function sorteiaPerguntas(){
 			resp = "PENA";
 			$("#pergunta").html("<img src='imagens/times/escudo-do-corinthians.png'>");
 			for(var i=0; i < resp.length; i++){
-				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
+				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");						
 			}			
 		break;
 	}
@@ -109,6 +111,7 @@ function sorteiaPerguntas(){
 	for(var i = 0; i< letras; i++){
 		if(i != 1){			
 			$("#resposta"+i).val(resp[i]);
+			$("#resposta"+i).prop('readonly', true);
 		}
 	}			
 	$("input[type='text']").bind('keyup',function(e) {
@@ -127,7 +130,7 @@ function sorteiaPerguntas(){
 function verificaSorteados(){
 	if(sorteados.length >= 10){		
 		$("#ganhou-jogo").show();
-		$("#jogo").hide;
+		$("#jogo").hide();
 		$("#resposta").prop('disabled', true);
 
 	}else{		
@@ -171,16 +174,15 @@ function opcoes(){
 function verificaVidas(){
 	if (vidas < 0){
 		$("#fim-do-jogo").show();
+		$("#jogo").hide();
 		$("#resposta").prop('disabled', true);
 	}
 }
-function jogarNovamente(){		
-	$("#jogarNovamente").hide();
+function jogarNovamente(){
 	$("#resposta").prop('disabled', false);
 	comecarJogo();
 }
 function voltar(){
-	$("#jogarNovamente").hide();
 	$("#resposta").prop('disabled', false);
 	$("#jogo").hide();
 	$("#telaInicial").show();
