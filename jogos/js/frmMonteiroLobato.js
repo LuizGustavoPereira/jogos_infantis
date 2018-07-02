@@ -7,6 +7,8 @@ var cor = 1,
 
 
 audio = document.getElementById('audio');
+perdeu = document.getElementById('perdeu');
+ganhou = document.getElementById('ganhou');
 var bool = true
 
 
@@ -31,9 +33,12 @@ function verificaResposta(valor) {
 		$("#vidas").html(vidas);
 		alert("resposta errada");
 
-		if( vidas < 0 ){
+		if( vidas < 0 ){			
+			audio.pause();
+			perdeu.play();
 			$("#jogo").hide();
 			$("#fim-do-jogo").show();
+			$("#jogarNovamente").show();
 		}
 	}
 
@@ -202,6 +207,8 @@ function sorteiaPergunta(){
 		musica();
 		$("#jogo").hide();
 		$("#ganhou-jogo").show();
+		audio.pause();
+		ganhou.play();
 
 	}else{
 		pergunta = Math.floor((Math.random() * 10) + 1);		
@@ -214,6 +221,7 @@ function sorteiaPergunta(){
 }
 
 function voltar(){
+	perdeu.pause();
 	bool = true;
 	musica();
 	perguntasFeitas = [];

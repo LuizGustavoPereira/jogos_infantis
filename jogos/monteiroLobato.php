@@ -41,6 +41,14 @@
 		            <audio id="audio">
 						<source src="sons/monteiro-lobato/sitio.mp3" type="audio/mpeg">
 						   	Seu navegador não possui suporte ao elemento audio
+					</audio>
+					<audio id="perdeu">
+						<source src="sons/geral/perdeu.mp3" type="audio/mpeg">
+						   	Seu navegador não possui suporte ao elemento audio
+					</audio>
+					<audio id="ganhou">
+						<source src="sons/geral/ganhou.mp3" type="audio/mpeg">
+						   	Seu navegador não possui suporte ao elemento audio
 					</audio>					
 					<a class="icon-sound"  onclick="musica()" id="icone-musica"><i class="material-icons">volume_up</i></a>
 						
