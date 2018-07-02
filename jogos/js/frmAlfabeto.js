@@ -23,6 +23,7 @@ function comecarJogo(){
 	$("#resposta").focus();
 	$("#fim-do-jogo").hide();
 	$("#ganhou-jogo").hide();
+	$("#jogarNovamente").hide();
 	sorteiaPerguntas();
 }
 
@@ -132,6 +133,7 @@ function verificaSorteados(){
 		$("#ganhou-jogo").show();
 		$("#jogo").hide();
 		$("#resposta").prop('disabled', true);
+		$("#jogarNovamente").show();
 
 	}else{		
 		pergunta = Math.floor((Math.random() * 10) + 1);
