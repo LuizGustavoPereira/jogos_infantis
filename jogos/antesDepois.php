@@ -9,8 +9,8 @@
         <div class="card transparent darken-1">
             <div class="card-content blue-text"> 
 	            <div class="row">
-	            	<div class="col l10 offset-l1 center-align ">
-						<h3 class=" deep-purple-text" >ADIVINHE O QUE VEM ANTES E DEPOIS.</h3>
+	            	<div class="col l10 offset-l1">
+						<img class="width-100" src="imagens/antes-depois/antes-depois.png">
 	            	</div>
             	</div> 
             	<div class="row center-align">
