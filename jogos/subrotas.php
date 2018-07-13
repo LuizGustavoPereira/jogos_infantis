@@ -45,6 +45,10 @@ $routerContent->addRoutes(array(
 	array('GET','/alfabeto/',  			'/alfabeto.php', ''),
 	array('GET','/alfabeto/[*]',		'/alfabeto.php', ''),
 
+	array('GET','/salada-fruta',  		'/saladaFruta.php', 'saladaFruta'),
+	array('GET','/salada-fruta/',  			'/saladaFruta.php', ''),
+	array('GET','/salada-fruta/[*]',		'/saladaFruta.php', ''),
+
 ));	
 
 $matchContent = $routerContent->match();

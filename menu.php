@@ -84,6 +84,9 @@
 						$menu->append('O que é o que é?', 						'./jogos/charadas');
 						$menu->append('Tabuada',  								'./jogos/tabuada/');
 						$menu->append('Times', 	  								'./jogos/times/');
+						$menu->append('Salada de Frutas', 	  					'./jogos/salada-fruta/');
+
+
 					$menu->render();
 
 					$menu->renderLink('Sair', './logOut/', '');
