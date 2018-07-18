@@ -7,6 +7,7 @@ var resp = "",
 	letras = 0,
 	posInput = 1,
 	nomeFruta = "",
+	index=1,
 	tempo;
 
 function comecarJogo(){
@@ -30,40 +31,88 @@ function sorteiaFruta(){
 	nomeFruta = [];
 	posInput = 1;
 	verificaFrutas()	
-	switch (1){
+	switch (2){
 		case 1:
-			letras = 7;
+			resp = "ABACAXI";
+			input = 0;
+			index = 0;
+			array_index = [1,2,3,4,5,6,7];
+			array_letras=["A","C","A","B","A","I","X"];
 			$("#divResp").html("");
-			$("#logoTime").html("<img class='width-50' src='imagens/salada-de-frutas/abacaxi.png'>");
-			for(var i=0; i < letras; i++){
+			$("#letrasFruta").html("");
+			$("#imagemFruta").html("<img class='width-100' src='imagens/salada-de-frutas/abacaxi.png'>");
+			for(var i=0; i < array_index.length; i++){
+				if((i%2 == 0)){
+					$("#letrasFruta").append("<span class='float-left letra-salada-fruta-par' id=letra1>"+array_letras[i]+"</span>");
+				}else{
+					$("#letrasFruta").append("<span class='float-left letra-salada-fruta-impar' id=letra1>"+array_letras[i]+"</span>");
+				}
+			}
+			for(var i=0; i < array_index.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\" data-next=\"#nomeTime"+(i+1)+"\" >");			
 			}
-			$("#dica").html("DICA: "+letras+" letras");
-			resp = "ABACAXI";
+			
+			opcoes();
 		break;
-
-	}
-	$("#nomeTime0").focus();
-	$("input[type='text']").bind('keyup',function(e) {	
-		nomeFruta = [];			
-		if(e.keyCode == '13'){
-			for(var i = 0; i<letras; i++){
-				nomeFruta += $("#nomeTime"+i).val() ;
+		case 2:
+			resp = "MELANCIA";
+			input = 0;
+			index = 0;
+			array_index = [0,1,2,3,4,5,6,7];
+			array_letras=["L","A","N","M","A","I","C","E"];
+			$("#divResp").html("");
+			$("#letrasFruta").html("");
+			$("#imagemFruta").html("<img class='width-100' src='imagens/salada-de-frutas/melancia.png'>");
+			for(var i=0; i < array_index.length; i++){
+				if((i%2 == 0)){
+					$("#letrasFruta").append("<span class='float-left letra-salada-fruta-par' id=letra"+i+">"+array_letras[i]+"</span>");
+				}else{
+					$("#letrasFruta").append("<span class='float-left letra-salada-fruta-impar' id=letra"+i+">"+array_letras[i]+"</span>");
+				}
 			}
-			verificaResposta(nomeTime);
-		}else{
-			if(posInput <= letras){				
-				$("#nomeTime"+posInput).focus();
-				posInput++;
+			for(var i=0; i < array_index.length; i++){
+				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\" data-next=\"#nomeTime"+(i+1)+"\" >");			
 			}
-		}
+			
+			opcoes();
+		break;
+	}	
+	$(document).keypress(function(e) {
+    	if(e.which == 13) {
+    		var valor = $('#letra'+array_index[index-1]).text();
+    		alert(valor);
+    		
+    		if(valor == resp[input]){
+    			$('#letra'+array_index[index-1]).hide();
+    			console.log(resp[input])    			
+    			$("#nomeFruta"+input).val(valor)
+    			array_index.splice(index-1, 1);
+    			input+=1
+    			index-=1
+    		}
+    	}
 	});
-		
+}
+
+function opcoes(){
+	if((array_index).length > 0){
+		if(array_index[index] == null){
+			$("#letra"+(array_index[index-1])).removeClass("animacao-fruta");
+			index = 0
+		}
+		$("#letra"+(array_index[index-1])).removeClass("animacao-fruta");
+		$("#letra"+(array_index[index])).addClass("animacao-fruta");
+		index +=1;
+		tempo = setTimeout( "opcoes()", 2500 );	
+	}
+	else{
+		sorteiaFruta();
+	}
 	
 }
 
 function verificaFrutas(){
-	if(sorteados.length >= 10){
+	if(sorteados.length >= 1){
 		alert("PARABENS! VOCÊ CONSEGUIU");
 		clearTimeout(tempo);
 		$("#jogarNovamente").show();
@@ -79,34 +128,20 @@ function verificaFrutas(){
 	}
 }
 
-function verificaResposta(nomeTime){
-	var resposta  = nomeTime.toUpperCase();
-	console.log(resposta)
-	$("#nomeTime").val("");
-	if( resposta == resp ){
-		pontuacao += 10;
-		$("#pontuacao").html(pontuacao)
-		alert("VOCÊ ACERTOU");
-		sorteiaTime();
-	}else{
-		vidas-=1;
-		$("#vidas").html(vidas);
-		verificaVidas();
-		alert("ERROU");
-	}
 
-}
 function verificaVidas(){
 	if (vidas < 0){
 		$("#jogarNovamente").show();
 		$("#nomeTime").prop('disabled', true);
 	}
 }
+
 function jogarNovamente(){		
 	$("#jogarNovamente").hide();
 	$("#nomeTime").prop('disabled', false);
 	comecarJogo();
 }
+
 function voltar(){
 	$("#jogarNovamente").hide();
 	$("#nomeTime").prop('disabled', false);

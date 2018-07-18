@@ -492,3 +492,33 @@
 		margin-top: 5%;
 		margin-bottom: 10%;
 	}
+
+	@keyframes pisca {
+		20%, 40%, 80%{
+			color: white;
+		}
+		10%, 50%, 90%{
+			color: black;
+		}
+	}
+
+	.animacao-fruta{
+		animation-name: pisca;
+		animation-duration: 2.5s;
+	}
+
+	.letras-salada-fruta{
+		margin-top: 3%
+	}
+	
+	.letra-salada-fruta-impar{
+		font-size: 3vw;
+		margin-left: 2%;
+	}
+
+	.letra-salada-fruta-par{
+		font-size: 3vw;
+		margin-left: 2%;
+		margin-top: 10%;
+	}
+

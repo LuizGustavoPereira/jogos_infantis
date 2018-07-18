@@ -10,7 +10,7 @@
             <div class="card-content blue-text"> 
 	            <div class="row">
 	            	<div class="col l10 offset-l1 center-align">
-						<img class="width-50" src="imagens/salada-de-frutas/melancia.png">
+						<img class="width-50" src="imagens/salada-de-frutas/salada-fruta.png">
 	            	</div>
             	</div> 
             	<div class="row center-align">
@@ -29,19 +29,18 @@
         <div class="card transparent darken-1">
             <div class="card-content "> 
 	            <div class="row">
-	            	<div class="col l7  xl6 offset-xl2 center-align" >
-	            		<div class="col l6 center-align" style="margin-left: 27%;">
-		            		<div class="card card-imagens small">
-						        <div  id="logoTime">			        	
+	            	<div class="col l7  xl8 offset-xl0" >
+	            		
+		            	<div class="col xl4 card card-imagens small float-left">
+						    <div id="imagemFruta">			        	
 									
-						        </div>							
-				     		</div>
+						    </div>							
+				     	</div>
+			     		<div class="col xl7 offset-xl1 letras-salada-fruta" id="letrasFruta">
+			     			
 			     		</div>
-			     		<div class="col l12" id="divResp">
+			     		<div class="col l12 center-align" id="divResp">
 	            			
-	            		</div>
-	            		<div class="col l12">	            			
-	            			<h5 id="dica"></h5>
 	            		</div>
 	            	</div>
 	            	<div class="col l5 xl3 offset-xl1 center-align">
