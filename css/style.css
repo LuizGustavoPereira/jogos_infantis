@@ -401,6 +401,10 @@
 	.margin-top-5{
 		margin-top: 5% !important;
 	}
+
+	.margin-top-10{
+		margin-top: 10% !important;
+	}
 	
 	.pergunta-monteiro{
 		width: 100%;
@@ -498,7 +502,8 @@
 			color: white;
 		}
 		10%, 50%, 90%{
-			color: black;
+			color: red;
+			font-weight: bold;
 		}
 	}
 
@@ -519,6 +524,6 @@
 	.letra-salada-fruta-par{
 		font-size: 3vw;
 		margin-left: 2%;
-		margin-top: 10%;
+		margin-top: 20%;
 	}
 

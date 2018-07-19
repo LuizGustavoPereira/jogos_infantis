@@ -29,9 +29,9 @@
         <div class="card transparent darken-1">
             <div class="card-content "> 
 	            <div class="row">
-	            	<div class="col l7  xl8 offset-xl0" >
+	            	<div class="col l7 xl8 offset-xl0 margin-top-5" >
 	            		
-		            	<div class="col xl4 card card-imagens small float-left">
+		            	<div class="col xl4 card card-imagens float-left">
 						    <div id="imagemFruta">			        	
 									
 						    </div>							
@@ -39,7 +39,7 @@
 			     		<div class="col xl7 offset-xl1 letras-salada-fruta" id="letrasFruta">
 			     			
 			     		</div>
-			     		<div class="col l12 center-align" id="divResp">
+			     		<div class="col l12 center-align margin-top-5" id="divResp">
 	            			
 	            		</div>
 	            	</div>
@@ -51,19 +51,6 @@
 						<fieldset>
 							<legend>Vidas</legend>
 							<h5><b class="red-text" id="vidas"></b><i class="material-icons red-text">favorite</i></h5>
-						</fieldset>
-						<fieldset>
-							<legend>Tempo</legend>
-							<fieldset class="tempo">
-								<div class="row">
-									<div class="col l7" id="min">
-										
-									</div>									
-									<div class="col l5" id="countTempo">
-										&nbsp;
-									</div>
-								</div>
-							</fieldset>
 						</fieldset>
 					</div>
 	            	
