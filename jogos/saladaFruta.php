@@ -66,6 +66,30 @@
             </div>            
         </div>
     </div>
+    <div class="col l10 offset-l1" id="fim-do-jogo" display>
+		<div class="card transparent darken-1">
+	        <div class="card-content blue-text text-darken-2"> 
+		        <div class="row">
+		        	<div class="titulo col l10 offset-l1 center-align">
+			        	<h3 style="color: #00a1ff; font-size: 3vw; margin-top: 5%">FIM DO JOGO</h3>
+			        	<a style="margin-top: 5%" class="waves-effect waves-light btn background btnControl" onClick="comecarJogo()" id="jogarNovamente" display="">Jogar Novamente</a>
+					</div>				
+		        </div>
+		    </div>
+		</div>	
+	</div>
+    <div class="col l10 offset-l1" id="ganhou-jogo">
+		<div class="card transparent darken-1">
+	        <div class="card-content blue-text"> 
+		        <div class="row">
+		        	<div class="titulo col l10 offset-l1 center-align">
+			        	<h3 style="color: #00a1ff; font-size: 3vw; margin-top: 5%">PARABÉNS!!</h3>
+			        	<a style="margin-top: 5%" class="waves-effect waves-light btn background btnControl" onClick="comecarJogo()" id="jogarNovamente" display="">Jogar Novamente</a>
+					</div>				
+		        </div>
+		    </div>
+		</div>	
+	</div>
 </div>
 
 <script src="jogos/js/frmSaladaFruta.js" type="text/javascript"></script>
