@@ -530,5 +530,8 @@
 	.input-descubra-palavra input{
 		width: 3em;
 		display: block;
+		text-align: center;
+		float: left;
+		readonly="true"
 	}
 
