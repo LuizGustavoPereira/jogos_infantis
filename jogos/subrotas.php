@@ -46,8 +46,12 @@ $routerContent->addRoutes(array(
 	array('GET','/alfabeto/[*]',		'/alfabeto.php', ''),
 
 	array('GET','/salada-fruta',  		'/saladaFruta.php', 'saladaFruta'),
-	array('GET','/salada-fruta/',  			'/saladaFruta.php', ''),
-	array('GET','/salada-fruta/[*]',		'/saladaFruta.php', ''),
+	array('GET','/salada-fruta/',  		'/saladaFruta.php', ''),
+	array('GET','/salada-fruta/[*]',	'/saladaFruta.php', ''),
+
+	array('GET','/animais',  			'/animais.php', 'animais'),
+	array('GET','/animais/',  			'/animais.php', ''),
+	array('GET','/animais/[*]',			'/animais.php', ''),
 
 ));	
 

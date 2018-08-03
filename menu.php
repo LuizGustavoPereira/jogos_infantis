@@ -77,6 +77,7 @@
 					$menu = new Menu('Jogos', 'games');
 						$menu->append('Ver Todos', 								'./jogos/menu-principal/');
 						$menu->append('Alfabeto',  								'./jogos/alfabeto/');
+						$menu->append('Animais', 								'./jogos/animais');
 						$menu->append('Antes e Depois', 						'./jogos/antes-depois/');
 						$menu->append('Brasileiro',  							'./jogos/brasileiro/');
 						$menu->append('Brincando com Monteiro Lobato', 	  		'./jogos/monteiro-lobato/');
