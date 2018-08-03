@@ -142,29 +142,29 @@ function sorteiaFruta(){
 	
 }
 
-$(document).keypress(function(e) {
-    	if(e.which == 13) {
-    		var valor = $('#letra'+array_index[index-1]).text();
-    		if(vidas<=0){
-    			$("#jogo").hide();
-				$("#fim-do-jogo").show();
-				$("#jogarNovamente").show();
-    		}else{
-    			if(valor == resp[input]){  	
-	    			alert("deu");		
-	    			$("#nomeFruta"+input).val(valor)
-	    			array_index.splice(index-1, 1);
-	    			input+=1
-	    			index-=1
-    			}else{
-	    			alert("não");
-	    			vidas-=1;
-	    			$("#vidas").html(vidas);
-    			}
-    		}
-    		
-    	}
-	});
+$(document).keypress( this, function(e){	
+	if(e.which == 13) {
+		var valor = $('#letra'+array_index[index-1]).text();
+		if(vidas<=0){
+			$("#jogo").hide();
+			$("#fim-do-jogo").show();
+			$("#jogarNovamente").show();
+		}else{
+			if(valor == resp[input]){	    	
+				 $("#letra"+array_index[index-1]).prop("disabled",true);	
+    			$("#nomeFruta"+input).val(valor);
+    			array_index.splice(index-1, 1);
+    			input+=1
+    			index-=1
+			}else{
+    			alert("não");
+    			vidas-=1;
+    			$("#vidas").html(vidas);
+			}
+		}
+		
+	}
+});
 
 function opcoes(){
 	if((array_index).length > 0){
@@ -184,7 +184,7 @@ function opcoes(){
 }
 
 function verificaFrutas(){
-	if(sorteados.length >= 1){
+	if(sorteados.length >= 6){
 		pontuacao = 0,
 		sorteados = [],
 		vidas = 3;
