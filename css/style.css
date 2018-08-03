@@ -527,3 +527,8 @@
 		margin-top: 20%;
 	}
 
+	.input-descubra-palavra input{
+		width: 3em;
+		display: block;
+	}
+
