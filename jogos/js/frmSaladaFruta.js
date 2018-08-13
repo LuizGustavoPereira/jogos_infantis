@@ -20,6 +20,7 @@ function comecarJogo(){
 	$("#jogarNovamente").hide();
 	$("#fim-do-jogo").hide();
 	$("#ganhou-jogo").hide();
+	$("#min").html("<p>inicio</p>");
 	$("#pontuacao").html(pontuacao);
 	$("#jogo").show();
 	$("#vidas").html(vidas);
