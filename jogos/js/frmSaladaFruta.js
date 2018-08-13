@@ -20,6 +20,7 @@ function comecarJogo(){
 	$("#jogarNovamente").hide();
 	$("#fim-do-jogo").hide();
 	$("#ganhou-jogo").hide();
+	$("#min").html("<p>inicio</p>");
 	$("#pontuacao").html(pontuacao);
 	$("#jogo").show();
 	$("#vidas").html(vidas);
@@ -31,7 +32,7 @@ function comecarJogo(){
 function sorteiaFruta(){
 	clearTimeout(tempo);
 	$("#divResp").html("");
-	$("#letrasFruta").html("");		
+	$("#letrasFruta").html("");
 	input = 0;
 	index = 0;
 	nomeFruta = [];
@@ -141,7 +142,64 @@ function sorteiaFruta(){
 	
 }
 
+$(document).keypress( this, function(e){	
+	if(e.which == 13) {
+		var valor = $('#letra'+array_index[index-1]).text();
+		if(vidas<=0){
+			$("#jogo").hide();
+			$("#fim-do-jogo").show();
+			$("#jogarNovamente").show();
+		}else{
+			if(valor == resp[input]){	    	
+				 $("#letra"+array_index[index-1]).prop("disabled",true);	
+    			$("#nomeFruta"+input).val(valor);
+    			array_index.splice(index-1, 1);
+    			input+=1
+    			index-=1
+			}else{
+    			alert("não");
+    			vidas-=1;
+    			$("#vidas").html(vidas);
+			}
+		}
+		
+	}
+});
 
+function opcoes(){
+	if((array_index).length > 0){
+		if(array_index[index] == null){
+			$("#letra"+(array_index[index-1])).removeClass("animacao-fruta");
+			index = 0
+		}
+		$("#letra"+(array_index[index-1])).removeClass("animacao-fruta");
+		$("#letra"+(array_index[index])).addClass("animacao-fruta");
+		index +=1;
+		tempo = setTimeout( "opcoes()", 2500 );	
+	}
+	else{
+		sorteiaFruta();
+	}
+	
+}
+
+function verificaFrutas(){
+	if(sorteados.length >= 6){
+		pontuacao = 0,
+		sorteados = [],
+		vidas = 3;
+		$("#jogo").hide();
+		$("#ganhou-jogo").show();
+	}else{		
+		fruta = Math.floor((Math.random() * 6) + 1);
+		if(sorteados.indexOf(fruta) > -1){
+			verificaFrutas();
+
+		}else{	
+			sorteados.push(fruta);			
+		}
+	}
+}
 
 
 
