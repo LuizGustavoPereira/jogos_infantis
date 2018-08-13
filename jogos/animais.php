@@ -29,18 +29,19 @@
         <div class="card transparent darken-1">
             <div class="card-content "> 
 	            <div class="row">
-	            	<div class="col xl12">
-			            <audio id="audio">
-							<source src="sons/animais/aguia.mp3" type="audio/mpeg">							   
-						</audio>
-					</div>
 	            	<div class="col l7 xl8 offset-xl0 margin-top-5" >
 	            		
-		            	<div class="col xl12 card card-imagens center-align">
-						    <div id="imagemAnimal">			        	
+		            	<div class="col xl4 card card-imagens float-left">
+						    <div id="imagemFruta">			        	
 									
 						    </div>							
-				     	</div>			     		
+				     	</div>
+			     		<div class="col xl7 offset-xl1 letras-salada-fruta" id="letrasFruta">
+			     			
+			     		</div>
+			     		<div class="col l12 center-align margin-top-5" id="divResp">
+	            			
+	            		</div>
 	            	</div>
 	            	<div class="col l5 xl3 offset-xl1 center-align">
 						<fieldset>
