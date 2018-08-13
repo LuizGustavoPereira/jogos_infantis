@@ -538,7 +538,7 @@
 		margin-top: 20%;
 	}
 
-	.input-descubra-palavra input span{
+	.input-descubra-palavra input, .input-descubra-palavra span{
 		width: 3vw;
 		display: block;
 		text-align: center;
