@@ -30,12 +30,24 @@
             <div class="card-content "> 
 	            <div class="row">
 	            	<div class="col l7  xl8 offset-xl0 margin-top-5" >
-	            		<div class="col l6 center-align">
-		            		
-						    <div class="input-descubra-palavra">			        	
-								<input type="" name="" value="pi" >
-								<input type="" name="" value="hos">
-								<input type="" name="" value="tal">
+	            		<div class="col l7 center-align">		            		
+						    <div id="hospital" class="input-descubra-palavra">			        	
+								<input onClick="clicaSilaba('hospital1')" id="hospital1" type="button" value="pi" >
+								<input onClick="clicaSilaba('hospital2')" id="hospital2" type="button" value="hos">
+								<input onClick="clicaSilaba('hospital3')" id="hospital3" type="button" value="tal">
+								<span><i class="material-icons">trending_flat</i></span>
+								<input onClick="verificaSilaba('hos')" type="button" id="hos" name="" value="" >
+								<input onClick="verificaSilaba('pi')" type="button" id="pi" name="" value="">
+								<input onClick="verificaSilaba('tal')" type="button" id="tal" name="" value="">
+						    </div>
+						    <div id="amigo" class="margin-top-10 input-descubra-palavra">			        	
+								<input onClick="clicaSilaba('amigo1')" id="amigo1" type="button" value="mi" >
+								<input onClick="clicaSilaba('amigo2')" id="amigo2" type="button" value="a">
+								<input onClick="clicaSilaba('amigo3')" id="amigo3" type="button" value="go">
+								<span><i class="material-icons">trending_flat</i></span>
+								<input onClick="verificaSilaba('mi')" type="button" id="a" name="" value="" >
+								<input onClick="verificaSilaba('a')" type="button" id="mi" name="" value="">
+								<input onClick="verificaSilaba('g')" type="button" id="go" name="" value="">
 						    </div>							
 				     		
 			     		</div>

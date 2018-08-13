@@ -527,11 +527,15 @@
 		margin-top: 20%;
 	}
 
-	.input-descubra-palavra input{
+	.input-descubra-palavra input,span{
 		width: 3em;
 		display: block;
 		text-align: center;
 		float: left;
-		readonly="true"
+		cursor: pointer !important;
+	}
+
+	.input-descubra-palavra-clique{
+		color: red
 	}
 
