@@ -92,4 +92,4 @@
 	</div>
 </div>
 
-<script src="jogos/js/frmAnimais.js" type="text/javascript"></script>
+<script src="jogos/js/frmSaladaFruta.js" type="text/javascript"></script>
