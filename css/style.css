@@ -523,12 +523,12 @@
 
 	.letra-salada-fruta-par{
 		font-size: 3vw;
-		margin-left: 2%;
+		/*margin-left: 2%;*/
 		margin-top: 20%;
 	}
 
 	.input-descubra-palavra input,span{
-		width: 3rem;
+		/*width: 3vw;*/
 		display: block;
 		text-align: center;
 		float: left;
