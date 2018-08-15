@@ -8,10 +8,13 @@ var resp = "",
 	tempo;	
 	silaba = "";
 	idAtual = "";
+	grupoAtual = "";
+	acertos = 0;
 
 $(document).ready(function(){
 	$("#jogo").hide();
 	$("#jogarNovamente").hide();
+	$("#ganhou-jogo").hide();
 });
 
 
@@ -28,20 +31,31 @@ function comecarJogo(){
 	$("#jogo").show();
 	$("#vidas").html(vidas);
 	$("#telaInicial").hide();
+	$(".input-resposta-descubra-palavra").val("");
+	$("#"+idAtual).removeClass("input-descubra-palavra-clique");
 }
 
-function clicaSilaba(id) {
+function clicaSilaba(grupo, numero) {
 	if(idAtual!=""){
 		$("#"+idAtual).removeClass("input-descubra-palavra-clique");
 	}	
-	$("#"+id).addClass("input-descubra-palavra-clique");
-	idAtual = id
-	silaba = $("#"+id).val();
+	grupoAtual = grupo;
+	idAtual = grupo+numero
+	$("#"+idAtual).addClass("input-descubra-palavra-clique");
+	silaba = $("#"+idAtual).val();
 }
 
-function verificaSilaba(id) {
-	if(id == silaba){
-		$("#"+idAtual).removeClass("input-descubra-palavra-clique");
-		$("#"+id).val(id)
-	}
+function verificaSilaba(id,grupo) {
+	if(acertos<=1){
+		if(id == silaba && grupoAtual == grupo){
+			$("#"+idAtual).removeClass("input-descubra-palavra-clique");
+			$("#"+id+grupo).val(id);
+			$("#"+idAtual).prop("disabled", true);
+			$("#"+id+grupo).prop("disabled", true);
+			acertos+=1;
+		}
+	}else{
+		$("#jogo").hide();
+		$("#ganhou-jogo").show();
+	}	
 }

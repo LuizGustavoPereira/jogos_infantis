@@ -550,3 +550,7 @@
 		color: red
 	}
 
+	.input-resposta-descubra-palavra{
+		border: 1px solid #000000;
+    	background: white;
+	}
