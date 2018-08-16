@@ -10,7 +10,7 @@
             <div class="card-content blue-text"> 
 	            <div class="row">
 	            	<div class="col l10 offset-l1 center-align">
-						<img src="">
+						<img src="imagens/descubra-palavra/detetive.gif">
 	            	</div>
             	</div> 
             	<div class="row center-align">
@@ -29,7 +29,7 @@
         <div class="card transparent darken-1">
             <div class="card-content "> 
 	            <div class="row">
-	            	<div class="col l7  xl8 offset-xl0 margin-top-5" >
+	            	<div class="col l7  xl8 offset-xl0" >
 	            		<div class="col l8 xl8 center-align">		            		
 						    <div id="hospital" class="input-descubra-palavra">			        	
 								<input onClick="clicaSilaba('hospital','1')" id="hospital1" type="button" value="pi" >
@@ -162,6 +162,18 @@
 		        <div class="row">
 		        	<div class="titulo col l10 offset-l1 center-align">
 			        	<h3 style="color: #00a1ff; font-size: 3vw; margin-top: 5%">PARABÉNS!!</h3>
+			        	<a style="margin-top: 5%" class="waves-effect waves-light btn background btnControl" onClick="comecarJogo()" id="jogarNovamente" display="">Jogar Novamente</a>
+					</div>				
+		        </div>
+		    </div>
+		</div>	
+	</div>
+	<div class="col l10 offset-l1" id="fim-do-jogo">
+		<div class="card transparent darken-1">
+	        <div class="card-content blue-text text-darken-2"> 
+		        <div class="row">
+		        	<div class="titulo col l10 offset-l1 center-align">
+			        	<h3 style="color: #00a1ff; font-size: 3vw; margin-top: 5%">FIM DO JOGO</h3>
 			        	<a style="margin-top: 5%" class="waves-effect waves-light btn background btnControl" onClick="comecarJogo()" id="jogarNovamente" display="">Jogar Novamente</a>
 					</div>				
 		        </div>

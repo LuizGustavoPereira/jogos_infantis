@@ -15,6 +15,7 @@ $(document).ready(function(){
 	$("#jogo").hide();
 	$("#jogarNovamente").hide();
 	$("#ganhou-jogo").hide();
+	$("#fim-do-jogo").hide();
 });
 
 
@@ -24,15 +25,16 @@ function comecarJogo(){
 	sorteados = [];	
 	clearTimeout(tempo);
 	count = 0;
-	$("#jogarNovamente").hide();
-	$("#fim-do-jogo").hide();
-	$("#ganhou-jogo").hide();
+	tempo = setInterval("atualizaTempo()", 10000);
+	$("#min").html("<p>inicio</p>");
 	$("#pontuacao").html(pontuacao);
 	$("#jogo").show();
 	$("#vidas").html(vidas);
 	$("#telaInicial").hide();
 	$(".input-resposta-descubra-palavra").val("");
-	$("#"+idAtual).removeClass("input-descubra-palavra-clique");
+	if(idAtual != ""){
+		$("#"+idAtual).removeClass("input-descubra-palavra-clique");	
+	}	
 }
 
 function clicaSilaba(grupo, numero) {
@@ -53,9 +55,50 @@ function verificaSilaba(id,grupo) {
 			$("#"+idAtual).prop("disabled", true);
 			$("#"+id+grupo).prop("disabled", true);
 			acertos+=1;
+		}else{
+			if(vidas>0){
+				vidas-=1;
+				$("#vidas").html(vidas);
+			}else{
+				$("#jogo").hide();
+				$("#fim-do-jogo").show();
+			}		
 		}
 	}else{
 		$("#jogo").hide();
 		$("#ganhou-jogo").show();
 	}	
 }
+
+function atualizaTempo(){
+	if(count < 6 ){
+		color = "green";
+	}else if(count < 12){
+		color = "blue";
+	}else if (count < 17){
+		color = "red";
+	}
+	else{
+		$("#jogo").hide();
+		$("#fim-do-jogo").show();
+		clearTimeout(tempo);
+	}
+	if(count == 6){
+		$("#min").append("&nbsp;&nbsp;&nbsp;<p>1 min</p>");
+	}
+	else if(count == 12){
+		$("#min").append("&nbsp;&nbsp;&nbsp;<p>2 min</p>");
+	}
+	else if(count == 17){
+		$("#min").append("&nbsp;&nbsp;&nbsp;<p>3 min</p>");
+	}
+	$("#countTempo").append("<div style='background-color:"+color+"'></div>");
+	count ++;	
+}
+
+
+function tecla(){
+    window.alert("O código da tecla pressionada foi: " + event.keyCode);
+}
+  
+document.body.onkeypress = tecla;
