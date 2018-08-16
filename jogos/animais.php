@@ -30,8 +30,13 @@
             <div class="card-content "> 
 	            <div class="row">
 	            	<div class="col xl12">
-			            <audio id="audio">
-							<source src="sons/animais/aguia.mp3" type="audio/mpeg">							   
+			            <audio id="audio">														  
+						</audio>
+						<audio id="ganhou">
+							<source src="sons/geral/ganhou.mp3" type="audio/mpeg">						   	
+						</audio>
+						<audio id="perdeu">
+							<source src="sons/geral/perdeu.mp3" type="audio/mpeg">						   
 						</audio>
 					</div>
 	            	<div class="col l7 xl8 offset-xl0 margin-top-5" >

@@ -1,21 +1,19 @@
 var resp = "",
 	array_index=[]
 	sorteados = [],
-	fruta = "",
+	animal = "",
 	pontuacao = 0,
-	vidas = 3,
-	count = 0,
-	letras = 0,
-	posInput = 1,
-	nomeFruta = "",
-	index=1,
-	tempo = 0;
+	vidas = 3;	
+
+
+perdeu = document.getElementById('perdeu');
+ganhou = document.getElementById('ganhou');
+audio = document.getElementById('audio');
 
 function comecarJogo(){
 	vidas = 3;
 	pontuacao = 0;
 	sorteados = [];	
-	clearTimeout(tempo);
 	count = 0;
 	$("#jogarNovamente").hide();
 	$("#fim-do-jogo").hide();
@@ -26,177 +24,104 @@ function comecarJogo(){
 	$("#vidas").html(vidas);
 	$("#telaInicial").hide();
 	$("#nomeTime").focus();
-	sorteiaFruta();
+	sorteiaAnimais();
 }
 
-function sorteiaFruta(){
-	clearTimeout(tempo);
-	$("#divResp").html("");
-	$("#letrasFruta").html("");
-	input = 0;
-	index = 0;
-	nomeFruta = [];
-	posInput = 1;
-	verificaFrutas();	
-	switch (fruta){
+function sorteiaAnimais(){
+	$("#pontuacao").html(pontuacao);	
+	verificaAnimais();	
+	switch (animal){
 		case 1:
-			resp = "ABACAXI";
-			array_index = [0,1,2,3,4,5,6];
-			array_letras=["B","A","C","X","A","I","A"];			
-			$("#imagemFruta").html("<img class='width-100' src='imagens/salada-de-frutas/abacaxi.png'>");
-			for(var i=0; i < array_index.length; i++){
-				if((i%2 == 0)){
-					$("#letrasFruta").append("<span class='float-left letra-salada-fruta-par' id=letra"+i+">"+array_letras[i]+"</span>");
-				}else{
-					$("#letrasFruta").append("<span class='float-left letra-salada-fruta-impar' id=letra"+i+">"+array_letras[i]+"</span>");
-				}
-			}
-			for(var i=0; i < array_index.length; i++){
-				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\" data-next=\"#nomeFruta"+(i+1)+"\" >");			
-			}	
-			
+			resp = 49;	
+			$("#audio").html("<source src='sons/animais/aguia.mp3' type='audio/mpeg'>");				
+			$("#imagemAnimal").html("<img class='width-70' src='imagens/animais/aguiac.png'>");			
+			audio.play();
 		break;
 		case 2:
-			resp = "MELANCIA";
-			array_index = [0,1,2,3,4,5,6,7];
-			array_letras=["L","A","N","M","A","I","C","E"];			
-			$("#imagemFruta").html("<img class='width-100' src='imagens/salada-de-frutas/melancia.png'>");
-			for(var i=0; i < array_index.length; i++){
-				if((i%2 == 0)){
-					$("#letrasFruta").append("<span class='float-left letra-salada-fruta-par' id=letra"+i+">"+array_letras[i]+"</span>");
-				}else{
-					$("#letrasFruta").append("<span class='float-left letra-salada-fruta-impar' id=letra"+i+">"+array_letras[i]+"</span>");
-				}
-			}
-			for(var i=0; i < array_index.length; i++){
-				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\" data-next=\"#nomeFruta"+(i+1)+"\" >");			
-			}
+			resp = 50;	
+			$("#audio").html("<source src='sons/animais/gato.mp3' type='audio/mpeg'>");				
+			$("#imagemAnimal").html("<img class='width-70' src='imagens/animais/gatoc.png'>");			
+			audio.play();
 		break;
 		case 3:
-			resp = "BANANA";
-			array_index = [0,1,2,3,4,5];
-			array_letras=["N","A","A","B","A","N"];			
-			$("#imagemFruta").html("<img class='width-100' src='imagens/salada-de-frutas/banana.png'>");
-			for(var i=0; i < array_index.length; i++){
-				if((i%2 == 0)){
-					$("#letrasFruta").append("<span class='float-left letra-salada-fruta-par' id=letra"+i+">"+array_letras[i]+"</span>");
-				}else{
-					$("#letrasFruta").append("<span class='float-left letra-salada-fruta-impar' id=letra"+i+">"+array_letras[i]+"</span>");
-				}
-			}
-			for(var i=0; i < array_index.length; i++){
-				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\" data-next=\"#nomeFruta"+(i+1)+"\" >");			
-			}
+			resp = 51;	
+			$("#audio").html("<source src='sons/animais/elefante.mp3' type='audio/mpeg'>");				
+			$("#imagemAnimal").html("<img class='width-70' src='imagens/animais/elefantec.png'>");			
+			audio.play();
 		break;
 		case 4:
-			resp = "LARANJA";
-			array_index = [0,1,2,3,4,5,6];
-			array_letras=["L","A","J","A","A","N","R"];			
-			$("#imagemFruta").html("<img class='width-100' src='imagens/salada-de-frutas/laranja.png'>");
-			for(var i=0; i < array_index.length; i++){
-				if((i%2 == 0)){
-					$("#letrasFruta").append("<span class='float-left letra-salada-fruta-par' id=letra"+i+">"+array_letras[i]+"</span>");
-				}else{
-					$("#letrasFruta").append("<span class='float-left letra-salada-fruta-impar' id=letra"+i+">"+array_letras[i]+"</span>");
-				}
-			}
-			for(var i=0; i < array_index.length; i++){
-				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\" data-next=\"#nomeFruta"+(i+1)+"\" >");			
-			}
+			resp = 52;	
+			$("#audio").html("<source src='sons/animais/cachorro.mp3' type='audio/mpeg'>");				
+			$("#imagemAnimal").html("<img class='width-70' src='imagens/animais/cachorroc.png'>");			
+			audio.play();
 		break;
 		case 5:
-			resp = "LIMÃO";
-			array_index = [0,1,2,3,4];
-			array_letras=["L","M","O","Ã","I"];			
-			$("#imagemFruta").html("<img class='width-100' src='imagens/salada-de-frutas/limao.png'>");
-			for(var i=0; i < array_index.length; i++){
-				if((i%2 == 0)){
-					$("#letrasFruta").append("<span class='float-left letra-salada-fruta-par' id=letra"+i+">"+array_letras[i]+"</span>");
-				}else{
-					$("#letrasFruta").append("<span class='float-left letra-salada-fruta-impar' id=letra"+i+">"+array_letras[i]+"</span>");
-				}
-			}
-			for(var i=0; i < array_index.length; i++){
-				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\" data-next=\"#nomeFruta"+(i+1)+"\" >");			
-			}
+			resp = 53;	
+			$("#audio").html("<source src='sons/animais/leao.mp3' type='audio/mpeg'>");			
+			$("#imagemAnimal").html("<img class='width-70' src='imagens/animais/leaoc.png'>");			
+			audio.play();
 		break;
 		case 6:
-			resp = "MAÇÃ";
-			array_index = [0,1,2,3];
-			array_letras=["Ç","M","A","Ã"];			
-			$("#imagemFruta").html("<img class='width-100' src='imagens/salada-de-frutas/maca.png'>");
-			for(var i=0; i < array_index.length; i++){
-				if((i%2 == 0)){
-					$("#letrasFruta").append("<span class='float-left letra-salada-fruta-par' id=letra"+i+">"+array_letras[i]+"</span>");
-				}else{
-					$("#letrasFruta").append("<span class='float-left letra-salada-fruta-impar' id=letra"+i+">"+array_letras[i]+"</span>");
-				}
-			}
-			for(var i=0; i < array_index.length; i++){
-				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\" data-next=\"#nomeFruta"+(i+1)+"\" >");			
-			}
+			resp = 54;	
+			$("#audio").html("<source src='sons/animais/bode.mp3' type='audio/mpeg'>");	
+			$("#imagemAnimal").html("<img class='width-70' src='imagens/animais/bodec.png'>");			
+			audio.play();
 		break;
-	}	
-
-	opcoes();
-	
+		case 7:
+			resp = 55;	
+			$("#audio").html("<source src='sons/animais/touro.mp3' type='audio/mpeg'>");	
+			$("#imagemAnimal").html("<img class='width-70' src='imagens/animais/touroc.png'>");			
+			audio.play();
+		break;
+		case 8:
+			resp = 56;	
+			$("#audio").html("<source src='sons/animais/tigre.mp3' type='audio/mpeg'>");	
+			$("#imagemAnimal").html("<img class='width-70' src='imagens/animais/tigrec.png'>");			
+			audio.play();
+		break;
+		case 9:
+			resp = 57;	
+			$("#audio").html("<source src='sons/animais/macaco.mp3' type='audio/mpeg'>");	
+			$("#imagemAnimal").html("<img class='width-70' src='imagens/animais/macacoc.png'>");			
+			audio.play();
+		break;
+	}
 }
 
-$(document).keypress( this, function(e){	
-	if(e.which == 13) {
-		var valor = $('#letra'+array_index[index-1]).text();
-		if(vidas<=0){
-			$("#jogo").hide();
-			$("#fim-do-jogo").show();
-			$("#jogarNovamente").show();
+function tecla(){	
+	audio.pause();
+	if(event.keyCode == resp){
+		pontuacao += 10;
+		sorteiaAnimais();
+	}else{
+		if(vidas > 0){			
+			vidas -= 1;
+			$("#vidas").html(vidas);
+			alert("Errou, tente novamente");
 		}else{
-			if(valor == resp[input]){	    	
-				 $("#letra"+array_index[index-1]).prop("disabled",true);	
-    			$("#nomeFruta"+input).val(valor);
-    			array_index.splice(index-1, 1);
-    			input+=1
-    			index-=1
-			}else{
-    			alert("não");
-    			vidas-=1;
-    			$("#vidas").html(vidas);
-			}
+			$("#jogarNovamente").show();
+			$("#fim-do-jogo").show();
+			$("#jogo").hide();
+			perdeu.play();
 		}
-		
-	}
-});
-
-function opcoes(){
-	if((array_index).length > 0){
-		if(array_index[index] == null){
-			$("#letra"+(array_index[index-1])).removeClass("animacao-fruta");
-			index = 0
-		}
-		$("#letra"+(array_index[index-1])).removeClass("animacao-fruta");
-		$("#letra"+(array_index[index])).addClass("animacao-fruta");
-		index +=1;
-		tempo = setTimeout( "opcoes()", 2500 );	
-	}
-	else{
-		sorteiaFruta();
-	}
-	
+	}    
 }
 
-function verificaFrutas(){
-	if(sorteados.length >= 6){
+function verificaAnimais(){
+	if(sorteados.length >= 9){
 		pontuacao = 0,
 		sorteados = [],
 		vidas = 3;
 		$("#jogo").hide();
 		$("#ganhou-jogo").show();
+		ganhou.play();
 	}else{		
-		fruta = Math.floor((Math.random() * 6) + 1);
-		if(sorteados.indexOf(fruta) > -1){
-			verificaFrutas();
+		animal = Math.floor((Math.random() * 9) + 1);
+		if(sorteados.indexOf(animal) > -1){
+			verificaAnimais();
 
 		}else{	
-			sorteados.push(fruta);			
+			sorteados.push(animal);			
 		}
 	}
 }
@@ -217,7 +142,7 @@ function voltar(){
 	$("#telaInicial").show();
 }
 
-
+document.body.onkeypress = tecla;
 
 $(document).ready(function(){
 	$("#jogo").hide();
