@@ -4,11 +4,19 @@ var resp = "",
 	animal = "",
 	pontuacao = 0,
 	vidas = 3;	
+	audio = "";
 
-
+audioAguia = document.getElementById('audio-aguia');
+audioGato = document.getElementById('audio-gato');
+audioElefante = document.getElementById('audio-elefante');
+audioCachorro = document.getElementById('audio-cachorro');
+audioLeao = document.getElementById('audio-leao');
+audioBode = document.getElementById('audio-bode');
+audioTouro = document.getElementById('audio-touro');
+audioTigre = document.getElementById('audio-tigre');
+audioMacaco = document.getElementById('audio-macaco');
 perdeu = document.getElementById('perdeu');
 ganhou = document.getElementById('ganhou');
-audio = document.getElementById('audio');
 
 function comecarJogo(){
 	vidas = 3;
@@ -33,57 +41,57 @@ function sorteiaAnimais(){
 	switch (animal){
 		case 1:
 			resp = 49;	
-			$("#audio").html("<source src='sons/animais/aguia.mp3' type='audio/mpeg'>");				
 			$("#imagemAnimal").html("<img class='width-70' src='imagens/animais/aguiac.png'>");			
-			audio.play();
+			audioAguia.play();
+			audio = audioAguia
 		break;
 		case 2:
-			resp = 50;	
-			$("#audio").html("<source src='sons/animais/gato.mp3' type='audio/mpeg'>");				
+			resp = 50;		
 			$("#imagemAnimal").html("<img class='width-70' src='imagens/animais/gatoc.png'>");			
-			audio.play();
+			audioGato.play();
+			audio = audioGato;
 		break;
 		case 3:
 			resp = 51;	
-			$("#audio").html("<source src='sons/animais/elefante.mp3' type='audio/mpeg'>");				
 			$("#imagemAnimal").html("<img class='width-70' src='imagens/animais/elefantec.png'>");			
-			audio.play();
+			audioElefante.play();
+			audio = audioElefante;
 		break;
 		case 4:
-			resp = 52;	
-			$("#audio").html("<source src='sons/animais/cachorro.mp3' type='audio/mpeg'>");				
+			resp = 52;		
 			$("#imagemAnimal").html("<img class='width-70' src='imagens/animais/cachorroc.png'>");			
-			audio.play();
+			audioCachorro.play();
+			audio = audioCachorro;
 		break;
 		case 5:
-			resp = 53;	
-			$("#audio").html("<source src='sons/animais/leao.mp3' type='audio/mpeg'>");			
+			resp = 53;		
 			$("#imagemAnimal").html("<img class='width-70' src='imagens/animais/leaoc.png'>");			
-			audio.play();
+			audioLeao.play();
+			audio = audioLeao;
 		break;
 		case 6:
 			resp = 54;	
-			$("#audio").html("<source src='sons/animais/bode.mp3' type='audio/mpeg'>");	
 			$("#imagemAnimal").html("<img class='width-70' src='imagens/animais/bodec.png'>");			
-			audio.play();
+			audioBode.play();
+			audio = audioBode;
 		break;
 		case 7:
-			resp = 55;	
-			$("#audio").html("<source src='sons/animais/touro.mp3' type='audio/mpeg'>");	
+			resp = 55;		
 			$("#imagemAnimal").html("<img class='width-70' src='imagens/animais/touroc.png'>");			
-			audio.play();
+			audioTouro.play();
+			audio = audioTouro;
 		break;
 		case 8:
 			resp = 56;	
-			$("#audio").html("<source src='sons/animais/tigre.mp3' type='audio/mpeg'>");	
 			$("#imagemAnimal").html("<img class='width-70' src='imagens/animais/tigrec.png'>");			
-			audio.play();
+			audioTigre.play();
+			audio = audioTigre;
 		break;
 		case 9:
 			resp = 57;	
-			$("#audio").html("<source src='sons/animais/macaco.mp3' type='audio/mpeg'>");	
 			$("#imagemAnimal").html("<img class='width-70' src='imagens/animais/macacoc.png'>");			
-			audio.play();
+			audioMacaco.play();
+			audio = audioMacaco;
 		break;
 	}
 }

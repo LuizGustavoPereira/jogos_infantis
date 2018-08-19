@@ -30,8 +30,34 @@
             <div class="card-content "> 
 	            <div class="row">
 	            	<div class="col xl12">
-			            <audio id="audio">														  
+			            <audio id="audio-aguia">	
+			            	<source src='sons/animais/aguia.mp3' type='audio/mpeg'>													  
 						</audio>
+						<audio id="audio-gato">	
+			            	<source src='sons/animais/gato.mp3' type='audio/mpeg'>											  
+						</audio>
+						<audio id="audio-elefante">	
+			            	<source src='sons/animais/elefante.mp3' type='audio/mpeg'>											  
+						</audio>
+						<audio id="audio-cachorro">	
+			            	<source src='sons/animais/cachorro.mp3' type='audio/mpeg'>											  
+						</audio>
+						<audio id="audio-leao">	
+			            	<source src='sons/animais/leao.mp3' type='audio/mpeg'>												  
+						</audio>
+						<audio id="audio-bode">	
+			            	<source src='sons/animais/bode.mp3' type='audio/mpeg'>												  
+						</audio>
+						<audio id="audio-touro">	
+			            	<source src='sons/animais/touro.mp3' type='audio/mpeg'>											  
+						</audio>
+						<audio id="audio-tigre">	
+			            	<source src='sons/animais/tigre.mp3' type='audio/mpeg'>													  
+						</audio>
+						<audio id="audio-macaco">	
+			            	<source src='sons/animais/macaco.mp3' type='audio/mpeg'>												  
+						</audio>
+						
 						<audio id="ganhou">
 							<source src="sons/geral/ganhou.mp3" type="audio/mpeg">						   	
 						</audio>
