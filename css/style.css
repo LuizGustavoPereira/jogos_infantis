@@ -554,3 +554,25 @@
 		border: 1px solid #000000;
     	background: white;
 	}
+
+
+	.input-casa-s-com-borda{
+		width: 2.5em !important;
+		height: 2.5em !important;
+		border: 1px black solid !important;
+		text-align: center !important;
+		margin-bottom: 0.2em !important;
+	}
+
+	.input-casa-s-sem-borda{
+		width: 2.5em !important;
+		height: 2.5em !important;
+		border: 1px transparent solid !important;
+		text-align: center !important;
+		color: red !important;
+		margin-bottom: 0.2em !important;
+	}
+
+	.input-casa-s-dica{
+		border: 1px transparent solid !important;
+	}
