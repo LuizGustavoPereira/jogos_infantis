@@ -31,33 +31,33 @@
 	            <div class="row">
 	            	<div class="col l7  xl8 offset-xl0" >
 	            		<div class="col l12 xl12">		            		
-						    <input class="input-casa-s-sem-borda" disabled="true">
-						   	<input class="input-casa-s-sem-borda" disabled="true">
-						   	<input class="input-casa-s-sem-borda" disabled="true">
-						   	<input class="input-casa-s-sem-borda" disabled="true">
-						   	<input class="input-casa-s-sem-borda" disabled="true">
-						   	<input class="input-casa-s-sem-borda" disabled="true">
-						   	<input class="input-casa-s-sem-borda" value="7" disabled="true">
-						   	<input class="input-casa-s-sem-borda" disabled="true">
-						   	<input class="input-casa-s-sem-borda" disabled="true">
-						   	<input class="input-casa-s-sem-borda" disabled="true">
-						   	<input class="input-casa-s-sem-borda" disabled="true">
-						   	<input class="input-casa-s-sem-borda" disabled="true">
-						   	<input class="input-casa-s-sem-borda" disabled="true">
+						    <input class="input-casa-s-sem-borda 1" id="1-c" disabled="true">
+						   	<input class="input-casa-s-sem-borda 2" disabled="true">
+						   	<input class="input-casa-s-sem-borda 3" disabled="true">
+						   	<input class="input-casa-s-sem-borda 4" disabled="true">
+						   	<input class="input-casa-s-sem-borda 5" disabled="true">
+						   	<input class="input-casa-s-sem-borda 6" disabled="true">
+						   	<input class="input-casa-s-sem-borda 7" value="7" disabled="true">
+						   	<input class="input-casa-s-sem-borda 8" disabled="true">
+						   	<input class="input-casa-s-sem-borda 9" disabled="true">
+						   	<input class="input-casa-s-sem-borda 10" disabled="true">
+						   	<input class="input-casa-s-sem-borda 11" disabled="true">
+						   	<input class="input-casa-s-sem-borda 12" disabled="true">
+						   	<input class="input-casa-s-sem-borda 13" disabled="true">
 			     		</div>
 			     		<div class="col l12 xl12">		            		
-						    <input class="input-casa-s-sem-borda" disabled="true">
-						   	<input class="input-casa-s-sem-borda" disabled="true">
-						   	<input class="input-casa-s-sem-borda" disabled="true">
-						   	<input class="input-casa-s-sem-borda" disabled="true">
-						   	<input class="input-casa-s-sem-borda" disabled="true">
-						   	<input class="input-casa-s-sem-borda" value="6" disabled="true">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-sem-borda" value="8" disabled="true">
-						   	<input class="input-casa-s-sem-borda" disabled="true">
-						   	<input class="input-casa-s-sem-borda" disabled="true">
-						   	<input class="input-casa-s-sem-borda" disabled="true">
-						   	<input class="input-casa-s-sem-borda" disabled="true">
+						    <input class="input-casa-s-sem-borda 14" disabled="true">
+						   	<input class="input-casa-s-sem-borda 15" disabled="true">
+						   	<input class="input-casa-s-sem-borda 16" disabled="true">
+						   	<input class="input-casa-s-sem-borda 17" disabled="true">
+						   	<input class="input-casa-s-sem-borda 18" disabled="true">
+						   	<input class="input-casa-s-sem-borda 19" value="6" disabled="true">
+						   	<input class="input-casa-s-com-borda 20">
+						   	<input class="input-casa-s-sem-borda 21" value="8" disabled="true">
+						   	<input class="input-casa-s-sem-borda 22" disabled="true">
+						   	<input class="input-casa-s-sem-borda 23" disabled="true">
+						   	<input class="input-casa-s-sem-borda 24" disabled="true">
+						   	<input class="input-casa-s-sem-borda 25" disabled="true">
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 			     		</div>		            		
 						    <div class="col l12 xl12">		            		
