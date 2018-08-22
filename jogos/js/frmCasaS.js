@@ -16,11 +16,17 @@ $(document).ready(function(){
 	$("#jogarNovamente").hide();
 	$("#ganhou-jogo").hide();
 	$("#fim-do-jogo").hide();
-	
 
-	var chars = $(".1").attr('id').split('-');
-	console.log(chars[1]);
 });
+
+function corrigir(){
+	for(i=1;i<=58;i++){
+		id = $("."+i).attr('id');
+		console.log(id)
+	}
+	// var chars = $(".1").attr('id').split('-');
+	// console.log(chars[1]);
+}
 
 
 function comecarJogo(){

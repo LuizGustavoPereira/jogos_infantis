@@ -31,33 +31,33 @@
 	            <div class="row">
 	            	<div class="col l7  xl8 offset-xl0" >
 	            		<div class="col l12 xl12">		            		
-						    <input class="input-casa-s-sem-borda 1" id="1-c" disabled="true">
-						   	<input class="input-casa-s-sem-borda 2" disabled="true">
-						   	<input class="input-casa-s-sem-borda 3" disabled="true">
-						   	<input class="input-casa-s-sem-borda 4" disabled="true">
-						   	<input class="input-casa-s-sem-borda 5" disabled="true">
-						   	<input class="input-casa-s-sem-borda 6" disabled="true">
-						   	<input class="input-casa-s-sem-borda 7" value="7" disabled="true">
-						   	<input class="input-casa-s-sem-borda 8" disabled="true">
-						   	<input class="input-casa-s-sem-borda 9" disabled="true">
-						   	<input class="input-casa-s-sem-borda 10" disabled="true">
-						   	<input class="input-casa-s-sem-borda 11" disabled="true">
-						   	<input class="input-casa-s-sem-borda 12" disabled="true">
-						   	<input class="input-casa-s-sem-borda 13" disabled="true">
+						    <input class="input-casa-s-sem-borda" disabled="true">
+						   	<input class="input-casa-s-sem-borda" disabled="true">
+						   	<input class="input-casa-s-sem-borda" disabled="true">
+						   	<input class="input-casa-s-sem-borda" disabled="true">
+						   	<input class="input-casa-s-sem-borda" disabled="true">
+						   	<input class="input-casa-s-sem-borda" disabled="true">
+						   	<input class="input-casa-s-sem-borda" value="7" disabled="true">
+						   	<input class="input-casa-s-sem-borda" disabled="true">
+						   	<input class="input-casa-s-sem-borda" disabled="true">
+						   	<input class="input-casa-s-sem-borda" disabled="true">
+						   	<input class="input-casa-s-sem-borda" disabled="true">
+						   	<input class="input-casa-s-sem-borda" disabled="true">
+						   	<input class="input-casa-s-sem-borda" disabled="true">
 			     		</div>
 			     		<div class="col l12 xl12">		            		
-						    <input class="input-casa-s-sem-borda 14" disabled="true">
-						   	<input class="input-casa-s-sem-borda 15" disabled="true">
-						   	<input class="input-casa-s-sem-borda 16" disabled="true">
-						   	<input class="input-casa-s-sem-borda 17" disabled="true">
-						   	<input class="input-casa-s-sem-borda 18" disabled="true">
-						   	<input class="input-casa-s-sem-borda 19" value="6" disabled="true">
-						   	<input class="input-casa-s-com-borda 20">
-						   	<input class="input-casa-s-sem-borda 21" value="8" disabled="true">
-						   	<input class="input-casa-s-sem-borda 22" disabled="true">
-						   	<input class="input-casa-s-sem-borda 23" disabled="true">
-						   	<input class="input-casa-s-sem-borda 24" disabled="true">
-						   	<input class="input-casa-s-sem-borda 25" disabled="true">
+						    <input class="input-casa-s-sem-borda" disabled="true">
+						   	<input class="input-casa-s-sem-borda" disabled="true">
+						   	<input class="input-casa-s-sem-borda" disabled="true">
+						   	<input class="input-casa-s-sem-borda" disabled="true">
+						   	<input class="input-casa-s-sem-borda" disabled="true">
+						   	<input class="input-casa-s-sem-borda" value="6" disabled="true">
+						   	<input class="input-casa-s-com-borda 58">
+						   	<input class="input-casa-s-sem-borda" value="8" disabled="true">
+						   	<input class="input-casa-s-sem-borda" disabled="true">
+						   	<input class="input-casa-s-sem-borda" disabled="true">
+						   	<input class="input-casa-s-sem-borda" disabled="true">
+						   	<input class="input-casa-s-sem-borda" disabled="true">
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 			     		</div>		            		
 						    <div class="col l12 xl12">		            		
@@ -66,9 +66,9 @@
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 						   	<input class="input-casa-s-sem-borda" value="5" disabled="true">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
+						   	<input class="input-casa-s-com-borda 57">
+						   	<input class="input-casa-s-com-borda 56">
+						   	<input class="input-casa-s-com-borda 55">
 						   	<input class="input-casa-s-sem-borda" value="9" disabled="true">
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 						   	<input class="input-casa-s-sem-borda" disabled="true">
@@ -80,60 +80,60 @@
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 						   	<input class="input-casa-s-sem-borda" value="4" disabled="true">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
+						   	<input class="input-casa-s-com-borda 54">
+						   	<input class="input-casa-s-com-borda 53">
+						   	<input class="input-casa-s-com-borda 52">
+						   	<input class="input-casa-s-com-borda 51">
+						   	<input class="input-casa-s-com-borda 50">
 						   	<input class="input-casa-s-sem-borda" value="10" disabled="true">
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 			     		</div>
 			     		<div class="col l12 xl12">		            		
-						    <input class="input-casa-s-sem-borda" value="1" disabled="true">
-						   	<input class="input-casa-s-sem-borda" value="2" disabled="true">
-						   	<input class="input-casa-s-sem-borda" value="3" disabled="true">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
+						    <input class="input-casa-s-sem-borda 49" value="1" disabled="true">
+						   	<input class="input-casa-s-sem-borda 48" value="2" disabled="true">
+						   	<input class="input-casa-s-sem-borda 47" value="3" disabled="true">
+						   	<input class="input-casa-s-com-borda 46">
+						   	<input class="input-casa-s-com-borda 45">
+						   	<input class="input-casa-s-com-borda 44">
+						   	<input class="input-casa-s-com-borda 43">
+						   	<input class="input-casa-s-com-borda 42">
+						   	<input class="input-casa-s-com-borda 41">
+						   	<input class="input-casa-s-com-borda 40">
 						   	<input class="input-casa-s-sem-borda" value="11" disabled="true">
 						   	<input class="input-casa-s-sem-borda" value="12" disabled="true">
 						   	<input class="input-casa-s-sem-borda" value="13" disabled="true">
 			     		</div>
 			     		<div class="col l12 xl12">		            		
-						    <input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
+						    <input class="input-casa-s-com-borda 39">
+						   	<input class="input-casa-s-com-borda 38">
+						   	<input class="input-casa-s-com-borda 37">
+						   	<input class="input-casa-s-com-borda 36">
+						   	<input class="input-casa-s-com-borda 35">
+						   	<input class="input-casa-s-com-borda 34">
+						   	<input class="input-casa-s-com-borda 33">
+						   	<input class="input-casa-s-com-borda 32">
+						   	<input class="input-casa-s-com-borda 31">
+						   	<input class="input-casa-s-com-borda 30">
+						   	<input class="input-casa-s-com-borda 29">
+						   	<input class="input-casa-s-com-borda 28">
+						   	<input class="input-casa-s-com-borda 27">
 			     		</div>
 			     		<div class="col l12 xl12">		            		
-						    <input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
+						    <input class="input-casa-s-com-borda 26">
+						   	<input class="input-casa-s-com-borda 25">
+						   	<input class="input-casa-s-com-borda 24">
+						   	<input class="input-casa-s-com-borda 23">
+						   	<input class="input-casa-s-com-borda 22">
+						   	<input class="input-casa-s-com-borda 21">
+						   	<input class="input-casa-s-com-borda 20">
+						   	<input class="input-casa-s-com-borda 19">
+						   	<input class="input-casa-s-com-borda 18">
+						   	<input class="input-casa-s-com-borda 17">
+						   	<input class="input-casa-s-com-borda 16">
+						   	<input class="input-casa-s-com-borda 15">
+						   	<input class="input-casa-s-com-borda 14">
 			     		</div>
 			     		<div class="col l12 xl12">		            		
 						    <input class="input-casa-s-com-borda" value="S" disabled="true">
@@ -151,20 +151,21 @@
 						   	<input class="input-casa-s-com-borda" value="S" disabled="true">
 			     		</div>
 			     		<div class="col l12 xl12">		            		
-						    <input id="1-a" class="input-casa-s-com-borda 1">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
-						   	<input class="input-casa-s-com-borda">
+						    <input id="1-a" class="input-casa-s-com-borda 13">
+						   	<input class="input-casa-s-com-borda 12">
+						   	<input class="input-casa-s-com-borda 11">
+						   	<input class="input-casa-s-com-borda 10">
+						   	<input class="input-casa-s-com-borda 9">
+						   	<input class="input-casa-s-com-borda 8">
+						   	<input class="input-casa-s-com-borda 7">
+						   	<input class="input-casa-s-com-borda 6">
+						   	<input class="input-casa-s-com-borda 5">
+						   	<input class="input-casa-s-com-borda 4">
+						   	<input class="input-casa-s-com-borda 3">
+						   	<input class="input-casa-s-com-borda 2">
+						   	<input class="input-casa-s-com-borda 1">
 			     		</div>
+			     		<button onclick="corrigir()"></button>
 	            		<div class="col l12 xl12">
 	            			<input class="input-casa-s-dica" value="Dica: onde você mora">
 	            		</div>	
