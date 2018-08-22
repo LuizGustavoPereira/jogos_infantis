@@ -151,7 +151,7 @@
 						   	<input class="input-casa-s-com-borda" value="S" disabled="true">
 			     		</div>
 			     		<div class="col l12 xl12">		            		
-						    <input class="input-casa-s-com-borda">
+						    <input id="1-a" class="input-casa-s-com-borda 1">
 						   	<input class="input-casa-s-com-borda">
 						   	<input class="input-casa-s-com-borda">
 						   	<input class="input-casa-s-com-borda">

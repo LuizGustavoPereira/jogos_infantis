@@ -16,6 +16,10 @@ $(document).ready(function(){
 	$("#jogarNovamente").hide();
 	$("#ganhou-jogo").hide();
 	$("#fim-do-jogo").hide();
+	
+
+	var chars = $(".1").attr('id').split('-');
+	console.log(chars[1]);
 });
 
 
@@ -97,8 +101,4 @@ function atualizaTempo(){
 }
 
 
-function tecla(){
-    window.alert("O código da tecla pressionada foi: " + event.keyCode);
-}
-  
-document.body.onkeypress = tecla;
+
