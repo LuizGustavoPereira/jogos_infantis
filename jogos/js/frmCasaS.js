@@ -28,6 +28,48 @@ function corrigir(){
 	// console.log(chars[1]);
 }
 
+function dica(numero){
+	if(numero == 1){
+		$("#dica").val("Onde você mora.");
+	}
+	if(numero == 2){
+		$("#dica").val("Onde coloca flores.");
+	}
+	if(numero == 3){
+		$("#dica").val("O contrário de fundo.");
+	}
+	if(numero == 4){
+		$("#dica").val("Atrás das grades.");
+	}
+	if(numero == 5){
+		$("#dica").val("Demora de pagamento.");
+	}
+	if(numero == 6){
+		$("#dica").val("Aquilo que é bom e saboro também é...");
+	}
+	if(numero == 7){
+		$("#dica").val("Creme que se coloca no sanduiche ou na batata.");
+	}
+	if(numero == 8){
+		$("#dica").val("Que causa tédio.");
+	}
+	if(numero == 9){
+		$("#dica").val("Palavra derivada do mel.");
+	}
+	if(numero == 10){
+		$("#dica").val("1ª pessoa do presente do indicativo do verbo 'pensar'.");
+	}
+	if(numero == 11){
+		$("#dica").val("Aquilo que a balança faz.");
+	}
+	if(numero == 12){
+		$("#dica").val("Aquilo que o cachorro gosta de roer e brincar.");
+	}
+	if(numero == 13){
+		$("#dica").val("Material que reveste o chão.");
+	}
+
+}
 
 function comecarJogo(){
 	vidas = 3;
