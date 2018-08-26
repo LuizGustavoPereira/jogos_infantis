@@ -557,6 +557,8 @@
 
 
 	.input-casa-s-com-borda{
+		box-shadow: 1px 1px black !important;
+		text-transform: uppercase;
 		width: 2.5em !important;
 		height: 2.5em !important;
 		border: 1px black solid !important;
@@ -575,4 +577,9 @@
 
 	.input-casa-s-dica{
 		border: 1px transparent solid !important;
+	}
+
+	.border-casa-s-errado{		
+		box-shadow: 1px 1px red !important;
+		border: 1px red solid !important;
 	}

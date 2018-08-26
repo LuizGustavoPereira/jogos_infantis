@@ -20,9 +20,13 @@ $(document).ready(function(){
 });
 
 function corrigir(){
-	for(i=1;i<=58;i++){
-		id = $("."+i).attr('id');
-		console.log(id)
+	for(i=1;i<=55;i++){
+		var letra = $("."+i).attr('id').split('-');
+		var valor = $("."+i).val();
+		$("."+i).removeClass("border-casa-s-errado");
+		if(letra[1] != valor){
+			$("."+i).addClass("border-casa-s-errado");
+		}
 	}
 	// var chars = $(".1").attr('id').split('-');
 	// console.log(chars[1]);
