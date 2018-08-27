@@ -29,7 +29,7 @@
         <div class="card transparent darken-1">
             <div class="card-content "> 
 	            <div class="row">
-	            	<div class="col l7  xl8 offset-xl0" >
+	            	<div class="col l12 xl12 offset-xl0 center-align" >
 	            		<div class="col l12 xl12">		            		
 						    <input class="input-casa-s-sem-borda" disabled="true">
 						   	<input class="input-casa-s-sem-borda" disabled="true">
@@ -66,7 +66,7 @@
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 						   	<input class="input-casa-s-sem-borda" value="5" disabled="true">
-						   	<input id="6-o" class="input-casa-s-com-borda 54" maxlength="1" onclick="dica(6)">
+						   	<input id="6-g" class="input-casa-s-com-borda 54" maxlength="1" onclick="dica(6)">
 						   	<input id="7-a" class="input-casa-s-com-borda 53" maxlength="1" onclick="dica(7)">
 						   	<input id="8-t" class="input-casa-s-com-borda 52" maxlength="1" onclick="dica(8)">
 						   	<input class="input-casa-s-sem-borda" value="9" disabled="true">
@@ -98,7 +98,7 @@
 						   	<input id="5-t" class="input-casa-s-com-borda 45" maxlength="1" onclick="dica(5)">
 						   	<input id="6-s" class="input-casa-s-com-borda 44" maxlength="1" onclick="dica(6)">
 						   	<input id="7-o" class="input-casa-s-com-borda 43" maxlength="1" onclick="dica(7)">
-						   	<input id="8-i" class="input-casa-s-com-borda 42" maxlength="1" onclick="dica(8)">
+						   	<input id="8-d" class="input-casa-s-com-borda 42" maxlength="1" onclick="dica(8)">
 						   	<input id="9-e" class="input-casa-s-com-borda 41" maxlength="1" onclick="dica(9)">
 						   	<input id="10-p" class="input-casa-s-com-borda 40" maxlength="1" onclick="dica(10)">
 						   	<input class="input-casa-s-sem-borda" value="11" disabled="true">
@@ -124,16 +124,16 @@
 						    <input id="1-a" class="input-casa-s-com-borda 26" maxlength="1" onclick="dica(1)">
 						   	<input id="2-a" class="input-casa-s-com-borda 25" maxlength="1" onclick="dica(2)">
 						   	<input id="3-a" class="input-casa-s-com-borda 24" maxlength="1" onclick="dica(3)">
-						   	<input id="4-a" class="input-casa-s-com-borda 23" maxlength="1" onclick="dica(4)">
+						   	<input id="4-e" class="input-casa-s-com-borda 23" maxlength="1" onclick="dica(4)">
 						   	<input id="5-a" class="input-casa-s-com-borda 22" maxlength="1" onclick="dica(5)">
-						   	<input id="6-a" class="input-casa-s-com-borda 21" maxlength="1" onclick="dica(6)">
-						   	<input id="7-a" class="input-casa-s-com-borda 20" maxlength="1" onclick="dica(7)">
-						   	<input id="8-a" class="input-casa-s-com-borda 19" maxlength="1" onclick="dica(8)">
-						   	<input id="9-a" class="input-casa-s-com-borda 18" maxlength="1" onclick="dica(9)">
-						   	<input id="10-a" class="input-casa-s-com-borda 17" maxlength="1" onclick="dica(10)">
-						   	<input id="11-a" class="input-casa-s-com-borda 16" maxlength="1" onclick="dica(11)">
-						   	<input id="12-a" class="input-casa-s-com-borda 15" maxlength="1" onclick="dica(12)">
-						   	<input id="13-a" class="input-casa-s-com-borda 14" maxlength="1" onclick="dica(13)">
+						   	<input id="6-o" class="input-casa-s-com-borda 21" maxlength="1" onclick="dica(6)">
+						   	<input id="7-e" class="input-casa-s-com-borda 20" maxlength="1" onclick="dica(7)">
+						   	<input id="8-o" class="input-casa-s-com-borda 19" maxlength="1" onclick="dica(8)">
+						   	<input id="9-o" class="input-casa-s-com-borda 18" maxlength="1" onclick="dica(9)">
+						   	<input id="10-n" class="input-casa-s-com-borda 17" maxlength="1" onclick="dica(10)">
+						   	<input id="11-e" class="input-casa-s-com-borda 16" maxlength="1" onclick="dica(11)">
+						   	<input id="12-s" class="input-casa-s-com-borda 15" maxlength="1" onclick="dica(12)">
+						   	<input id="13-i" class="input-casa-s-com-borda 14" maxlength="1" onclick="dica(13)">
 			     		</div>
 			     		<div class="col l12 xl12">	
 						    <input class="input-casa-s-com-borda" value="S" disabled="true">
@@ -151,7 +151,7 @@
 						   	<input class="input-casa-s-com-borda" value="S" disabled="true">
 			     		</div>
 			     		<div class="col l12 xl12">	    
-			     			<input id="1-a" class="input-casa-s-com-borda 13" maxlength="1" onclick="dica(1)">
+			     			<input id="1-a" class="input-casa-s-com-borda 13" data-next=".12" maxlength="1" onclick="dica(1)">
 						   	<input id="2-o" class="input-casa-s-com-borda 12" maxlength="1" onclick="dica(2)">
 						   	<input id="3-o" class="input-casa-s-com-borda 11" maxlength="1" onclick="dica(3)">
 						   	<input id="4-o" class="input-casa-s-com-borda 10" maxlength="1" onclick="dica(4)">
@@ -165,34 +165,17 @@
 						   	<input id="12-o" class="input-casa-s-com-borda 2" maxlength="1" onclick="dica(12)">
 						   	<input id="13-o" class="input-casa-s-com-borda 1" maxlength="1"  onclick="dica(13)">
 			     		</div>
-			     		<button onclick="corrigir()"></button>
-	            		<div class="col l12 xl12">
-	            			<input class="input-casa-s-dica" id="dica">
+			     		
+	            		<div class="col l12 xl12 margin-top-5">
+	            			<button style="float: right;" onclick="corrigir()">Corrigir</button>
+	            			<div class="col xl10" style="float: left;">
+	            				<input class=" input-casa-s-dica col xl2 float-left" value="Dica:" disabled="true">
+	            				<input class="col xl8 input-casa-s-dica float-left" id="dica" disabled="true">
+	            			</div>
 	            		</div>	
 	            	</div>
-	            	<div class="col l5 xl3 offset-xl1 center-align">
-						<fieldset>
-							<legend>Pontuação</legend>
-							<h5><b id="pontuacao">0</b></h5>
-						</fieldset>
-						<fieldset>
-							<legend>Vidas</legend>
-							<h5><b class="red-text" id="vidas"></b><i class="material-icons red-text">favorite</i></h5>
-						</fieldset>
-						<fieldset>
-							<legend>Tempo</legend>
-							<fieldset class="tempo">
-								<div class="row">
-									<div class="col l7" id="min">
-										
-									</div>									
-									<div class="col l5" id="countTempo">
-										&nbsp;
-									</div>
-								</div>
-							</fieldset>
-						</fieldset>
-					</div>
+	            	
+
 	            	
             	</div> 
             	<div class="row left-align">
