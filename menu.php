@@ -87,6 +87,7 @@
 						$menu->append('Tabuada',  								'./jogos/tabuada/');
 						$menu->append('Times', 	  								'./jogos/times/');
 						$menu->append('Salada de Frutas', 	  					'./jogos/salada-fruta/');
+						$menu->append('Casa do S', 	  					'./jogos/casa-s/');
 
 
 					$menu->render();

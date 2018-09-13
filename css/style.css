@@ -294,6 +294,10 @@
 		float: left;
 	}
 
+	.float-right{
+		float: right !important;
+	}
+
 	.img-tabuada-bicicleta {
 		width: 250px;
 		height: 197px;
