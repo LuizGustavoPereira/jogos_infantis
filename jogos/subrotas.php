@@ -61,6 +61,10 @@ $routerContent->addRoutes(array(
 	array('GET','/animais/',  			'/animais.php', ''),
 	array('GET','/animais/[*]',			'/animais.php', ''),
 
+	array('GET','/quadrado',  			'/quadrado.php', 'quadrado'),
+	array('GET','/quadrado/',  			'/quadrado.php', ''),
+	array('GET','/quadrado/[*]',		'/quadrado.php', ''),
+
 ));	
 
 $matchContent = $routerContent->match();

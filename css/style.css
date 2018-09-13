@@ -588,3 +588,9 @@
 		box-shadow: 1px 1px red !important;
 		border: 1px red solid !important;
 	}
+
+	.div-border-quadrado{
+		border: 2px solid !important;
+		height: 130px;
+		margin-left: 29px !important;
+	}
