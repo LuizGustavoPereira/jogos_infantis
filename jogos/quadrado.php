@@ -31,71 +31,71 @@
 				<div class="row no-bottom">
 					<div class="col l8 xl9 center-align" >
 						<div class="row">
-							<div class="col l2 div-border-quadrado">
+							<div class="col xl2 l2 div-border-quadrado">
 								
 							</div>
-							<div class="col l2 div-border-quadrado">
+							<div class="col xl2 l2 div-border-quadrado">
 								
 							</div>
-							<div class="col l2 div-border-quadrado">
+							<div class="col xl2 l2 div-border-quadrado">
 								
 							</div>
-							<div class="col l2 div-border-quadrado">
+							<div class="col xl2 l2 div-border-quadrado">
 								
 							</div>
-							<div class="col l2 div-border-quadrado">
+							<div class="col xl2 l2 div-border-quadrado">
 								
 							</div>
 						</div>
 						<div class="row">
-							<div class="col l2">
+							<div class="col xl2 l2">
 								<img src="imagens/quadrado/Quad11Mono.png">
 							</div>
-							<div class="col l2">
+							<div class="col xl2 l2">
 								<img src="imagens/quadrado/Quad12Mono.png">
 							</div>
-							<div class="col l2">
+							<div class="col xl2 l2">
 								<img src="imagens/quadrado/Quad13Mono.png">
 							</div>
-							<div class="col l2">
+							<div class="col xl2 l2">
 								<img src="imagens/quadrado/Quad21Mono.png">
 							</div>
-							<div class="col l2">
+							<div class="col xl2 l2">
 								<img src="imagens/quadrado/Quad22Mono.png">
 							</div>
-							<div class="col l2">
+							<div class="col xl2 l2">
 								<img src="imagens/quadrado/Quad23Mono.png">
 							</div>
-							<div class="col l2">
+							<div class="col xl2 l2">
 								<img src="imagens/quadrado/Quad31Mono.png">
 							</div>
-							<div class="col l2">
+							<div class="col xl2 l2">
 								<img src="imagens/quadrado/Quad32Mono.png">
 							</div>
-							<div class="col l2">
+							<div class="col xl2 l2">
 								<img src="imagens/quadrado/Quad33Mono.png">
 							</div>
-							<div class="col l2">
+							<div class="col xl2 l2">
 								<img src="imagens/quadrado/Quad41Mono.png">
 							</div>
-							<div class="col l2">
+							<div class="col xl2 l2">
 								<img src="imagens/quadrado/Quad42Mono.png">
 							</div>
-							<div class="col l2">
+							<div class="col xl2 l2">
 								<img src="imagens/quadrado/Quad43Mono.png">
 							</div>
-							<div class="col l2">
+							<div class="col xl2 l2">
 								<img src="imagens/quadrado/Quad51Mono.png">
 							</div>
-							<div class="col l2">
+							<div class="col xl2 l2">
 								<img src="imagens/quadrado/Quad52Mono.png">
 							</div>
-							<div class="col l2">
+							<div class="col xl2 l2">
 								<img src="imagens/quadrado/Quad53Mono.png">
 							</div>
 						</div>						
 					</div>
-					<div class="col l2">
+					<div class="col xl2 l2">
 						<fieldset>
 							<legend>Tempo</legend>
 							<fieldset class="tempo">
@@ -112,7 +112,7 @@
 					</div>
 				</div>			
 				<div class="row left-align">
-					<div class="col l4 ">
+					<div class="col xl4 l4 ">
 						<a class="waves-effect waves-light btn background btnControl" onClick="voltar()"><i class="material-icons"> arrow_back </i></a>
 					</div>
 				</div>			

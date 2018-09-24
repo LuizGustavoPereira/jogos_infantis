@@ -9,6 +9,7 @@
 	$router->map('GET','/',         function(){ require __DIR__ .'/menu.php';}, 'menu');
 	$router->map('GET','/home',     function(){ require __DIR__ .'/menu.php';});
 	$router->map('GET','/home/[*]',    function(){ require __DIR__ .'/menu.php';});
+	
 
 	
 	$router->map('GET','/[*:url]',  function($url){ 

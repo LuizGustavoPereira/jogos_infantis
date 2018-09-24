@@ -68,8 +68,8 @@
 	            	<div class="col l7 xl8 offset-xl0 margin-top-5" >
 	            		
 		            	<div class="col xl12 card card-imagens center-align">
-						    <div id="imagemAnimal">			        	
-									
+						    <div >			        	
+								<img class='width-70' id="imagemAnimal">	
 						    </div>							
 				     	</div>			     		
 	            	</div>

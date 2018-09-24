@@ -150,14 +150,12 @@ function verificaResposta(resposta){
 	$("#resposta").val("");
 	if( resposta == resp ){
 		pontuacao += 10;
-		$("#pontuacao").html(pontuacao)
-		alert("VOCÊ ACERTOU");						
+		$("#pontuacao").html(pontuacao)							
 		sorteiaPerguntas();
 	}else{
 		vidas-=1;
 		$("#vidas").html(vidas);
-		verificaVidas();
-		alert("ERROU");
+		verificaVidas();	
 	}
 
 }
