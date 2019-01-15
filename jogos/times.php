@@ -50,10 +50,6 @@
 							<h5><b id="pontuacao">0</b></h5>
 						</fieldset>
 						<fieldset>
-							<legend>Vidas</legend>
-							<h5><b class="red-text" id="vidas"></b><i class="material-icons red-text">favorite</i></h5>
-						</fieldset>
-						<fieldset>
 							<legend>Tempo</legend>
 							<fieldset class="tempo">
 								<div class="row">

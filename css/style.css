@@ -360,7 +360,8 @@
 	}
 
 	.tempo{
-		height: 160px;
+		min-height: 280px;
+		height: 100%;
 		width: 90%;
 		margin-left: 5%
 	}
@@ -590,3 +591,10 @@
 		height: 130px;
 		margin-left: 29px !important;
 	}
+
+	.image{
+		max-height: 300px;
+	}
+
+
+	

@@ -9,6 +9,7 @@ var resp = "",
 	index = 0,
 	tempo = 0;
 	resposta = "";
+	letra = "";
 
 function comecarJogo(){
 	vidas = 3;
@@ -33,10 +34,11 @@ function sorteiaPerguntas(){
 	resposta = [];
 	posInput = 2;
 	verificaSorteados();
-	index = 0;		
+	index = 0;	
 	switch (pergunta){
 		case 1:
-			resp = "POLEGAR";	
+			resp = "POLEGAR";
+			letra = "O";	
 			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/polegar.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\" data-next=\"#resposta"+(i+1)+"\" >");			
@@ -44,27 +46,31 @@ function sorteiaPerguntas(){
 		break;
 		case 2:			
 			resp = "PORCO";
+			letra = "O";	
 			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/porco.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}			
 		break;
 		case 3:
-			resp = "PINGO";
-			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/pingo.png'>");
+			resp = "BOCA";
+			letra = "O";	
+			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/boca.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}			
 		break;
 		case 4:
-			resp = "BERINJELA";
-			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/berinjela.png'>");
+			resp = "TOMATE";
+			letra = "O";	
+			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/tomate.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}			
 		break;
 		case 5:
 			resp = "BOLA";
+			letra = "O";	
 			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/bola.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
@@ -72,6 +78,7 @@ function sorteiaPerguntas(){
 		break;
 		case 6:
 			resp = "PIPA";
+			letra = "I";	
 			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/pipa.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
@@ -79,6 +86,7 @@ function sorteiaPerguntas(){
 		break;
 		case 7:
 			resp = "BANANA";
+			letra = "A";	
 			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/banana.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
@@ -86,6 +94,7 @@ function sorteiaPerguntas(){
 		break;
 		case 8:
 			resp = "BOLO";
+			letra = "O";	
 			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/bolo.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
@@ -93,6 +102,7 @@ function sorteiaPerguntas(){
 		break;
 		case 9:
 			resp = "PEIXE";
+			letra = "E";	
 			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/peixe.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
@@ -100,6 +110,7 @@ function sorteiaPerguntas(){
 		break;
 		case 10:
 			resp = "PENA";
+			letra = "E";	
 			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/pena.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");						
@@ -150,9 +161,10 @@ function verificaResposta(resposta){
 	$("#resposta").val("");
 	if( resposta == resp ){
 		pontuacao += 10;
-		$("#pontuacao").html(pontuacao)
-		alert("VOCÊ ACERTOU");						
-		sorteiaPerguntas();
+		$("#pontuacao").html(pontuacao)					
+		vidas = 3;
+		$("#vidas").html(vidas);
+		setTimeout("sorteiaPerguntas()", 1000);
 	}else{
 		vidas-=1;
 		$("#vidas").html(vidas);
@@ -175,9 +187,10 @@ function opcoes(){
 }
 function verificaVidas(){
 	if (vidas < 0){
-		$("#fim-do-jogo").show();
-		$("#jogo").hide();
-		$("#resposta").prop('disabled', true);
+		vidas = 3;
+		$("#vidas").html(vidas);
+		$("#resposta1").val(letra);
+		setTimeout("sorteiaPerguntas()", 1000);
 	}
 }
 function jogarNovamente(){

@@ -2,7 +2,6 @@ var resp = "",
 	sorteados = [],
 	time = "",
 	pontuacao = 0,
-	vidas = 3,
 	count = 0,
 	letras = 0,
 	posInput = 1,
@@ -10,7 +9,6 @@ var resp = "",
 	tempo;
 
 function comecarJogo(){
-	vidas = 3;
 	pontuacao = 0;
 	sorteados = [];	
 	clearTimeout(tempo);
@@ -19,7 +17,6 @@ function comecarJogo(){
 	$("#min").html("<p>inicio</p>");
 	$("#pontuacao").html(pontuacao);
 	$("#jogo").show();
-	$("#vidas").html(vidas);
 	$("#countTempo").html("&nbsp;");
 	$("#telaInicial").hide();
 	$("#nomeTime").focus();
@@ -30,7 +27,7 @@ function sorteiaTime(){
 	nomeTime = [];
 	posInput = 1;
 	verificaTimes()	
-	switch (time){
+	switch (time){		
 		case 1:
 			letras = 8;
 			$("#divResp").html("");
@@ -112,7 +109,7 @@ function sorteiaTime(){
 			resp = "SANTOS";
 		break;
 		case 9:
-			letras = 8;
+			letras = 9;
 			$("#divResp").html("");
 			$("#logoTime").html("<img src='imagens/times/escudo-do-sao-paulo.png'>");
 			for(var i=0; i < letras; i++){
@@ -170,7 +167,6 @@ function verificaTimes(){
 
 function verificaResposta(nomeTime){
 	var resposta  = nomeTime.toUpperCase();
-	console.log(resposta)
 	$("#nomeTime").val("");
 	if( resposta == resp ){
 		pontuacao += 10;
@@ -178,18 +174,9 @@ function verificaResposta(nomeTime){
 		alert("VOCÊ ACERTOU");
 		sorteiaTime();
 	}else{
-		vidas-=1;
-		$("#vidas").html(vidas);
-		verificaVidas();
 		alert("ERROU");
 	}
 
-}
-function verificaVidas(){
-	if (vidas < 0){
-		$("#jogarNovamente").show();
-		$("#nomeTime").prop('disabled', true);
-	}
 }
 function jogarNovamente(){		
 	$("#jogarNovamente").hide();
@@ -204,11 +191,11 @@ function voltar(){
 }
 
 function atualizaTempo(){
-	if(count < 6 ){
+	if(count < 12 ){
 		color = "green";
-	}else if(count < 12){
+	}else if(count < 20){
 		color = "blue";
-	}else if (count < 17){
+	}else if (count < 29){
 		color = "red";
 	}
 	else{
@@ -222,8 +209,14 @@ function atualizaTempo(){
 	else if(count == 12){
 		$("#min").append("&nbsp;&nbsp;&nbsp;<p>2 min</p>");
 	}
-	else if(count == 17){
+	else if(count == 18){
 		$("#min").append("&nbsp;&nbsp;&nbsp;<p>3 min</p>");
+	}
+	else if(count == 24){
+		$("#min").append("&nbsp;&nbsp;&nbsp;<p>4 min</p>");
+	}
+	else if(count == 29){
+		$("#min").append("&nbsp;&nbsp;&nbsp;<p>5 min</p>");
 	}
 	$("#countTempo").append("<div style='background-color:"+color+"'></div>");
 	count ++;	

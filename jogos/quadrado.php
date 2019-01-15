@@ -31,67 +31,67 @@
 				<div class="row no-bottom">
 					<div class="col l8 xl9 center-align" >
 						<div class="row">
-							<div class="col l2 div-border-quadrado">
+							<div class="col l2 div-border-quadrado" ondrop="drop(event)" ondragover="allowDrop(event)">
 								
 							</div>
-							<div class="col l2 div-border-quadrado">
+							<div class="col l2 div-border-quadrado" ondrop="drop(event)" ondragover="allowDrop(event)">
 								
 							</div>
-							<div class="col l2 div-border-quadrado">
+							<div class="col l2 div-border-quadrado" ondrop="drop(event)" ondragover="allowDrop(event)">
 								
 							</div>
-							<div class="col l2 div-border-quadrado">
+							<div class="col l2 div-border-quadrado" ondrop="drop(event)" ondragover="allowDrop(event)">
 								
 							</div>
-							<div class="col l2 div-border-quadrado">
+							<div class="col l2 div-border-quadrado" ondrop="drop(event)" ondragover="allowDrop(event)">
 								
 							</div>
 						</div>
 						<div class="row">
 							<div class="col l2">
-								<img src="imagens/quadrado/Quad11Mono.png">
+								<img src="imagens/quadrado/Quad11Mono.png" draggable="true" ondragstart="drag(event)" id="img_11">
 							</div>
 							<div class="col l2">
-								<img src="imagens/quadrado/Quad12Mono.png">
+								<img src="imagens/quadrado/Quad12Mono.png" draggable="true" ondragstart="drag(event)" id="img_12">
 							</div>
 							<div class="col l2">
-								<img src="imagens/quadrado/Quad13Mono.png">
+								<img src="imagens/quadrado/Quad13Mono.png" draggable="true" ondragstart="drag(event)" id="img_13">
 							</div>
 							<div class="col l2">
-								<img src="imagens/quadrado/Quad21Mono.png">
+								<img src="imagens/quadrado/Quad21Mono.png" draggable="true" ondragstart="drag(event)" id="img_21">
 							</div>
 							<div class="col l2">
-								<img src="imagens/quadrado/Quad22Mono.png">
+								<img src="imagens/quadrado/Quad22Mono.png" draggable="true" ondragstart="drag(event)" id="img_22">
 							</div>
 							<div class="col l2">
-								<img src="imagens/quadrado/Quad23Mono.png">
+								<img src="imagens/quadrado/Quad23Mono.png" draggable="true" ondragstart="drag(event)" id="img_23">
 							</div>
 							<div class="col l2">
-								<img src="imagens/quadrado/Quad31Mono.png">
+								<img src="imagens/quadrado/Quad31Mono.png" draggable="true" ondragstart="drag(event)" id="img_31">
 							</div>
 							<div class="col l2">
-								<img src="imagens/quadrado/Quad32Mono.png">
+								<img src="imagens/quadrado/Quad32Mono.png" draggable="true" ondragstart="drag(event)" id="img_32">
 							</div>
 							<div class="col l2">
-								<img src="imagens/quadrado/Quad33Mono.png">
+								<img src="imagens/quadrado/Quad33Mono.png" draggable="true" ondragstart="drag(event)" id="img_33">
 							</div>
 							<div class="col l2">
-								<img src="imagens/quadrado/Quad41Mono.png">
+								<img src="imagens/quadrado/Quad41Mono.png" draggable="true" ondragstart="drag(event)" id="img_41">
 							</div>
 							<div class="col l2">
-								<img src="imagens/quadrado/Quad42Mono.png">
+								<img src="imagens/quadrado/Quad42Mono.png" draggable="true" ondragstart="drag(event)" id="img_42">
 							</div>
 							<div class="col l2">
-								<img src="imagens/quadrado/Quad43Mono.png">
+								<img src="imagens/quadrado/Quad43Mono.png" draggable="true" ondragstart="drag(event)" id="img_43">
 							</div>
 							<div class="col l2">
-								<img src="imagens/quadrado/Quad51Mono.png">
+								<img src="imagens/quadrado/Quad51Mono.png" draggable="true" ondragstart="drag(event)" id="img_51">
 							</div>
 							<div class="col l2">
-								<img src="imagens/quadrado/Quad52Mono.png">
+								<img src="imagens/quadrado/Quad52Mono.png" draggable="true" ondragstart="drag(event)" id="img_52">
 							</div>
 							<div class="col l2">
-								<img src="imagens/quadrado/Quad53Mono.png">
+								<img src="imagens/quadrado/Quad53Mono.png" draggable="true" ondragstart="drag(event)" id="img_53">
 							</div>
 						</div>						
 					</div>
