@@ -130,15 +130,28 @@ function sorteiaTime(){
 		break;
 	}
 	$("#nomeTime0").focus();
-	$("input[type='text']").bind('keyup',function(e) {	
-		nomeTime = [];			
+	$("input[type='text']").bind('keyup',function(e) {
+		nomeTime = [];	
+		if(resp=="SÃO PAULO"){
+			var letraInserida = ($("#nomeTime"+(posInput-1)).val())	
+			if((posInput-1)==1 && letraInserida.toUpperCase() == "A"){
+				$("#nomeTime"+(posInput-1)).val("Ã")
+			}
+		}	
+		if(resp=="GRÊMIO"){
+			var letraInserida = ($("#nomeTime"+(posInput-1)).val())
+			if((posInput-1)==2 && letraInserida.toUpperCase() == "E"){
+				$("#nomeTime"+(posInput-1)).val("Ê")
+			}
+		}	
 		if(e.keyCode == '13'){
 			for(var i = 0; i<letras; i++){
 				nomeTime += $("#nomeTime"+i).val() ;
 			}
 			verificaResposta(nomeTime);
 		}else{
-			if(posInput <= letras){				
+			if(posInput <= letras){	
+				
 				$("#nomeTime"+posInput).focus();
 				posInput++;
 			}
