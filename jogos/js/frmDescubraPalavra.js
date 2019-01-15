@@ -48,7 +48,7 @@ function clicaSilaba(grupo, numero) {
 }
 
 function verificaSilaba(id,grupo) {
-	if(acertos<=1){
+	if(acertos<=10){
 		if(id == silaba && grupoAtual == grupo){
 			$("#"+idAtual).removeClass("input-descubra-palavra-clique");
 			$("#"+id+grupo).val(id);

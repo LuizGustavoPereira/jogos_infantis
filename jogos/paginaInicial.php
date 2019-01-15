@@ -35,6 +35,36 @@
 			     	</div>
 			    </a>
 	    	</div>
+	    	<div class="col l3 ">
+		    	<a href="./jogos/alfabeto">
+			      	<div class="card card-imagens small ">
+				        <div class="card-image card-ver-todos" >			        	
+							<img src="imagens/alfabeto/alfabeto.png">
+				        </div>		        
+						<span class="card-title amber-text">Alfabeto</span>
+			     	</div>
+			    </a>
+	    	</div>
+	    	<div class="col l3 ">
+		    	<a href="./jogos/antes-depois">
+			      	<div class="card card-imagens small ">
+				        <div class="card-image card-ver-todos" >			        	
+							<img src="imagens/antes-depois/antes-depois.png">
+				        </div>		        
+						<span class="card-title amber-text">Antes e Depois</span>
+			     	</div>
+			    </a>
+	    	</div>
+	    	<div class="col l3 ">
+		    	<a href="./jogos/casa-s">
+			      	<div class="card card-imagens small ">
+				        <div class="card-image card-ver-todos" >			        	
+							<img src="imagens/antes-depois/antes-depois.png">
+				        </div>		        
+						<span class="card-title amber-text">Casa do S</span>
+			     	</div>
+			    </a>
+	    	</div>
   		</div>
     </div>
 </div>
