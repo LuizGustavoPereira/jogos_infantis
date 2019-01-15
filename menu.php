@@ -72,7 +72,7 @@
 			<?php
 				try{
 					require_once "classes/Menu.Class.php";
-			        $menu->renderLink('Home', './home/', 'home');
+			        $menu->renderLink('Home', './jogos/menu-principal/', 'home');
 
 					$menu = new Menu('Jogos', 'games');
 						$menu->append('Ver Todos', 								'./jogos/menu-principal/');
@@ -81,6 +81,7 @@
 						$menu->append('Antes e Depois', 						'./jogos/antes-depois/');
 						$menu->append('Brasileiro',  							'./jogos/brasileiro/');
 						$menu->append('Brincando com Monteiro Lobato', 	  		'./jogos/monteiro-lobato/');
+						$menu->append('Casa do S', 	  							'./jogos/casa-s/');
 						$menu->append('Descubra a Palavra', 					'./jogos/descubra-palavra/');
 						$menu->append('Quadrado', 								'./jogos/quadrado/');
 						$menu->append('Matemática', 							'./jogos/matematica/');
@@ -92,7 +93,7 @@
 
 					$menu->render();
 
-					$menu->renderLink('Sair', './logOut/', '');
+					// $menu->renderLink('Sair', './logOut/', '');
 				}catch(Excepition $e){
 					print $e->getMessage();
 				}

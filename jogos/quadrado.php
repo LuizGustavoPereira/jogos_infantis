@@ -95,7 +95,7 @@
 							</div>
 						</div>						
 					</div>
-					<div class="col l2">
+					<div class="col xl2 l2">
 						<fieldset>
 							<legend>Tempo</legend>
 							<fieldset class="tempo">
@@ -112,7 +112,7 @@
 					</div>
 				</div>			
 				<div class="row left-align">
-					<div class="col l4 ">
+					<div class="col xl4 l4 ">
 						<a class="waves-effect waves-light btn background btnControl" onClick="voltar()"><i class="material-icons"> arrow_back </i></a>
 					</div>
 				</div>			
