@@ -2,39 +2,39 @@ var resp = "",
 	sorteados = [],
 	pergunta = "",
 	pontuacao = 0,
-	vidas = 3,
-	count = 0,
+	count = 1,
 	letras = 0,
 	posInput = 2,
 	resposta = "",
 	tempo;
 
 function comecarJogo(){
-	vidas = 3;
 	pontuacao = 0;
 	sorteados = [];	
 	clearTimeout(tempo);
-	count = 0;
+	count = 1;
 	tempo = setInterval("atualizaTempo()", 10000);
 	$("#min").html("<p>inicio</p>");
 	$("#pontuacao").html(pontuacao);
 	$("#jogo").show();
-	$("#vidas").html(vidas);
 	$("#countTempo").html("&nbsp;");
 	$("#telaInicial").hide();
 	$("#fim-do-jogo").hide();
 	$("#ganhou-jogo").hide();
 	$("#resposta").focus();
 	$("#jogarNovamente").hide();
+	$("#passarPalavra").hide();
 	sorteiaPerguntas();
 }
 
-function sorteiaPerguntas(){
+function sorteiaPerguntas(perguntaRepetida){
+	count = 1;
 	$("#divResp").html("");
 	resposta = [];
-	posInput = 2;
-	verificaSorteados();
-	// pergunta = 10;	
+	posInput = 2;	
+	if(perguntaRepetida == null){
+		verificaSorteados();
+	}	
 	switch (pergunta){
 		case 1:
 			resp = "BONECA";			
@@ -109,7 +109,7 @@ function sorteiaPerguntas(){
 			$("#dica").html("DICA: "+letras+" letras");
 		break;
 		case 9:
-			resp = "LINGUA";
+			resp = "LÍNGUA";
 			letras = resp.length;
 			$("#pergunta").html("<h5>Mesmo pertinho do céu.<br>Em casa vive trancada.<br>Quer chova, quer faça sol vive sozinha e molhada.</h5>");
 			for(var i=0; i < letras; i++){
@@ -124,17 +124,25 @@ function sorteiaPerguntas(){
 			for(var i=0; i < letras; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}
-			$("#dica").html("DICA: "+letras+" letras");
+			$("#dica").html("DICA: "+letras+" letras");		
 		break;
 	}
+	$("#resposta0").prop('readonly', true);
 	$("#resposta0").val(resp[0]);
 	$("#resposta1").focus();
 	$("input[type='text']").bind('keyup',function(e) {
+		if(resp=="LÍNGUA"){
+			var letraInserida = ($("#resposta"+(posInput-1)).val())	
+			if((posInput-1)==1 && letraInserida.toUpperCase() == "I"){
+				$("#resposta"+(posInput-1)).val("Í")
+			}
+		}
 		resposta = [];				
 		if(e.keyCode == '13'){
 			for(var i = 0; i<letras; i++){
 				resposta += $("#resposta"+i).val() ;
 			}
+			$("#resposta1").focus();
 			verificaResposta(resposta);
 		}else{
 			if(posInput <= letras){				
@@ -145,6 +153,32 @@ function sorteiaPerguntas(){
 	});
 		
 	
+}
+
+function digitaResposta(){
+	posInput2 = 2;
+	$("#resposta1").focus();
+	$("input[type='text']").bind('keyup',function(e) {
+		if(resp=="LÍNGUA"){
+			var letraInserida = ($("#resposta"+(posInput-1)).val())	
+			if((posInput-1)==1 && letraInserida.toUpperCase() == "I"){
+				$("#resposta"+(posInput-1)).val("Í")
+			}
+		}
+		resposta = [];				
+		if(e.keyCode == '13'){
+			for(var i = 0; i<letras; i++){
+				resposta += $("#resposta"+i).val() ;
+			}
+			$("#resposta1").focus();
+			verificaResposta(resposta);
+		}else{
+			if(posInput2 <= letras){				
+				$("#resposta"+posInput2).focus();
+				posInput2++;
+			}
+		}
+	});
 }
 
 function verificaSorteados(){
@@ -171,31 +205,24 @@ function verificaResposta(resposta){
 	if( resposta == resp ){
 		pontuacao += 10;
 		$("#pontuacao").html(pontuacao)
-		alert("VOCÊ ACERTOU");
 		clearTimeout(tempo);
 		tempo = setInterval("atualizaTempo()", 10000);
 		$("#countTempo").html("&nbsp;");
 		sorteiaPerguntas();
 	}else{
-		vidas-=1;
-		$("#vidas").html(vidas);
-		verificaVidas();
-		alert("ERROU");
+		for(i = 1; i < resposta.length; i ++){
+			$("#resposta"+i).val("")
+		}
+		sorteiaPerguntas(pergunta)		
 	}
+}
 
-}
-function verificaVidas(){
-	if (vidas < 0){
-		$("#fim-do-jogo").show();
-		$("#jogo").hide();
-		$("#resposta").prop('disabled', true);
-	}
-}
 function jogarNovamente(){		
 	$("#jogarNovamente").hide();
 	$("#resposta").prop('disabled', false);
 	comecarJogo();
 }
+
 function voltar(){
 	$("#jogarNovamente").hide();
 	$("#resposta").prop('disabled', false);
@@ -204,29 +231,38 @@ function voltar(){
 }
 
 function atualizaTempo(){
-	if(count < 6 ){
+	if(count < 4 ){
 		color = "green";
-	}else if(count < 12){
+		$("#countTempo").append("<div style='background-color:"+color+"'></div>");
+	}else if(count < 8){
 		color = "blue";
-	}else if (count < 17){
+		$("#countTempo").append("<div style='background-color:"+color+"'></div>");
+	}else if (count < 12){
 		color = "red";
+		$("#countTempo").append("<div style='background-color:"+color+"'></div>");
 	}
-	else{
-		$("#resposta").prop('disabled', true);
-		$("#jogarNovamente").show();
-		clearTimeout(tempo);
-	}
+
 	if(count == 6){
 		$("#min").append("&nbsp;&nbsp;&nbsp;<p>1 min</p>");
 	}
-	else if(count == 12){
+	else if(count == 1){
 		$("#min").append("&nbsp;&nbsp;&nbsp;<p>2 min</p>");
+		for(i = 1; i < resp.length; i ++){
+			$("#resposta"+i).val(resp[i]);
+			$("#resposta"+i).prop('readonly', true);
+		}
+		$('#passarPalavra').show();
 	}
-	else if(count == 17){
-		$("#min").append("&nbsp;&nbsp;&nbsp;<p>3 min</p>");
-	}
-	$("#countTempo").append("<div style='background-color:"+color+"'></div>");
 	count ++;	
+}
+
+function passarPalavra(){
+	sorteiaPerguntas();
+	$("#passarPalavra").hide();
+	clearTimeout(tempo);
+	tempo = setInterval("atualizaTempo()", 10000);
+	$("#min").html("<p>inicio</p>");
+	$("#countTempo").html("&nbsp;");
 }
 
 $(document).ready(function(){

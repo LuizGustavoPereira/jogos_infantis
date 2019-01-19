@@ -48,10 +48,6 @@
 							<h5><b id="pontuacao">0</b></h5>
 						</fieldset>
 						<fieldset>
-							<legend>Vidas</legend>
-							<h5><b class="red-text" id="vidas"></b><i class="material-icons red-text">favorite</i></h5>
-						</fieldset>
-						<fieldset>
 							<legend>Tempo</legend>
 							<fieldset class="tempo">
 								<div class="row">
@@ -73,7 +69,10 @@
 					</div>	
 					<div class="col l4">
 						<a class="waves-effect waves-light btn background btnControl" onClick="jogarNovamente()" id="jogarNovamente" display="">Jogar Novamente</a>
-					</div>				
+					</div>	
+					<div class="float-right">
+						<a class="waves-effect waves-light btn background btnControl" onClick="passarPalavra()" id="passarPalavra" display="">Próximo</a>
+					</div>			
 				</div>	           	
             </div>            
         </div>
