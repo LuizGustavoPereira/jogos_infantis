@@ -29,6 +29,10 @@ function corrigir(){
 			erro +=1;
 			$("."+i).addClass("border-casa-s-errado");
 		}
+		else if(letra[1] == valor){
+			$("."+i).addClass("border-casa-s-certo");
+			$("."+i).prop('disabled', true);
+		}
 	}
 	if(erro == 0){
 		$("#jogo").hide();

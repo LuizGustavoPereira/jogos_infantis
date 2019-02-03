@@ -169,7 +169,7 @@
 	            		<div class="col l12 xl12 margin-top-5">
 	            			<button class="waves-effect waves-light btn background btnControl float-right" onclick="corrigir()">Corrigir</button>
 	            			<div class="col xl10" style="float: left;">
-	            				<input class=" input-casa-s-dica col xl2 float-left" value="Dica:" disabled="true">
+	            				<input class="col xl2 input-casa-s-dica float-left" value="Dica:" disabled="true">
 	            				<input class="col xl8 input-casa-s-dica float-left" id="dica" disabled="true">
 	            			</div>
 	            		</div>	

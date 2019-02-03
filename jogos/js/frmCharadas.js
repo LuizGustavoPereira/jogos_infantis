@@ -205,10 +205,7 @@ function verificaResposta(resposta){
 	if( resposta == resp ){
 		pontuacao += 10;
 		$("#pontuacao").html(pontuacao)
-		clearTimeout(tempo);
-		tempo = setInterval("atualizaTempo()", 10000);
-		$("#countTempo").html("&nbsp;");
-		sorteiaPerguntas();
+		passarPalavra();
 	}else{
 		for(i = 1; i < resposta.length; i ++){
 			$("#resposta"+i).val("")
@@ -245,7 +242,7 @@ function atualizaTempo(){
 	if(count == 6){
 		$("#min").append("&nbsp;&nbsp;&nbsp;<p>1 min</p>");
 	}
-	else if(count == 1){
+	else if(count == 12){
 		$("#min").append("&nbsp;&nbsp;&nbsp;<p>2 min</p>");
 		for(i = 1; i < resp.length; i ++){
 			$("#resposta"+i).val(resp[i]);
@@ -260,9 +257,9 @@ function passarPalavra(){
 	sorteiaPerguntas();
 	$("#passarPalavra").hide();
 	clearTimeout(tempo);
-	tempo = setInterval("atualizaTempo()", 10000);
-	$("#min").html("<p>inicio</p>");
 	$("#countTempo").html("&nbsp;");
+	tempo = setInterval("atualizaTempo()", 6000);
+	$("#min").html("<p>inicio</p>");
 }
 
 $(document).ready(function(){

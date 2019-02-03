@@ -581,6 +581,7 @@
 	}
 
 	.input-casa-s-dica{
+		font-size: 2em !important;
 		color: black !important;
 		border: 1px transparent solid !important;
 	}
@@ -588,6 +589,11 @@
 	.border-casa-s-errado{		
 		box-shadow: 1px 1px red !important;
 		border: 1px red solid !important;
+	}
+
+	.border-casa-s-certo{		
+		box-shadow: 1px 1px #10e710 !important;
+		border: 1px #10e710 solid !important;
 	}
 
 	.div-border-quadrado{
