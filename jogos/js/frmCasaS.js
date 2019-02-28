@@ -11,12 +11,28 @@ var resp = "",
 	grupoAtual = "";
 	acertos = 0;
 
+
 $(document).ready(function(){
 	$("#jogo").hide();
 	$("#jogarNovamente").hide();
 	$("#ganhou-jogo").hide();
 	$("#fim-do-jogo").hide();
+});
 
+$("input[type='text']").bind('keyup',function(e) {
+	if($(".caixa"+posInput).val()!=""){
+		posInput+=1;
+		$(".caixa"+posInput).focus();
+	}else{
+		if(posInput>1){
+			posInput-=1;	
+		}		
+		$(".caixa"+posInput).focus();
+	}
+	var idCaixa = document.getElementsByClassName('caixa'+posInput)[0].id;
+	var idCaixa = idCaixa.split("-");
+	var idCaixa = idCaixa[0];
+	dica(idCaixa,posInput);
 });
 
 function corrigir(){
@@ -40,47 +56,48 @@ function corrigir(){
 	}
 }
 
-function dica(numero){
+function dica(numero, caixa){
 	if(numero == 1){
-		$("#dica").val("Onde você mora.");
+		$("#dica").html("Onde você mora.");
 	}
 	if(numero == 2){
-		$("#dica").val("Onde coloca flores.");
+		$("#dica").html("Onde coloca flores.");
 	}
 	if(numero == 3){
-		$("#dica").val("O contrário de fundo.");
+		$("#dica").html("O contrário de fundo.");
 	}
 	if(numero == 4){
-		$("#dica").val("Atrás das grades.");
+		$("#dica").html("Atrás das grades.");
 	}
 	if(numero == 5){
-		$("#dica").val("Demora de pagamento.");
+		$("#dica").html("Demora de pagamento.");
 	}
 	if(numero == 6){
-		$("#dica").val("Aquilo que é bom e saboro também é...");
+		$("#dica").html("Aquilo que é bom e saboro também é...");
 	}
 	if(numero == 7){
-		$("#dica").val("Creme que se coloca no sanduiche ou na batata.");
+		$("#dica").html("Creme que se coloca no sanduiche ou na batata.");
 	}
 	if(numero == 8){
-		$("#dica").val("Que causa tédio.");
+		$("#dica").html("Que causa tédio.");
 	}
 	if(numero == 9){
-		$("#dica").val("Palavra derivada do mel.");
+		$("#dica").html("Palavra derivada do mel.");
 	}
 	if(numero == 10){
-		$("#dica").val("1ª pessoa do presente do indicativo do verbo 'pensar'.");
+		$("#dica").html("1ª pessoa do presente do indicativo do verbo 'pensar'.");
 	}
 	if(numero == 11){
-		$("#dica").val("Aquilo que a balança faz.");
+		$("#dica").html("Aquilo que a balança faz.");
 	}
 	if(numero == 12){
-		$("#dica").val("Aquilo que o cachorro gosta de roer e brincar.");
+		$("#dica").html("Aquilo que o cachorro gosta de roer e brincar.");
 	}
 	if(numero == 13){
-		$("#dica").val("Material que reveste o chão.");
-	}
-
+		$("#dica").html("Material que reveste o chão.");
+	}	
+	posInput = caixa;
+	$(".caixa"+posInput).focus();
 }
 
 function comecarJogo(){
@@ -88,8 +105,11 @@ function comecarJogo(){
 	pontuacao = 0;
 	sorteados = [];	
 	$("#jogo").show();
-	$("#telaInicial").hide();
+	$("#telaInicial").hide();	
+	$(".caixa"+posInput).focus();
 }
+
+
 
 
 
