@@ -1,11 +1,11 @@
 <div class="row" >
 	<!-- Pagína inicial -->
-	<div class="col l10 offset-l1">
+	<div class="col xl10 offset-xl1 l12">
 		<div class="titulo ">
 			<h3 class="float-left deep-purple-text" >ANTES E DEPOIS</h3>			
 		</div> 
 	</div>
-	<div class="col l10 offset-l1" id="telaInicial" display>
+	<div class="col xl10 offset-xl1 l12" id="telaInicial" display>
         <div class="card transparent darken-1">
             <div class="card-content blue-text"> 
 	            <div class="row">
@@ -24,24 +24,32 @@
 
 
 	<!-- Pagína do jogo -->
-	<div class="col l10 offset-l1" id="jogo" display>
+	<div class="col xl12 l12" id="jogo" display>
         <div class="card transparent darken-1">
             <div class="card-content "> 
 	            <div class="row">
-		            <div class="col l10 margin-top-5" id="perguntas">
+		            <div class="col xl7 offset-xl1 l9 margin-top-5" id="perguntas">
 							
 					</div>	
 
-					<div class="col l2 center-align">
+					<div class="col xl3 offset-xl1 l3 center-align">
 						<fieldset>
 							<legend>Pontuação</legend>
 							<h5><b id="pontuacao">0</b></h5>
-						</fieldset>
+						</fieldset>						
 						<fieldset>
-							<legend>Vidas</legend>
-							<h5><b class="red-text" id="vidas"></b><i class="material-icons red-text">favorite</i></h5>
-						</fieldset>
-							
+							<legend>Tempo</legend>
+							<fieldset class="tempo">
+								<div class="row">
+									<div class="col l7" id="min">
+										
+									</div>									
+									<div class="col l5" id="countTempo">
+										&nbsp;
+									</div>
+								</div>
+							</fieldset>
+						</fieldset>						
 					</div>
 	            	
             	</div> 

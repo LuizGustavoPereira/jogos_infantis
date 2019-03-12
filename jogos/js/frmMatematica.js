@@ -33,7 +33,7 @@ function verificaResposta(valor) {
 		$("#pontuacao").html(pontuacao);
 		$("#resp").html(resp)
 		index = 1;
-		setTimeout("formularPergunta()", 1000);
+		setTimeout("formularPergunta()", 10000);
 		
 	}else{
 		vidas-=1;
