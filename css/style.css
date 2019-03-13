@@ -503,9 +503,13 @@
 		border-width: medium !important;
 	    width: 100px;
 	    height: 100px;
-	    background-color: red;
 	    animation: animacao 1s ease infinite;
 	}
+
+	.input-antes-depois{
+		border-color: #4B0082 !important;
+		color: #4B0082 !important;
+	}	
 
 	.resposta-matematica p{
 		font-weight: bolder;
@@ -615,6 +619,10 @@
 
 	.image{
 		max-height: 300px;
+	}
+
+	.antes-depois ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  		color: #4B0082 ;
 	}
 
 

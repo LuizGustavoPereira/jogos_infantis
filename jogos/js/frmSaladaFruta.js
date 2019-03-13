@@ -14,7 +14,7 @@ function comecarJogo(){
 	pontuacao = 0;
 	sorteados = [];	
 	clearTimeout(tempo);
-	tempo = setInterval("atualizaTempo()", 100);
+	tempo = setInterval("atualizaTempo()", 10000);
 	count = 0;
 	$("#jogarNovamente").hide();
 	$("#fim-do-jogo").hide();
