@@ -1,19 +1,15 @@
 var numero = 0,
 	multiplicador = 2,
 	valor = 0,
-	pontuacao = 0,
 	entradaTec = "",
 	valTabuada = 0,
-	vidas = 3,
 	tempo;	
 
 function comecarJogo(){
-	vidas = 3;
 	$("#ganhou-jogo").hide();
 	$("#fim-do-jogo").hide();
 	$("#inicio").hide();
 	$("#jogo").show();
-	$("#vidas").html(vidas);
 	var entrada = $("input[name=entrada]:checked").val();
 	var tabuada = $("input[name=tabuada]:checked").val();
 	entradaTec = entrada;
@@ -27,7 +23,7 @@ function comecarJogo(){
 	}else if(valTabuada == 6){
 		$("#enunciado").html("<h4>Uma <img src='imagens/tabuada/arvore.png' class='img-tabuada-girafa'> tem 6 maçãs</h4>");
 	}else if(valTabuada == 8){
-		$("#enunciado").html("<h4>Uma <img src='imagens/tabuada/aranha.png' class='img-tabuada-girafa'> tem 8 patas</h4>");
+		$("#enunciado").html("<h4>Uma <img src='imagens/tabuada/aranha.png' class='img-tabuada-girafa'> tem 8 pernas</h4>");
 	}else if(valTabuada == 10){
 		$("#enunciado").html("<h4>Uma <img src='imagens/tabuada/arvore10.png' class='img-tabuada-10'> tem 10 maçãs</h4>");
 	}
@@ -52,7 +48,6 @@ function comecarJogo(){
 }
 
 function calculaTabuada(valor = ""){
-	$("#pontuacao").html(pontuacao);
 	var vetNumeros = ["Duas", "Três", "Quatro", "Cinco", "Seis", "Sete", "Oito", "Nove", "Dez"];
 	var opcao = $("input[name=entrada]:checked").val();
 	if(numero < vetNumeros.length){
@@ -84,7 +79,7 @@ function calculaTabuada(valor = ""){
 			$("#respJogo").html(
 								"<div class='col l12 center-align'>"+
 									"<h3> "+vetNumeros[numero]+" ARANHA tem "+
-										"<input class='input-tabuada resposta' type='text' value='"+valor+"' data-tabuada = "+valTabuada+"> patas</h3>"+
+										"<input class='input-tabuada resposta' type='text' value='"+valor+"' data-tabuada = "+valTabuada+"> pernas</h3>"+
 								"</div>"
 								);
 		}
@@ -126,8 +121,7 @@ function verificaResposta(){
 	var chave = 0;
 
 	if(resp == correto){	
-		$("#"+numero).html(valTabuada+" x 2 = "+correto);	
-		pontuacao += 10;			
+		$("#"+numero).html(valTabuada+" x 2 = "+correto);
 		numero+=1;
 		multiplicador+=1;
 		chave = 1;
@@ -136,8 +130,6 @@ function verificaResposta(){
 		calculaTabuada();
 	}else{
 		valor = 0;
-		vidas-=1;
-		$("#vidas").html(vidas);
 		alert("Você errou, tente novamente.");
 		$(".resposta").val("");
 		chave = 0;
@@ -155,17 +147,13 @@ function verificaResposta(){
 		$("#jogo").hide();		
 		numero = 0;
 		multiplicador = 2;
-		pontuacao = 0;
 	}
 }
 
 function voltar(){
 	numero = 0;
 	multiplicador = 2;	
-	pontuacao = 0;
 	valor = 0;
-	clearTimeout(tempo);
-	$("#pontuacao").html(0);
 	$("#inicio").show();
 	$("#jogo").hide();
 }
