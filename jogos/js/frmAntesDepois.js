@@ -9,8 +9,8 @@ var cor = 1,
 	count = 0,
 	tempo;
 
-
-audio = document.getElementById('audio');
+audioErrou = document.getElementById('audio-errou');
+audioAcertou = document.getElementById('audio-acertou');
 var bool = true
 
 
@@ -61,8 +61,9 @@ function verificaResposta(resposta) {
 			index = 2;
 			$("#depois").addClass("animation");
 			$("#antes").removeClass("animation");
+			audioAcertou.play();
 		}else{						
-			//alert("resposta errada");
+			audioErrou.play();
 		}
 	}else{
 		if(resposta == respostaDepois){
@@ -71,9 +72,9 @@ function verificaResposta(resposta) {
 			$("#depois").val(resposta)
 			index = 1;
 			setTimeout("formularPergunta()", 1000);
-			
+			audioAcertou.play();
 		}else{			
-			//alert("resposta errada");
+			audioErrou.play();
 		}
 	}
 

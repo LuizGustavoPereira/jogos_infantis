@@ -25,7 +25,7 @@ function comecarJogo(){
 function verificaResposta(valor) {
 	if (valor == resposta){
 		$(".troca-imagem").html(textoTroca);
-		setTimeout("formularPergunta()", 1000);
+		setTimeout("formularPergunta()", 3000);
 		vidas+=1		
 		$("#vidas").html(vidas);
 		$('#imagem').html(resposta)
@@ -46,9 +46,9 @@ function formularPergunta(){
 	switch(pergunta){
 		case 1:
 			resposta = "SACI"
-			textoTroca = "Será que o pedrinho tem medo do SACI ?";
-			$("#perguntas").html("<div style='float: left; margin-top: 5%' class='col-md-8 pergunta-monteiro'>"+
-					 		"<div class='troca-imagem'> Será que o pedrinho tem medo do "+
+			textoTroca = "<div>Será que o pedrinho tem medo do <b>SACI</b>?</div>";
+			$("#perguntas").html("<div class='col-md-8 pergunta-monteiro'>"+
+					 		"<div class='pergunta-monteiro troca-imagem'> Será que o pedrinho tem medo do "+
 					 		"<img id='imagemEnigma' src='imagens/monteiro-lobato/saci.png'> ?</div>"+
 					 	"</div>"+
 					 	"<div class='center-align col l9 offset-l2 xl10 offset-xl2 resposta-monteiro'>"+
@@ -61,8 +61,8 @@ function formularPergunta(){
 		break;
 		case 2:
 			resposta = "BOLO";
-			textoTroca = "A Tia Anastacia faz um BOLO muito gostoso."
-			$("#perguntas").html("<div style='float: left; margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
+			textoTroca = "<div>A tia Anastácia faz um do <b>BOLO</b> muito gostoso.</div>"
+			$("#perguntas").html("<div style='margin-top: 5%' class='col-md-8 pergunta-monteiro'>"+
 					 		"<div class='troca-imagem'> A Tia Anastacia faz um "+
 					 		"<img id='imagemEnigma' src='imagens/monteiro-lobato/bolo.png'>"+
 					 		"muito gostoso.</div>"+
@@ -77,8 +77,8 @@ function formularPergunta(){
 		break;
 		case 3:
 			resposta = "BONECA"
-			textoTroca = "Emilia é uma BONECA de pano.";
-			$("#perguntas").html("<div style='float: left; margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
+			textoTroca = "<div>Emilia é uma <b>BONECA</b> de pano.</div>";
+			$("#perguntas").html("<div style='margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
 				 		"<div class='troca-imagem'> Emilia é uma "+
 				 		"<img id='imagemEnigma' src='imagens/monteiro-lobato/emilia.png'>"+
 				 		"de pano.</div>"+
@@ -93,10 +93,10 @@ function formularPergunta(){
 		break;
 		case 4:
 			resposta = "PORCO"
-			textoTroca = ">Marquês de Rabicó é um PORCO."
-			$("#perguntas").html("<div style='float: left; margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
+			textoTroca = "<div>Marquês de Rabicó é um<b> PORCO.</b></div>"
+			$("#perguntas").html("<div style='margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
 				 		"<div class='troca-imagem'>Marquês de Rabicó é um"+
-				 		"	<img id='imagemEnigma' src='imagens/monteiro-lobato/porco.png'>"+
+				 		"	<img id='imagemEnigma' src='imagens/monteiro-lobato/porco.png'>."+
 				 		"</div>"+
 				 	"</div>"+
 					 	"<div class='center-align col l9 offset-l2 xl12 offset-xl0 resposta-monteiro'>"+
@@ -109,8 +109,8 @@ function formularPergunta(){
 		break;
 		case 5:
 			resposta = "BOLA"
-			textoTroca = "Pedrinho gosta de jogar BOLA."
-			$("#perguntas").html("<div style='float: left; margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
+			textoTroca = "<div>Pedrinho gosta de jogar <b>BOLA.</b></div>"
+			$("#perguntas").html("<div style='margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
 				 		"<div class='troca-imagem'>Pedrinho gosta de jogar "+
 				 		"	<img id='imagemEnigma' style='width: 10%' src='imagens/monteiro-lobato/bola.png'>"+
 				 		".</div>"+
@@ -125,8 +125,8 @@ function formularPergunta(){
 		break;
 		case 6:
 			resposta = "PATOS"
-			textoTroca = "No sítio do Pica Pau Amarelo, tia Anastácia cuida dos PATOS."
-			$("#perguntas").html("<div style='float: left; margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
+			textoTroca = "<div>No sítio do Pica Pau Amarelo, tia Anastácia cuida dos<b> PATOS. </b></div>"
+			$("#perguntas").html("<div style='margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
 					 		"<div class='troca-imagem'>No sítio do Pica Pau Amarelo, tia Anastácia cuida dos "+
 					 		"	<img id='imagemEnigma' style='width: 18%;' src='imagens/monteiro-lobato/patos.png'>"+
 					 		".</div>"+
@@ -141,8 +141,8 @@ function formularPergunta(){
 		break;
 		case 7:
 			resposta = "PIPA"
-			textoTroca = "Pedrinho e Emilia brincam de PIPA."
-			$("#perguntas").html("<div style='float: left; margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
+			textoTroca = "<div>Pedrinho e Emilia brincam de <b>PIPA.</b></div>"
+			$("#perguntas").html("<div style='margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
 				 		"<div class='troca-imagem'>Pedrinho e Emilia brincam de "+					 	 
 				 		"<img id='imagemEnigma' style='width: 10%' src='imagens/monteiro-lobato/pipa.png'>"+
 				 		".</div>"+
@@ -157,8 +157,8 @@ function formularPergunta(){
 		break;
 		case 8:
 			resposta = "MILHO";
-			textoTroca = "Visconde de Sabugosa é uma espiga de MILHO."
-			$("#perguntas").html("<div style='float: left; margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
+			textoTroca = "<div>Visconde de Sabugosa é uma espiga de <b> MILHO. </b></div>"
+			$("#perguntas").html("<div style='margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
 					 		"<div class='troca-imagem'>Visconde de Sabugosa é uma espiga de "+					 		
 					 		"<img id='imagemEnigma' style='width: 10%' src='imagens/monteiro-lobato/milho.png'>"+
 					 		".</div>"+
@@ -172,9 +172,9 @@ function formularPergunta(){
 						);	
 		break;
 		case 9:
-			resposta = "OCULOS"
-			textoTroca = "Dona Benta usa OCULOS."
-			$("#perguntas").html("<div style='float: left; margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
+			resposta = "ÓCULOS"
+			textoTroca = "<div>Dona Benta usa <b> ÓCULOS. </b></div>"
+			$("#perguntas").html("<div style='margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
 					 		"<div class='troca-imagem'>Dona Benta usa"+
 					 		"<img id='imagemEnigma' style='width: 10%' src='imagens/monteiro-lobato/oculos.png'>"+
 					 		".</div>"+
@@ -182,7 +182,7 @@ function formularPergunta(){
 					 		"<div class='center-align col l9 offset-l2 xl12 offset-xl0 resposta-monteiro'>"+
 						 	"<p onClick=\"verificaResposta('VESTIDO')\">VESTIDO</p>"+
 						 	"<p onClick=\"verificaResposta('BOTA')\">BOTA</p>"+
-						 	"<p onClick=\"verificaResposta('OCULOS')\">OCULOS</p>"+
+						 	"<p onClick=\"verificaResposta('ÓCULOS')\">ÓCULOS</p>"+
 						 	"<p onClick=\"verificaResposta('CASACO')\">CASACO</p>"+
 					 	"</div>"
 					 	
@@ -190,11 +190,11 @@ function formularPergunta(){
 		break;
 		case 10:
 			resposta = "PIPOCA"
-			textoTroca = "Pedrinho e Narizinho pediram pra tia Anastácia fazer PIPOCA."
-			$("#perguntas").html("<div style='float: left; margin-top: 10%' class='col l12 pergunta-monteiro'>"+
+			textoTroca = "<div>Pedrinho e Narizinho pediram pra tia Anastácia fazer <b>PIPOCA</b>.</div>"
+			$("#perguntas").html("<div style='margin-top: 10%' class='col l12 pergunta-monteiro'>"+
 					 		"<div class='troca-imagem'>Pedrinho e Narizinho pediram pra tia Anastácia fazer "+
 					 		"<img id='imagemEnigma' style='width: 10%' src='imagens/monteiro-lobato/pipoca.png'>"+
-					 		"</div>"+
+					 		".</div>"+
 					 	"</div>"+
 					 		"<div class='center-align col l9 offset-l2 xl12 offset-xl0 resposta-monteiro'>"+
 						 	"<p onClick=\"verificaResposta('BOLO')\">BOLO</p>"+

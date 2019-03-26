@@ -2,8 +2,7 @@ var numero = 0,
 	multiplicador = 2,
 	valor = 0,
 	entradaTec = "",
-	valTabuada = 0,
-	tempo;	
+	valTabuada = 0;
 
 function comecarJogo(){
 	$("#ganhou-jogo").hide();
@@ -126,7 +125,6 @@ function verificaResposta(){
 		multiplicador+=1;
 		chave = 1;
 		valor = 0;
-		clearTimeout(tempo);
 		calculaTabuada();
 	}else{
 		valor = 0;
@@ -136,13 +134,11 @@ function verificaResposta(){
 
 		if( vidas < 0 ){
 			$(".resposta").prop('disabled', true);
-			clearTimeout(tempo);			
 			$("#fim-do-jogo").show();
 			$("#jogo").hide();
 		}
 	}
-	if(multiplicador > 10 && chave == 1){		
-		clearTimeout(tempo);
+	if(multiplicador > 10 && chave == 1){
 		$("#ganhou-jogo").show();
 		$("#jogo").hide();		
 		numero = 0;

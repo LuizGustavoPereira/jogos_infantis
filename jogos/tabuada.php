@@ -80,7 +80,10 @@
 							<div class="col l12" id="enunciado">
 								
 							</div>
-							<div class="col l12" style="margin-top: 15px">
+							<div class="col l12" style="color:#618fb0; float:left"; id="">
+								<h5><b>seguindo o exemplo a cima, complete:</b></h5>
+							</div>
+							<div class="col l12">
 								<div class="row" id="respJogo"></div>
 							</div>
 						</div>

@@ -27,13 +27,21 @@ function comecarJogo(){
 }
 
 function verificaResposta(valor) {
-	
-	if(valor == operacao){
+	if(valor == "+"){
+		resultado = primeiroNumero + segundoNumero
+	}else if(valor == "-"){
+		resultado = primeiroNumero - segundoNumero;
+	}else if(valor == "/"){
+		resultado = primeiroNumero / segundoNumero;
+	}else{
+		resultado = primeiroNumero * segundoNumero;
+	}
+	if(resultado == valorFinal){
 		pontuacao += 10
 		$("#pontuacao").html(pontuacao);
-		$("#resp").html(resp)
+		$("#resp").html(valor)
 		index = 1;
-		setTimeout("formularPergunta()", 10000);
+		setTimeout("formularPergunta()", 1000);
 		
 	}else{
 		vidas-=1;
@@ -51,11 +59,11 @@ function verificaResposta(valor) {
 function formularPergunta(){
 	sorteiaPergunta();		
 	$("#perguntas").html(	
-						"<div class='margin-top-5 col l8 offset-l2 center'>"+
+						"<div class='col l8 offset-l4 xl8 offset-xl4 pergunta-matematica margin-top-5'>"+
 
-		 					"<h4><b> "+primeiroNumero+" </b> <span id='resp' class='center pergunta-matematica'>&#63;</span> <b> "+segundoNumero+" = "+valorFinal+"</b> </h4>"+
+		 					"<text><b> "+primeiroNumero+" </b> <span id='resp' class='center pergunta-matematica fa-blink'>&#63;</span> <b> "+segundoNumero+" = "+valorFinal+"</b> </text>"+
 		 				"</div>"+									
-					 	"<div class='center col l10 offset-l1 xl7 offset-xl4 resposta-matematica'>"+
+					 	"<div class='center col l9 offset-l3 xl9 offset-xl3 resposta-matematica'>"+
 						 	"<p onClick=\"verificaResposta('+')\">&#43;</p>"+
 						 	"<p onClick=\"verificaResposta('-')\">&#8722;</p>"+
 						 	"<p onClick=\"verificaResposta('/')\">&divide;</p>"+
@@ -73,33 +81,11 @@ function sorteiaPergunta(){
 		$("#jogo").hide();
 		$("#ganhou-jogo").show();
 
-	}else{
-		primeiroNumero  = parseInt( Math.floor((Math.random() * 10) + 1) );		
-		segundoNumero  = parseInt( Math.floor((Math.random() * 10) + 1) );
-		operacao = operacoes[Math.floor((Math.random() * 4))];
-		switch (operacao){
-			case "+":
-				valorFinal = primeiroNumero + segundoNumero;
-				valorFinal = parseFloat(valorFinal.toFixed(2));
-				resp = "&#43;";
-			break;
-			case "-":
-				valorFinal = primeiroNumero - segundoNumero;
-				valorFinal = parseFloat(valorFinal.toFixed(2));
-				resp = "&#8722;";
-			break;
-			case "/":
-				valorFinal = primeiroNumero / segundoNumero;
-				valorFinal = parseFloat(valorFinal.toFixed(2));
-				resp = "&divide;";
-			break;
-			case "*":
-				valorFinal = primeiroNumero * segundoNumero;
-				valorFinal = parseFloat(valorFinal.toFixed(2));
-				resp = "&#215;";
-			break;
-
-		}
+	}else{	
+			sorteiaOperacao();	
+			while(Number.isInteger(valorFinal) != true || (primeiroNumero == 0 && segundoNumero==0) || valorFinal<0){
+				sorteiaOperacao();
+			}			
 		var pergunta = primeiroNumero + operacao + segundoNumero +" = "+ valorFinal; 		
 		if(perguntasFeitas.indexOf(pergunta) > -1){
 			sorteiaPergunta();
@@ -107,6 +93,34 @@ function sorteiaPergunta(){
 			perguntasFeitas.push(pergunta);
 		}
 	}	
+}
+
+function sorteiaOperacao(){
+	primeiroNumero  = parseInt( Math.floor((Math.random() * 5) + 0) );		
+	segundoNumero  = parseInt( Math.floor((Math.random() * 5) + 0) );
+	operacao = operacoes[Math.floor((Math.random() * 4))];
+	switch (operacao){
+		case "+":
+			valorFinal = primeiroNumero + segundoNumero;
+			valorFinal = parseFloat(valorFinal.toFixed(2));
+			resp = "&#43;";
+		break;
+		case "-":
+			valorFinal = primeiroNumero - segundoNumero;
+			valorFinal = parseFloat(valorFinal.toFixed(2));
+			resp = "&#8722;";
+		break;
+		case "/":
+			valorFinal = primeiroNumero / segundoNumero;
+			valorFinal = parseFloat(valorFinal.toFixed(2));
+			resp = "&divide;";
+		break;
+		case "*":
+			valorFinal = primeiroNumero * segundoNumero;
+			valorFinal = parseFloat(valorFinal.toFixed(2));
+			resp = "&#215;";
+		break;
+		}
 }
 
 function voltar(){
