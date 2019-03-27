@@ -5,6 +5,7 @@ var resp = "",
 	pontuacao = 0,
 	vidas = 3;	
 	audio = "";
+	tempo = 0;
 
 audioAguia = document.getElementById('audio-aguia');
 audioGato = document.getElementById('audio-gato');
@@ -19,7 +20,8 @@ perdeu = document.getElementById('perdeu');
 ganhou = document.getElementById('ganhou');
 
 function comecarJogo(){
-	vidas = 3;
+	clearTimeout(tempo);
+	tempo = setInterval("atualizaTempo()", 10000);
 	pontuacao = 0;
 	sorteados = [];	
 	count = 0;
@@ -111,6 +113,7 @@ function tecla(){
 			$("#jogo").hide();
 			perdeu.play();
 			audio = perdeu;
+			clearTimeout(tempo);
 		}
 	}    
 }
@@ -134,6 +137,31 @@ function verificaAnimais(){
 			sorteados.push(animal);			
 		}
 	}
+}
+
+function atualizaTempo(){
+	if(count < 6 ){
+		color = "green";
+	}else if(count < 12){
+		color = "blue";
+	}else if (count < 17){
+		color = "red";
+	}
+	else{
+		$("#jogarNovamente").show();
+		clearTimeout(tempo);
+	}
+	if(count == 5){
+		$("#min").append("&nbsp;&nbsp;&nbsp;<p>1 min</p>");
+	}
+	else if(count == 11){
+		$("#min").append("&nbsp;&nbsp;&nbsp;<p>2 min</p>");
+	}
+	else if(count == 17){
+		$("#min").append("&nbsp;&nbsp;&nbsp;<p>3 min</p>");
+	}
+	$("#countTempo").append("<div style='background-color:"+color+"'></div>");
+	count ++;	
 }
 
 
