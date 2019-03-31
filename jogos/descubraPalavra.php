@@ -42,7 +42,7 @@
 						    </div>
 						    <br/>
 						    <div id="amigo" class="margin-top-10 input-descubra-palavra">			        	
-								<input onClick="clicaSilaba('amigo','1)" id="amigo1" type="button" value="mi" >
+								<input onClick="clicaSilaba('amigo','1')" id="amigo1" type="button" value="mi">
 								<input onClick="clicaSilaba('amigo','2')" id="amigo2" type="button" value="a">
 								<input onClick="clicaSilaba('amigo','3')" id="amigo3" type="button" value="go">
 								<span><i class="material-icons">trending_flat</i></span>
@@ -120,27 +120,10 @@
 	            			<h5 id="dica"></h5>
 	            		</div>
 	            	</div>
-	            	<div class="col l5 xl3 offset-xl1 center-align">
+	            	<div class="col l5 xl3 offset-xl1 center-align">					
 						<fieldset>
-							<legend>Pontuação</legend>
-							<h5><b id="pontuacao">0</b></h5>
-						</fieldset>
-						<fieldset>
-							<legend>Vidas</legend>
-							<h5><b class="red-text" id="vidas"></b><i class="material-icons red-text">favorite</i></h5>
-						</fieldset>
-						<fieldset>
-							<legend>Tempo</legend>
-							<fieldset class="tempo">
-								<div class="row">
-									<div class="col l7" id="min">
-										
-									</div>									
-									<div class="col l5" id="countTempo">
-										&nbsp;
-									</div>
-								</div>
-							</fieldset>
+							<legend>Acertos</legend>
+							<h5><b class="red-text" id="acertos"></b><i class="material-icons red-text">favorite</i></h5>
 						</fieldset>
 					</div>
 	            	
