@@ -19,13 +19,12 @@ function musica(){
 
 function comecarJogo(){
 	cor = 1;
-	audio.play()
 	$("#jogo").show();
 	$("#telaInicial").hide();
 	$("#ganhou-jogo").hide();
 	$("#nomeCor").html("<h3 style='color: blue' >AZUL</h3>");
 	$("#bandeira").html("<img src='imagens/brasileiro/bandeira-preta-branca.png' class='img-brasileiro-bandeira'>")
-
+	audio.pause();
 }
 
 function voltar(){
@@ -69,6 +68,7 @@ function verificaResposta(resp){
 function terminaJogo(){
 	$("#jogo").hide();
 	$("#ganhou-jogo").show();
+	audio.play();
 }
 
 $(document).ready(function(){

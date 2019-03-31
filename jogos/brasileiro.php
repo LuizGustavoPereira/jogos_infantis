@@ -1,7 +1,7 @@
 
 <div class="row" >
 	<div class="col l10 offset-l1">
-		<div class="titulo ">
+		<div class="titulo">
 			<h3 class="float-left" style="color: green">J</h3>
 			<h3 class="float-left" style="color: blue">O</h3>
 			<h3 class="float-left" style="color: yellow">G</h3>
@@ -42,13 +42,15 @@
 	            <div class="row">
 
 	            	<audio id="audio">
-					    <source src="sons/brasileiro/aquele-abraco.mp3" type="audio/mpeg">
+					    <source src="sons/brasileiro/meu-brasil-brasileiro.mp3" type="audio/mpeg">
 					    Seu navegador não possui suporte ao elemento audio
 					</audio>					
-					<a class="icon-sound icone-musica"  onclick="musica()"><i class="material-icons">volume_up</i></a>
+					<!--<a class="icon-sound icone-musica"  onclick="musica()"><i class="material-icons">volume_up</i></a>-->
 					
 
-
+					<div class="enunciado-brasileiro">
+            			<h5>Clique nas tintas, para pintar a bandeira, conforme a palavra.</h5>
+            		</div>              		
 	            	<div class="center-align col l12" id="bandeira">
 	            		<img src='imagens/brasileiro/bandeira-preta-branca.png' class='img-brasileiro-bandeira'>
             		</div>  
@@ -67,7 +69,8 @@
         			<div class="center-align col l2">
         				<img src='imagens/brasileiro/tinta-verde.png' class="img-brasileiro-tinta tinta" onClick="verificaResposta(3)">   
         			</div>
-            	</div>  
+            	</div>
+
             	<div class="row">
             		<div class="col l10 offset-l1 center-align" id="nomeCor">
 
@@ -91,6 +94,9 @@
 		        	<div class="col l12 left">		        		
 		        		<a class="icon-sound icone-musica"  onclick="musica()" ><i class="material-icons">volume_up</i></a>
 		        	</div>
+		        	<div class="center-align col l12" id="bandeira">
+	            		<img src='imagens/brasileiro/bandeira_colorida.png' class='img-brasileiro-bandeira'>
+            		</div> 
 		        	<div class="titulo col l10 offset-l1 center-align">
 			        	<h3 style="font-size: 3vw; margin-top: 5%" class="blue-text">PARABÉNS!!</h3>
 			        	<a style="margin-top: 5%" class="waves-effect waves-light btn background btnControl" onClick="comecarJogo()" id="jogarNovamente" display="">Jogar Novamente</a>
