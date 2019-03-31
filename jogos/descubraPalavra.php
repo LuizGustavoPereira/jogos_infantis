@@ -29,6 +29,9 @@
         <div class="card transparent darken-1">
             <div class="card-content "> 
 	            <div class="row">
+	            	<audio id="audio">	
+			            <source src='sons/geral/ganhou.mp3' type='audio/mpeg'>
+					</audio>
 	            	<div class="col l7  xl8 offset-xl0" >
 	            		<div class="col l8 xl8 center-align">		            		
 						    <div id="hospital" class="input-descubra-palavra">			        	

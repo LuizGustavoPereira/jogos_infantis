@@ -6,7 +6,10 @@ var resp = "",
 	silaba = "";
 	idAtual = "";
 	grupoAtual = "";
-	acertos = 0;
+	acertos = 0,
+	respondidos = 0;
+
+	audio = document.getElementById('audio');
 
 $(document).ready(function(){
 	$("#jogo").hide();
@@ -41,7 +44,7 @@ function clicaSilaba(grupo, numero) {
 }
 
 function verificaSilaba(id,grupo) {
-	if(acertos < 24){
+	if(respondidos <= 23){
 		if(id == silaba && grupoAtual == grupo){
 			$("#"+idAtual).removeClass("input-descubra-palavra-clique");
 			$("#"+id+grupo).val(id);
@@ -50,7 +53,7 @@ function verificaSilaba(id,grupo) {
 			if(!$("#"+id+grupo).hasClass('erro')){
 				acertos+=1;
 			}
-
+			respondidos+=1;
 			$("#"+id+grupo).removeClass("erro");
 			$("#"+id+grupo).addClass("acerto");
 			
@@ -65,6 +68,7 @@ function verificaSilaba(id,grupo) {
 		}
 	}else{
 		$("#jogo").hide();
+		audio.play();
 		$("#ganhou-jogo").show();
 	}	
 }
