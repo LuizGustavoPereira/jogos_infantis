@@ -27,21 +27,12 @@
         <div class="card transparent darken-1">
             <div class="card-content "> 
 	            <div class="row">
+	            	<audio id="audio">	
+			            <source src='sons/geral/ganhou.mp3' type='audio/mpeg'>
+					</audio>
 		            <div class="col l10" id="perguntas">
 							
-					</div>	
-
-					<div class="col l2 center-align">
-						<fieldset>
-							<legend>Pontuação</legend>
-							<h5><b id="pontuacao">0</b></h5>
-						</fieldset>
-						<fieldset>
-							<legend>Vidas</legend>
-							<h5><b class="red-text" id="vidas"></b><i class="material-icons red-text">favorite</i></h5>
-						</fieldset>
-							
-					</div>
+					</div>					
 	            	
             	</div> 
             	<div class="row left-align">
