@@ -172,18 +172,19 @@ function formularPergunta(){
 						);	
 		break;
 		case 9:
-			resposta = "ÓCULOS"
-			textoTroca = "<div>Dona Benta usa <b> ÓCULOS. </b></div>"
-			$("#perguntas").html("<div style='margin-top: 10%' class='col-md-8 pergunta-monteiro'>"+
-					 		"<div class='troca-imagem'>Dona Benta usa"+
-					 		"<img id='imagemEnigma' style='width: 10%' src='imagens/monteiro-lobato/oculos.png'>"+
-					 		".</div>"+
+			resposta = "DONA BENTA"
+			textoTroca = "<div><b>Dona Benta</b> gosta de contar histórias no sítio do Pica Pau Amarelo.</div>"
+			$("#perguntas").html("<div style='margin-top: 5%' class='col-md-8 pergunta-monteiro'>"+
+							"<div class='troca-imagem'>"+
+							"<img id='imagemEnigma' style='width: 17%' src='imagens/monteiro-lobato/DonaBenta.png'>"+
+					 		"gosta de contar histórias no sítio do Pica Pau Amarelo."+
+					 		"</div>"+
 					 	"</div>"+
 					 		"<div class='center-align col l9 offset-l2 xl12 offset-xl0 resposta-monteiro'>"+
-						 	"<p onClick=\"verificaResposta('VESTIDO')\">VESTIDO</p>"+
-						 	"<p onClick=\"verificaResposta('BOTA')\">BOTA</p>"+
-						 	"<p onClick=\"verificaResposta('ÓCULOS')\">ÓCULOS</p>"+
-						 	"<p onClick=\"verificaResposta('CASACO')\">CASACO</p>"+
+						 	"<p onClick=\"verificaResposta('DONA BENTA')\">Dona Benta</p>"+
+						 	"<p onClick=\"verificaResposta('PEDRINHO')\">Pedrinho</p>"+
+						 	"<p onClick=\"verificaResposta('EMÍLIA')\">Emília</p>"+
+						 	"<p onClick=\"verificaResposta('RABICÓ')\">Rabicó</p>"+
 					 	"</div>"
 					 	
 						);	
