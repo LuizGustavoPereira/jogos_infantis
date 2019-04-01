@@ -37,21 +37,16 @@ function verificaResposta(valor) {
 		resultado = primeiroNumero * segundoNumero;
 	}
 	if(resultado == valorFinal){
-		pontuacao += 10
-		$("#pontuacao").html(pontuacao);
+		$("#resp").removeClass("erro")
+		$("#resp").addClass("acerto")
 		$("#resp").html(valor)
 		index = 1;
 		setTimeout("formularPergunta()", 1000);
 		
 	}else{
-		vidas-=1;
-		$("#vidas").html(vidas);
-		alert("resposta errada");
-
-		if( vidas < 0 ){
-			$("#jogo").hide();
-			$("#fim-do-jogo").show();
-		}
+		$("#resp").removeClass("acerto")
+		$("#resp").addClass("erro");
+		$("#resp").html(valor)		
 	}	
 
 }
@@ -59,9 +54,9 @@ function verificaResposta(valor) {
 function formularPergunta(){
 	sorteiaPergunta();		
 	$("#perguntas").html(	
-						"<div class='col l8 offset-l4 xl8 offset-xl4 pergunta-matematica margin-top-5'>"+
+						"<div class='col l10 offset-l1  xl10 offset-xl1 center pergunta-matematica margin-top-5'>"+
 
-		 					"<text><b> "+primeiroNumero+" </b> <span id='resp' class='center pergunta-matematica fa-blink'>&#63;</span> <b> "+segundoNumero+" = "+valorFinal+"</b> </text>"+
+		 					"<h2><b> "+primeiroNumero+" </b> <span id='resp' class='center pergunta-matematica fa-blink'>&#63;</span> <b> "+segundoNumero+" = "+valorFinal+"</b> </h2>"+
 		 				"</div>"+									
 					 	"<div class='center col l9 offset-l3 xl9 offset-xl3 resposta-matematica'>"+
 						 	"<p onClick=\"verificaResposta('+')\">&#43;</p>"+
@@ -80,6 +75,7 @@ function sorteiaPergunta(){
 		bool = true;
 		$("#jogo").hide();
 		$("#ganhou-jogo").show();
+		audio.play();
 
 	}else{	
 			sorteiaOperacao();	
