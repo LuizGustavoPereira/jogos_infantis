@@ -1,10 +1,10 @@
 <?php	
-	require_once "config.php";
-	require_once "classes/autoload.php";
-	require_once "classes/Menu.Class.php";
-	$menu = new Menu;
-	
-	$imgTexture = "img/bkg-texture-". COR . ".jpg";	
+require_once "config.php";
+require_once "classes/autoload.php";
+require_once "classes/Menu.Class.php";
+$menu = new Menu;
+
+$imgTexture = "img/bkg-texture-". COR . ".jpg";	
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +46,7 @@
 			background: #fafafa;
 		}
 		.btntour{
-		    padding: 4px 6px;
+			padding: 4px 6px;
 		}
 		.versionamento{
 			position:fixed;
@@ -61,196 +61,196 @@
 </head>
 
 
-<body class=" lighten-3">
-	<main>
-		<aside>
-			<ul id="slide-out" class="side-nav fixed">
-				<li class='logo-li'>
-					<div class="topSideNav"></div>
-				</li>
-				
-			<?php
-				try{
-					require_once "classes/Menu.Class.php";
-			        $menu->renderLink('Home', './jogos/menu-principal/', 'home');
+<body class="lighten-3">
+	
+			<nav>
+				<div class="nav-wrapper container">
+					<a href="#" data-activates="slide-out" class="button-collapse">
+						<i class="material-icons">menu</i>
+					</a>
+										
 
-					$menu = new Menu('Jogos', 'games');
-						$menu->append('Ver Todos', 								'./jogos/menu-principal/');
-						$menu->append('Alfabeto',  								'./jogos/alfabeto/');
-						$menu->append('Animais', 								'./jogos/animais');
-						$menu->append('Antes e Depois', 						'./jogos/antes-depois/');
-						$menu->append('Brasileiro',  							'./jogos/brasileiro/');
-						$menu->append('Brincando com Monteiro Lobato', 	  		'./jogos/monteiro-lobato/');
-						$menu->append('Casa do S', 	  							'./jogos/casa-s/');
-						$menu->append('Descubra a Palavra', 					'./jogos/descubra-palavra/');
-						$menu->append('Quadrado', 								'./jogos/quadrado/');
-						$menu->append('Matemática', 							'./jogos/matematica/');
-						$menu->append('O que é o que é?', 						'./jogos/charadas');
-						$menu->append('Tabuada',  								'./jogos/tabuada/');
-						$menu->append('Times', 	  								'./jogos/times/');
-						$menu->append('Salada de Frutas', 	  					'./jogos/salada-fruta/');
+					<ul id="slide-out" class="side-nav fixed">
+						<li class='logo-li'> 
+							<div class="topSideNav"></div>
+						</li>
+
+						<?php
+						try{
+							require_once "classes/Menu.Class.php";
+							$menu->renderLink('Home', './jogos/menu-principal/', 'home');
+
+							$menu = new Menu('Jogos', 'games');
+							$menu->append('Ver Todos', 								'./jogos/menu-principal/');
+							$menu->append('Alfabeto',  								'./jogos/alfabeto/');
+							$menu->append('Animais', 								'./jogos/animais');
+							$menu->append('Antes e Depois', 						'./jogos/antes-depois/');
+							$menu->append('Brasileiro',  							'./jogos/brasileiro/');
+							$menu->append('Brincando com Monteiro Lobato', 	  		'./jogos/monteiro-lobato/');
+							$menu->append('Casa do S', 	  							'./jogos/casa-s/');
+							$menu->append('Descubra a Palavra', 					'./jogos/descubra-palavra/');
+							$menu->append('Quadrado', 								'./jogos/quadrado/');
+							$menu->append('Matemática', 							'./jogos/matematica/');
+							$menu->append('O que é o que é?', 						'./jogos/charadas');
+							$menu->append('Tabuada',  								'./jogos/tabuada/');
+							$menu->append('Times', 	  								'./jogos/times/');
+							$menu->append('Salada de Frutas', 	  					'./jogos/salada-fruta/');
 
 
-					$menu->render();
+							$menu->render();
 
 					// $menu->renderLink('Sair', './logOut/', '');
-				}catch(Excepition $e){
-					print $e->getMessage();
-				}
-			?>
-			</ul>
-		</aside>
-
-		<ul id="dropdown1" class="dropdown-content navbar-dropdown">
-			<div class="arrow-up"></div>
-			<li><a href="alterar-senha">Alterar senha</a></li>
-			<li class="divider"></li>
-			<li><a onClick="logout()">Sair</a></li>
-		</ul>
-
+						}catch(Excepition $e){
+							print $e->getMessage();
+						}
+						?>
+					</ul>
+				</div>
+			</nav>
+		
 		<section class="main-content" style='padding:15px; z-index: 1'>
 			<?php
-				try{
-					$routerContent = new AltoRouter();
-					$routerContent->setBasePath( BASE_ROUTE );
+			try{
+				$routerContent = new AltoRouter();
+				$routerContent->setBasePath( BASE_ROUTE );
 
 
-					$routerContent->addRoutes(array(
+				$routerContent->addRoutes(array(
 
-						
-						array('GET','/jogos/[*]',  								  '/jogos/subrotas.php', ''),
 
-					));	
+					array('GET','/jogos/[*]',  								  '/jogos/subrotas.php', ''),
 
-					$matchContent = $routerContent->match();
-					if( is_array($matchContent)  ) {
-						require __DIR__. $matchContent['target'];
+				));	
 
-					}else{
-						require "bloqueio.php";
-					}
-				}catch(Exception $e){
-					print $e->getMessage();
+				$matchContent = $routerContent->match();
+				if( is_array($matchContent)  ) {
+					require __DIR__. $matchContent['target'];
+
+				}else{
+					require "bloqueio.php";
 				}
+			}catch(Exception $e){
+				print $e->getMessage();
+			}
 			?>
-				
+
 		</section>
-	</main>	
 	<?php
-		require __DIR__ ."/pages/footer.html";
+	require __DIR__ ."/pages/footer.html";
 	?>
-<script>
-	$(document).ready(function($) {
-		 $(".button-menu").sideNav();
-		$( ".tooltipped" ).each(function(index) {
+	<script>
+		$(".button-collapse").sideNav();
+		$(document).ready(function($) {
+			$(".button-menu").sideNav();
+			$( ".tooltipped" ).each(function(index) {
 			// console.log($(this).text());
 			$(this).tooltip({tooltip: $(this).text().replace("keyboard_arrow_right", ""), position: "right", delay: 100});
 		});
-		$(".collapsible-body li").children().each(function() {
-			$(this).width() > $(".collapsible-body li").width() && $(this).attr("title", $(this).text().replace("keyboard_arrow_right", ""));
-		});
-		$(".dropdown-button").dropdown();
-		$('.modal').modal();
-		$('.collapsible').collapsible();
+			$(".collapsible-body li").children().each(function() {
+				$(this).width() > $(".collapsible-body li").width() && $(this).attr("title", $(this).text().replace("keyboard_arrow_right", ""));
+			});
+			$(".dropdown-button").dropdown();
+			$('.modal').modal();
+			$('.collapsible').collapsible();
 
-        $.extend( true, $.fn.dataTable.defaults, {
-			"language":{
-				"url": "lib/datatable.ptbr.json"
-			}
-		} );
-		
-		$(".dateFormat").datepicker().mask('00/00/0000');
-		$(".horaFormat").mask('00:00');
-		$('.money').mask("#.##0,00", {reverse: true});
-		$(".number").mask("#");
-		$('.telefone').mask(SPMaskBehavior, spOptions);
-		$(".cep").mask("99999-999");
-		$(".cnpj").mask("99.999.999/9999-99");
-
-		$('select').material_select();
-
-
-		$("input[type='text'],input[type='password']").bind('keydown',function(e) {  
-			if($(this).data('next')){
-				(e.keyCode == '13') && $($(this).data('next')).focus();
-			}
-			if($(this).data('btn')){
-				if(e.keyCode == '13'){
-				    if(liberarInclusao){
-				        $("#btnIncluir").click();
-				    }else if(liberarCorrecao){
-				        $("#btnCorrigir").click();
-				    }
+			$.extend( true, $.fn.dataTable.defaults, {
+				"language":{
+					"url": "lib/datatable.ptbr.json"
 				}
-			}
-			if($(this).data('pesq')){
-				(e.keyCode == '13') && $($(this).data('pesq')).click();
-			} 
-	    });
+			} );
 
-	});
+			$(".dateFormat").datepicker().mask('00/00/0000');
+			$(".horaFormat").mask('00:00');
+			$('.money').mask("#.##0,00", {reverse: true});
+			$(".number").mask("#");
+			$('.telefone').mask(SPMaskBehavior, spOptions);
+			$(".cep").mask("99999-999");
+			$(".cnpj").mask("99.999.999/9999-99");
 
-	$.fn.showAlert = function(message, type = 'orange'){
-		$(this).html("<div class=\"card "+type+" darken-1 show \" >\
-		                        <div class=\"card-content white-text\" >"+message+"</div></div>");
-	}
+			$('select').material_select();
 
-	$.fn.loadGif = function(sMessage){
 
-		sMessage = (sMessage !== "") ? "<div style='padding-left:10px;line-height: 32px; height:32px'>"+sMessage+"</div> ": "";
-		$(this).html("<div class=\"row\">\
-			<div class=\"col l12 center-align\">\
-				<div class=\"preloader-wrapper big active\">\
-					<div class=\"spinner-layer spinner-green-only\">\
-						<div class=\"circle-clipper left\">\
-						<div class=\"circle\"></div>\
-						</div><div class=\"gap-patch\">\
-						<div class=\"circle\"></div>\
-						</div><div class=\"circle-clipper right\">\
-						<div class=\"circle\"></div>\
-						</div>\
-					</div>\
-				</div>"+sMessage+"\
-			</div></div>");
-		
-	}
+			$("input[type='text'],input[type='password']").bind('keydown',function(e) {  
+				if($(this).data('next')){
+					(e.keyCode == '13') && $($(this).data('next')).focus();
+				}
+				if($(this).data('btn')){
+					if(e.keyCode == '13'){
+						if(liberarInclusao){
+							$("#btnIncluir").click();
+						}else if(liberarCorrecao){
+							$("#btnCorrigir").click();
+						}
+					}
+				}
+				if($(this).data('pesq')){
+					(e.keyCode == '13') && $($(this).data('pesq')).click();
+				} 
+			});
 
-	$.fn.loadProgress = function(){
-		$(this).html("<div class=\"progress\">\
-						<div class=\"indeterminate\"></div>\
-					  </div>");
-	}
-	
-	var SPMaskBehavior = function (val) {
-	  return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
-	},
-	spOptions = {
-	  onKeyPress: function(val, e, field, options) {
-	      field.mask(SPMaskBehavior.apply({}, arguments), options);
-	    }
-	};
+		});
 
-	var formatMoney = function(dinheiros, mostrarMoeda = false){
-		if (dinheiros != 0 && dinheiros != null) {
-			dinheiros = parseFloat(dinheiros).toFixed(2);
-			dinheiros = new Intl.NumberFormat('pt-BR',{ style: 'currency', currency: 'BRL' }).format( dinheiros );
-			dinheiros = (mostrarMoeda !== true)? dinheiros.replace('R$','').trim() : dinheiros;		
-		}else{
-			dinheiros = (mostrarMoeda !== true)? "0,00" : "R$ 0,00";
+		$.fn.showAlert = function(message, type = 'orange'){
+			$(this).html("<div class=\"card "+type+" darken-1 show \" >\
+				<div class=\"card-content white-text\" >"+message+"</div></div>");
 		}
-		return dinheiros;
-	}
 
-	$.datepicker.setDefaults({
-	    dateFormat: 'dd/mm/yy',
-	    dayNames: ['Domingo','Segunda','Ter&ccedil;a','Quarta','Quinta','Sexta','S&aacute;bado','Domingo'],
-	    dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
-	    dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','S&aacute;b','Dom'],
-	    monthNames: ['Janeiro','Fevereiro','Mar&ccedil;o','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
-	    monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
-	});
+		$.fn.loadGif = function(sMessage){
 
-	function post(path, params, method) {
+			sMessage = (sMessage !== "") ? "<div style='padding-left:10px;line-height: 32px; height:32px'>"+sMessage+"</div> ": "";
+			$(this).html("<div class=\"row\">\
+				<div class=\"col l12 center-align\">\
+				<div class=\"preloader-wrapper big active\">\
+				<div class=\"spinner-layer spinner-green-only\">\
+				<div class=\"circle-clipper left\">\
+				<div class=\"circle\"></div>\
+				</div><div class=\"gap-patch\">\
+				<div class=\"circle\"></div>\
+				</div><div class=\"circle-clipper right\">\
+				<div class=\"circle\"></div>\
+				</div>\
+				</div>\
+				</div>"+sMessage+"\
+				</div></div>");
+
+		}
+
+		$.fn.loadProgress = function(){
+			$(this).html("<div class=\"progress\">\
+				<div class=\"indeterminate\"></div>\
+				</div>");
+		}
+
+		var SPMaskBehavior = function (val) {
+			return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+		},
+		spOptions = {
+			onKeyPress: function(val, e, field, options) {
+				field.mask(SPMaskBehavior.apply({}, arguments), options);
+			}
+		};
+
+		var formatMoney = function(dinheiros, mostrarMoeda = false){
+			if (dinheiros != 0 && dinheiros != null) {
+				dinheiros = parseFloat(dinheiros).toFixed(2);
+				dinheiros = new Intl.NumberFormat('pt-BR',{ style: 'currency', currency: 'BRL' }).format( dinheiros );
+				dinheiros = (mostrarMoeda !== true)? dinheiros.replace('R$','').trim() : dinheiros;		
+			}else{
+				dinheiros = (mostrarMoeda !== true)? "0,00" : "R$ 0,00";
+			}
+			return dinheiros;
+		}
+
+		$.datepicker.setDefaults({
+			dateFormat: 'dd/mm/yy',
+			dayNames: ['Domingo','Segunda','Ter&ccedil;a','Quarta','Quinta','Sexta','S&aacute;bado','Domingo'],
+			dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
+			dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','S&aacute;b','Dom'],
+			monthNames: ['Janeiro','Fevereiro','Mar&ccedil;o','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+			monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
+		});
+
+		function post(path, params, method) {
 	    method = method || "post"; // Set method to post by default if not specified.
 
 	    var form = document.createElement("form");
@@ -259,14 +259,14 @@
 	    form.setAttribute("target", "_blank");
 
 	    for(var key in params) {
-	        if(params.hasOwnProperty(key)) {
-	            var hiddenField = document.createElement("input");
-	            hiddenField.setAttribute("type", "hidden");
-	            hiddenField.setAttribute("name", key);
-	            hiddenField.setAttribute("value", params[key]);
+	    	if(params.hasOwnProperty(key)) {
+	    		var hiddenField = document.createElement("input");
+	    		hiddenField.setAttribute("type", "hidden");
+	    		hiddenField.setAttribute("name", key);
+	    		hiddenField.setAttribute("value", params[key]);
 
-	            form.appendChild(hiddenField);
-	        }
+	    		form.appendChild(hiddenField);
+	    	}
 	    }
 	    document.body.appendChild(form);
 	    form.submit();

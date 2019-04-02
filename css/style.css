@@ -47,11 +47,22 @@
 		}
 
 		@media only screen and (min-width: 993px) {
-			.container{width:100%}	
+			.container{width:100%}			
 		}
 
 		@media only screen and (min-width: 1441px) {
 			.container{width:85%}	
+		}
+
+		@media only screen and (max-width: 992px) {
+			.main-content{
+				overflow:hidden;
+				margin-left:0% !important;  
+				top:50px;
+			}
+			.page-footer {
+				margin-left:0px !important;  
+			}
 		}
 
 		.paginate_button{
