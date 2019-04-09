@@ -47,7 +47,7 @@
 		}
 
 		@media only screen and (min-width: 993px) {
-			.container{width:100%}			
+			.container{width:100%}				
 		}
 
 		@media only screen and (min-width: 1441px) {
@@ -55,6 +55,10 @@
 		}
 
 		@media only screen and (max-width: 992px) {
+			.input-descubra-palavra input, .input-descubra-palavra span{
+				width: 54px !important;				
+			}	
+			
 			.main-content{
 				overflow:hidden;
 				margin-left:0% !important;  

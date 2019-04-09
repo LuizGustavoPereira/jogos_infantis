@@ -59,9 +59,6 @@ function verificaSilaba(id,grupo) {
 			
 			$("#acertos").html(acertos);
 		}else{
-			console.log(id)
-			console.log(grupo)
-			console.log(silaba)
 			$("#"+idAtual).removeClass("input-descubra-palavra-clique");
 			$("#"+id+grupo).val(silaba);
 			$("#"+id+grupo).addClass("erro");
@@ -76,6 +73,11 @@ function verificaSilaba(id,grupo) {
 
 function tecla(){
     window.alert("O código da tecla pressionada foi: " + event.keyCode);
+}
+
+function voltar(){
+	$("#jogo").hide();
+	$("#telaInicial").show();
 }
   
 document.body.onkeypress = tecla;

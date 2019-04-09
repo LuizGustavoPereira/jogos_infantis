@@ -34,7 +34,7 @@
 					</audio>
 	            	<div class="col s8 l7  xl8 offset-xl0" >
 	            		<div class="col s12 l8 xl8 center-align">		            		
-						    <div id="hospital" class="input-descubra-palavra row">						    			        
+						    <div id="hospital" class="input-descubra-palavra">						    			        
 								<input onClick="clicaSilaba('hospital','1')" id="hospital1" type="button" value="pi" >
 								<input onClick="clicaSilaba('hospital','2')" id="hospital2" type="button" value="hos">
 								<input onClick="clicaSilaba('hospital','3')" id="hospital3" type="button" value="tal">
