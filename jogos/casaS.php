@@ -1,20 +1,20 @@
 <!-- Pagína inicial -->
 <div class="row" >
-	<div class="col l10 offset-l1">
+	<div class="col s12 l10 offset-l1">
 		<div class="titulo ">
 			<h3 class="float-left amber-text" >Casa do S</h3>			
 		</div> 
 	</div>
-	<div class="col l10 offset-l1" id="telaInicial" display>
+	<div class="col s12 l10 offset-l1" id="telaInicial" display>
         <div class="card transparent darken-1">
             <div class="card-content blue-text"> 
 	            <div class="row">
-	            	<div class="col l10 offset-l1 center-align">
+	            	<div class="col s12 l10 offset-l1 center-align">
 						<img src="imagens/descubra-palavra/detetive.gif">
 	            	</div>
             	</div> 
             	<div class="row center-align">
-					<div class="col l10 offset-l1">
+					<div class="col s12 l10 offset-l1">
 						<a class="waves-effect waves-light btn background btnControl" onClick="comecarJogo()">COMEÇAR</a>
 					</div>
 				</div>          	
@@ -25,12 +25,12 @@
 
 <!-- Pagína do jogo -->
 <div class="row">
-	<div class="col l10 offset-l1" id="jogo" display>
+	<div class="col s12 l12" id="jogo" display>
         <div class="card transparent darken-1">
             <div class="card-content "> 
 	            <div class="row">
-	            	<div class="col l12 xl12 offset-xl0 center-align" >
-	            		<div class="col l12 xl12">		            		
+	            	<div class="col s12 l12 xl12 center-align" >
+	            		<div class="col s12 l12 xl12">		            		
 						    <input class="input-casa-s-sem-borda" disabled="true">
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 						   	<input class="input-casa-s-sem-borda" disabled="true">
@@ -45,7 +45,7 @@
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 			     		</div>
-			     		<div class="col l12 xl12">		            		
+			     		<div class="col s12 l12 xl12">		            		
 						    <input class="input-casa-s-sem-borda" disabled="true">
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 						   	<input class="input-casa-s-sem-borda" disabled="true">
@@ -60,7 +60,7 @@
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 			     		</div>		            		
-						    <div class="col l12 xl12">		            		
+						    <div class="col s12 l12 xl12">		            		
 						    <input class="input-casa-s-sem-borda" disabled="true">
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 						   	<input class="input-casa-s-sem-borda" disabled="true">
@@ -75,7 +75,7 @@
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 			     		</div>
-			     		<div class="col l12 xl12">		            		
+			     		<div class="col s12 l12 xl12">		            		
 						    <input class="input-casa-s-sem-borda" disabled="true">
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 						   	<input class="input-casa-s-sem-borda" disabled="true">
@@ -90,7 +90,7 @@
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 						   	<input class="input-casa-s-sem-borda" disabled="true">
 			     		</div>
-			     		<div class="col l12 xl12">
+			     		<div class="col s12 l12 xl12">
 						    <input class="input-casa-s-sem-borda" value="1" disabled="true">
 						   	<input class="input-casa-s-sem-borda" value="2" disabled="true">
 						   	<input class="input-casa-s-sem-borda" value="3" disabled="true">
@@ -105,7 +105,7 @@
 						   	<input class="input-casa-s-sem-borda" value="12" disabled="true">
 						   	<input class="input-casa-s-sem-borda" value="13" disabled="true">
 			     		</div>
-			     		<div class="col l12 xl12">
+			     		<div class="col s12 l12 xl12">
 						    <input id="1-c" class="input-casa-s-com-borda 39 caixa1" maxlength="1" onclick="dica(1,1)" type="text">
 						   	<input id="2-v" class="input-casa-s-com-borda 38 caixa4" maxlength="1" onclick="dica(2,4)" type="text">
 						   	<input id="3-r" class="input-casa-s-com-borda 37 caixa7" maxlength="1" onclick="dica(3,7)" type="text">
@@ -120,7 +120,7 @@
 						   	<input id="12-o" class="input-casa-s-com-borda 28 caixa50" maxlength="1" onclick="dica(12,50)" type="text">
 						   	<input id="13-p" class="input-casa-s-com-borda 27 caixa53" maxlength="1" onclick="dica(13,53)" type="text">
 			     		</div>
-			     		<div class="col l12 xl12">
+			     		<div class="col s12 l12 xl12">
 						    <input id="1-a" class="input-casa-s-com-borda 26 caixa2" maxlength="1" onclick="dica(1,2)" type="text">
 						   	<input id="2-a" class="input-casa-s-com-borda 25 caixa5" maxlength="1" onclick="dica(2,5)" type="text">
 						   	<input id="3-a" class="input-casa-s-com-borda 24 caixa8" maxlength="1" onclick="dica(3,8)" type="text">
@@ -135,7 +135,7 @@
 						   	<input id="12-s" class="input-casa-s-com-borda 15 caixa51" maxlength="1" onclick="dica(12,51)" type="text">
 						   	<input id="13-i" class="input-casa-s-com-borda 14 caixa54" maxlength="1" onclick="dica(13,54)" type="text">
 			     		</div>
-			     		<div class="col l12 xl12">	
+			     		<div class="col s12 l12 xl12">	
 						    <input class="input-casa-s-com-borda" value="S" disabled="true">
 						   	<input class="input-casa-s-com-borda" value="S" disabled="true">
 						   	<input class="input-casa-s-com-borda" value="S" disabled="true">
@@ -150,7 +150,7 @@
 						   	<input class="input-casa-s-com-borda" value="S" disabled="true">
 						   	<input class="input-casa-s-com-borda" value="S" disabled="true">
 			     		</div>
-			     		<div class="col l12 xl12">	    
+			     		<div class="col s12 l12 xl12">	    
 			     			<input id="1-a" class="input-casa-s-com-borda 13 caixa3" maxlength="1" onclick="dica(1,3)" type="text">
 						   	<input id="2-o" class="input-casa-s-com-borda 12 caixa6" maxlength="1" onclick="dica(2,6)" type="text">
 						   	<input id="3-o" class="input-casa-s-com-borda 11 caixa9" maxlength="1" onclick="dica(3,9)">
@@ -166,7 +166,7 @@
 						   	<input id="13-o" class="input-casa-s-com-borda 1 caixa55" maxlength="1"  onclick="dica(13,55)">
 			     		</div>			     			        
 	            	</div>
-	            	<div class="col l12 xl12 margin-top-5">
+	            	<div class="col s12 l12 xl12 margin-top-5">
 	            		<button class="waves-effect waves-light btn background btnControl float-right" onclick="corrigir()">Corrigir</button>
 	            		<div class="col xl12" style="float: left;">
 	            			<div class="col xl1 input-casa-s-dica float-left" disabled="true"><h5>Dica:</h5></div>
