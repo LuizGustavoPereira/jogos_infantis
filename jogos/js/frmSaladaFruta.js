@@ -10,6 +10,9 @@ var resp = "",
 	index=1,
 	tempo;
 
+audioErrou = document.getElementById('audio-errou');
+audioAcertou = document.getElementById('audio-acertou');
+
 function comecarJogo(){
 	pontuacao = 0;
 	sorteados = [];	
@@ -36,7 +39,6 @@ function sorteiaFruta(){
 	nomeFruta = [];
 	posInput = 1;
 	verificaFrutas();
-	fruta = 6	
 	switch (fruta){
 		case 1:
 			resp = "ABACAXI";
@@ -132,7 +134,7 @@ function sorteiaFruta(){
 				}
 			}
 			for(var i=0; i < array_index.length; i++){
-				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\" data-next=\"#nomeFruta"+(i+1)+"\" >");			
+				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\" data-next=\"#nomeFruta"+(i+1)+"\" disabled>");			
 			}
 		break;
 	}	
@@ -151,7 +153,7 @@ $(document).keypress( this, function(e){
 			input+=1
 			index-=1
 		}else{
-			alert("não");    			
+			audioErrou.play();			
 		}	
 	}
 });

@@ -29,6 +29,12 @@
         <div class="card transparent darken-1">
             <div class="card-content "> 
 	            <div class="row">
+	            	<audio id="audio-errou">	
+			            <source src='sons/geral/errou.mp3' type='audio/mpeg'>
+					</audio>
+					<audio id="audio-acertou">	
+			            <source src='sons/geral/acertou.mp3' type='audio/mpeg'>
+					</audio>
 	            	<div class="col l7 xl8 offset-xl0 margin-top-5" >
 	            		
 		            	<div class="col l4 xl4 card card-imagens float-left">
