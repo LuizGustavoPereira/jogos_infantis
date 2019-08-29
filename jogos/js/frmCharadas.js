@@ -4,7 +4,7 @@ var resp = "",
 	pontuacao = 0,
 	count = 1,
 	letras = 0,
-	posInput = 2,
+	posInput = 1,
 	resposta = "",
 	tempo;
 
@@ -31,7 +31,7 @@ function sorteiaPerguntas(perguntaRepetida){
 	count = 1;
 	$("#divResp").html("");
 	resposta = [];
-	posInput = 2;	
+	posInput = 1;	
 	if(perguntaRepetida == null){
 		verificaSorteados();
 	}	
@@ -131,6 +131,7 @@ function sorteiaPerguntas(perguntaRepetida){
 	$("#resposta0").val(resp[0]);
 	$("#resposta1").focus();
 	$("input[type='text']").bind('keyup',function(e) {
+		console.log(posInput)
 		if(resp=="LÍNGUA"){
 			var letraInserida = ($("#resposta"+(posInput-1)).val())	
 			if((posInput-1)==1 && letraInserida.toUpperCase() == "I"){
@@ -145,40 +146,22 @@ function sorteiaPerguntas(perguntaRepetida){
 			$("#resposta1").focus();
 			verificaResposta(resposta);
 		}else{
-			if(posInput <= letras){				
+			if(e.keyCode != 8){
+				if(posInput <= letras){								
+					posInput++;
+					$("#resposta"+posInput).focus();
+				}
+			}else{
+				if(posInput > 1){
+					posInput--;
+				}
 				$("#resposta"+posInput).focus();
-				posInput++;
-			}
+
+			}			
 		}
 	});
 		
 	
-}
-
-function digitaResposta(){
-	posInput2 = 2;
-	$("#resposta1").focus();
-	$("input[type='text']").bind('keyup',function(e) {
-		if(resp=="LÍNGUA"){
-			var letraInserida = ($("#resposta"+(posInput-1)).val())	
-			if((posInput-1)==1 && letraInserida.toUpperCase() == "I"){
-				$("#resposta"+(posInput-1)).val("Í")
-			}
-		}
-		resposta = [];				
-		if(e.keyCode == '13'){
-			for(var i = 0; i<letras; i++){
-				resposta += $("#resposta"+i).val() ;
-			}
-			$("#resposta1").focus();
-			verificaResposta(resposta);
-		}else{
-			if(posInput2 <= letras){				
-				$("#resposta"+posInput2).focus();
-				posInput2++;
-			}
-		}
-	});
 }
 
 function verificaSorteados(){

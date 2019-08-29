@@ -8,13 +8,15 @@ var resp = "",
 	posInput = 1,
 	nomeFruta = "",
 	index=1,
-	tempo;
+	tempo,
+	flag = 0;
+
+audioErrou = document.getElementById('errou');
 
 function comecarJogo(){
 	pontuacao = 0;
 	sorteados = [];	
 	clearTimeout(tempo);
-	tempo = setInterval("atualizaTempo()", 10000);
 	count = 0;
 	$("#jogarNovamente").hide();
 	$("#fim-do-jogo").hide();
@@ -36,7 +38,6 @@ function sorteiaFruta(){
 	nomeFruta = [];
 	posInput = 1;
 	verificaFrutas();
-	fruta = 6	
 	switch (fruta){
 		case 1:
 			resp = "ABACAXI";
@@ -51,7 +52,7 @@ function sorteiaFruta(){
 				}
 			}
 			for(var i=0; i < array_index.length; i++){
-				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\" data-next=\"#nomeFruta"+(i+1)+"\" >");			
+				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times input-salada-de-frutas\" maxlength=\"1\" data-next=\"#nomeFruta"+(i+1)+"\" >");			
 			}	
 			
 		break;
@@ -68,7 +69,7 @@ function sorteiaFruta(){
 				}
 			}
 			for(var i=0; i < array_index.length; i++){
-				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\" data-next=\"#nomeFruta"+(i+1)+"\" >");			
+				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times input-salada-de-frutas\" maxlength=\"1\" data-next=\"#nomeFruta"+(i+1)+"\" >");			
 			}
 		break;
 		case 3:
@@ -84,7 +85,7 @@ function sorteiaFruta(){
 				}
 			}
 			for(var i=0; i < array_index.length; i++){
-				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\" data-next=\"#nomeFruta"+(i+1)+"\" >");			
+				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times input-salada-de-frutas\" maxlength=\"1\" data-next=\"#nomeFruta"+(i+1)+"\" >");			
 			}
 		break;
 		case 4:
@@ -100,7 +101,7 @@ function sorteiaFruta(){
 				}
 			}
 			for(var i=0; i < array_index.length; i++){
-				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\" data-next=\"#nomeFruta"+(i+1)+"\" >");			
+				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times input-salada-de-frutas\" maxlength=\"1\" data-next=\"#nomeFruta"+(i+1)+"\" >");			
 			}
 		break;
 		case 5:
@@ -116,7 +117,7 @@ function sorteiaFruta(){
 				}
 			}
 			for(var i=0; i < array_index.length; i++){
-				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\" data-next=\"#nomeFruta"+(i+1)+"\" >");			
+				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times input-salada-de-frutas\" maxlength=\"1\" data-next=\"#nomeFruta"+(i+1)+"\" >");			
 			}
 		break;
 		case 6:
@@ -132,11 +133,11 @@ function sorteiaFruta(){
 				}
 			}
 			for(var i=0; i < array_index.length; i++){
-				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\" data-next=\"#nomeFruta"+(i+1)+"\" >");			
+				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times input-salada-de-frutas\" maxlength=\"1\" data-next=\"#nomeFruta"+(i+1)+"\" >");			
 			}
 		break;
 	}	
-
+	$("input").prop('disabled', true);
 	opcoes();
 	
 }
@@ -151,7 +152,8 @@ $(document).keypress( this, function(e){
 			input+=1
 			index-=1
 		}else{
-			alert("não");    			
+			audioErrou.play();
+			flag = 1;    			
 		}	
 	}
 });
@@ -168,6 +170,11 @@ function opcoes(){
 		tempo = setTimeout( "opcoes()", 2500 );	
 	}
 	else{
+		if(flag == 0){			
+			pontuacao += 10;
+			$("#pontuacao").html(pontuacao)
+		}
+		flag = 0;
 		sorteiaFruta();
 	}
 	
@@ -205,38 +212,6 @@ function voltar(){
 	$("#nomeTime").prop('disabled', false);
 	$("#jogo").hide();
 	$("#telaInicial").show();
-}
-
-function atualizaTempo(){
-	if(count < 12 ){
-		color = "green";
-	}else if(count < 20){
-		color = "blue";
-	}else if (count < 30){
-		color = "red";
-	}
-	else{		
-		$("#jogarNovamente").show();
-		clearTimeout(tempo);
-		return
-	}
-	if(count == 6){
-		$("#min").append("&nbsp;&nbsp;&nbsp;<p>1 min</p>");
-	}
-	else if(count == 12){
-		$("#min").append("&nbsp;&nbsp;&nbsp;<p>2 min</p>");
-	}
-	else if(count == 18){
-		$("#min").append("&nbsp;&nbsp;&nbsp;<p>3 min</p>");
-	}
-	else if(count == 24){
-		$("#min").append("&nbsp;&nbsp;&nbsp;<p>4 min</p>");
-	}
-	else if(count == 29){
-		$("#min").append("&nbsp;&nbsp;&nbsp;<p>5 min</p>");
-	}
-	$("#countTempo").append("<div style='background-color:"+color+"'></div>");
-	count ++;	
 }
 
 

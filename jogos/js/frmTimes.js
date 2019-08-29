@@ -4,9 +4,12 @@ var resp = "",
 	pontuacao = 0,
 	count = 0,
 	letras = 0,
-	posInput = 1,
+	posInput = 0,
 	nomeTime = "",
 	tempo;
+
+audioErrou = document.getElementById('errou');
+audioAcertou = document.getElementById('acertou');
 
 function comecarJogo(){
 	pontuacao = 0;
@@ -25,7 +28,7 @@ function comecarJogo(){
 
 function sorteiaTime(){
 	nomeTime = [];
-	posInput = 1;
+	posInput = 0;
 	verificaTimes()	
 	switch (time){		
 		case 1:
@@ -150,10 +153,17 @@ function sorteiaTime(){
 			}
 			verificaResposta(nomeTime);
 		}else{
-			if(posInput <= letras){	
-				
+			if(e.keyCode != 8){
+				if(posInput <= letras){								
+					posInput++;
+					$("#nomeTime"+posInput).focus();
+				}
+			}else{
+				if(posInput > 1){
+					posInput--;
+				}
 				$("#nomeTime"+posInput).focus();
-				posInput++;
+
 			}
 		}
 	});
@@ -184,10 +194,10 @@ function verificaResposta(nomeTime){
 	if( resposta == resp ){
 		pontuacao += 10;
 		$("#pontuacao").html(pontuacao)
-		alert("VOCÊ ACERTOU");
+		audioAcertou.play();
 		sorteiaTime();
 	}else{
-		alert("ERROU");
+		audioErrou.play();
 	}
 
 }

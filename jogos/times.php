@@ -30,6 +30,12 @@
             <div class="card-content "> 
 	            <div class="row">
 	            	<div class="col l7  xl6 offset-xl2 center-align" >
+	            		<audio id="errou">	
+			            	<source src='sons/geral/errou.mp3' type='audio/mpeg'>													  
+						</audio>
+						<audio id="acertou">	
+			            	<source src='sons/geral/acertou.mp3' type='audio/mpeg'>													  
+						</audio>
 	            		<div class="col l6 center-align" style="margin-left: 27%;">
 		            		<div class="card card-imagens small">
 						        <div  id="logoTime">			        	

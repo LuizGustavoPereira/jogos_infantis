@@ -30,7 +30,9 @@
             <div class="card-content "> 
 	            <div class="row">
 	            	<div class="col l7 xl8 offset-xl0 margin-top-5" >
-	            		
+	            		<audio id="errou">	
+			            	<source src='sons/geral/errou.mp3' type='audio/mpeg'>													  
+						</audio>
 		            	<div class="col l4 xl4 card card-imagens float-left">
 						    <div id="imagemFruta">			        	
 									
@@ -47,19 +49,6 @@
 						<fieldset>
 							<legend>Pontuação</legend>
 							<h5><b id="pontuacao">0</b></h5>
-						</fieldset>
-						<fieldset>
-							<legend>Tempo</legend>
-							<fieldset class="tempo">
-								<div class="row">
-									<div class="col l7" id="min">
-										
-									</div>									
-									<div class="col l5" id="countTempo">
-										&nbsp;
-									</div>
-								</div>
-							</fieldset>
 						</fieldset>						
 					</div>
 	            	

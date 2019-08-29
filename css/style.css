@@ -671,6 +671,10 @@
 		color: green;
 	}
 
+	.input-salada-de-frutas:disabled {
+		color: #000000 !important
+	}
+
 	
 
 
