@@ -13,6 +13,9 @@ var resp = "",
 
 audioErrou = document.getElementById('errou');
 
+audioErrou = document.getElementById('audio-errou');
+audioAcertou = document.getElementById('audio-acertou');
+
 function comecarJogo(){
 	pontuacao = 0;
 	sorteados = [];	
@@ -133,7 +136,11 @@ function sorteiaFruta(){
 				}
 			}
 			for(var i=0; i < array_index.length; i++){
+<<<<<<< HEAD
 				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times input-salada-de-frutas\" maxlength=\"1\" data-next=\"#nomeFruta"+(i+1)+"\" >");			
+=======
+				$("#divResp").append("<input type=\"text\" name=\"nome\" id=\"nomeFruta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\" data-next=\"#nomeFruta"+(i+1)+"\" disabled>");			
+>>>>>>> 09af9a33d0a8bc74d3110cdaf0e8048a2ba5920d
 			}
 		break;
 	}	
@@ -152,8 +159,12 @@ $(document).keypress( this, function(e){
 			input+=1
 			index-=1
 		}else{
+<<<<<<< HEAD
 			audioErrou.play();
 			flag = 1;    			
+=======
+			audioErrou.play();			
+>>>>>>> 09af9a33d0a8bc74d3110cdaf0e8048a2ba5920d
 		}	
 	}
 });

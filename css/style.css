@@ -54,7 +54,7 @@
 			.container{width:85%}	
 		}
 
-		@media only screen and (max-width: 992px) {
+		@media only screen and (max-widtFh: 992px) {
 			.input-descubra-palavra input, .input-descubra-palavra span{
 				width: 54px !important;				
 			}	
@@ -382,6 +382,7 @@
 		border-left:   1px solid !important;
 		border-right:  1px solid !important;
 		border-top: 1px solid !important;
+		color: black !important;
 	}
 
 	.tempo{
