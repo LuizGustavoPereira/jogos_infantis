@@ -96,7 +96,7 @@ function calculaTabuada(valor = ""){
 			}
 		});
 		if(entradaTec == "enter"){
-			tempo = setTimeout( "incrementaValor()", 2500 );
+			tempo = setTimeout( "incrementaValor()", 3000 );
 		}
 	}
 

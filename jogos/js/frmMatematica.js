@@ -56,7 +56,7 @@ function formularPergunta(){
 	$("#perguntas").html(	
 						"<div class='col l10 offset-l1  xl10 offset-xl1 center pergunta-matematica margin-top-5'>"+
 
-		 					"<h2><b> "+primeiroNumero+" </b> <span id='resp' class='center pergunta-matematica fa-blink'>&#63;</span> <b> "+segundoNumero+" = "+valorFinal+"</b> </h2>"+
+		 					"<h2><b> "+primeiroNumero+" </b> <span id='resp' class='center animation-span pergunta-matematica '>&#63;</span> <b> "+segundoNumero+" = "+valorFinal+"</b> </h2>"+
 		 				"</div>"+									
 					 	"<div class='center col l9 offset-l3 xl9 offset-xl3 resposta-matematica'>"+
 						 	"<p onClick=\"verificaResposta('+')\">&#43;</p>"+

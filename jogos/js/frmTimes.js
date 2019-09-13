@@ -159,7 +159,7 @@ function sorteiaTime(){
 					$("#nomeTime"+posInput).focus();
 				}
 			}else{
-				if(posInput > 1){
+				if(posInput > 0){
 					posInput--;
 				}
 				$("#nomeTime"+posInput).focus();
@@ -173,9 +173,9 @@ function sorteiaTime(){
 
 function verificaTimes(){
 	if(sorteados.length >= 10){
-		alert("PARABENS! VOCÊ CONSEGUIU");
 		clearTimeout(tempo);
-		$("#jogarNovamente").show();
+		$("#ganhou-jogo").show();
+		$("#jogo").hide();	
 		$("#nomeTime").prop('disabled', true);
 
 	}else{		
@@ -247,7 +247,6 @@ function atualizaTempo(){
 
 $(document).ready(function(){
 	$("#jogo").hide();
-	$("#jogarNovamente").hide();
-
+	$("#ganhou-jogo").hide();	
 	
 });

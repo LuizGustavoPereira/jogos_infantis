@@ -525,7 +525,17 @@
 	@keyframes animacao {
 	    from {border-color: #4B0082;}
 	    to {border-color: #FF00FF;}
+	}
+
+	@keyframes animacao-sapn{
+		from {color: purple;}
+	    to {color: #FF00FF;}
 	}	
+
+	.animation-span{
+		color: purple !important;
+		animation: animacao-sapn 2s ease infinite;
+	}
 	.animation {
 		border-bottom: solid !important;
 		border-width: medium !important;
@@ -669,11 +679,17 @@
 	}
 
 	.acerto{
-		color: green;
+		color: green !important;
 	}
 
 	.input-salada-de-frutas:disabled {
 		color: #000000 !important
+	}
+
+	.image-center {
+		display:block;
+    	margin:auto;
+    	margin-bottom: 5% !important
 	}
 
 	

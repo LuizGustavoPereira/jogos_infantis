@@ -117,24 +117,16 @@ function sorteiaPerguntas(){
 			}			
 		break;
 	}
+
+	$("input").prop('disabled', true);
 	letras = resp.length;	
 	$("#resposta1").focus();
 	opcoes();
 	for(var i = 0; i< letras; i++){
 		if(i != 1){			
 			$("#resposta"+i).val(resp[i]);
-			$("#resposta"+i).prop('readonly', true);
 		}
 	}			
-	$("input[type='text']").bind('keyup',function(e) {
-		resposta = [];
-		if(e.keyCode == '13'){
-			for(var i = 0; i<letras; i++){
-				resposta += $("#resposta"+i).val() ;
-			}
-			verificaResposta(resposta);
-		}
-	});
 		
 	
 }
@@ -165,7 +157,9 @@ function verificaResposta(resposta){
 		$("#pontuacao").html(pontuacao)					
 		vidas = 3;
 		$("#vidas").html(vidas);
-		setTimeout("sorteiaPerguntas()", 1000);
+		$('td[name=resposta]').addClass("acerto");
+		clearTimeout(tempo);
+		setTimeout("sorteiaPerguntas()", 2000);		
 	}else{
 		vidas-=1;
 		$("#vidas").html(vidas);
@@ -183,7 +177,7 @@ function opcoes(){
 		index = 0;
 		$("#resposta1").val(opcoes[index]);
 	}
-	tempo = setTimeout( "opcoes()", 2500 );
+	tempo = setTimeout( "opcoes()", 3000 );
 }
 function verificaVidas(){
 	if (vidas < 0){
@@ -206,5 +200,16 @@ function voltar(){
 $(document).ready(function(){
 	$("#jogo").hide();
 	$("#fim-do-jogo").hide();
-	$("#ganhou-jogo").hide();
+	$("#ganhou-jogo").hide();	
+
+	$("body").bind('keyup',function(e) {
+		resposta = [];
+		if(e.keyCode == '13'){
+			for(var i = 0; i<letras; i++){
+				resposta += $("#resposta"+i).val() ;
+			}
+			verificaResposta(resposta);
+		}
+	});
+
 });

@@ -36,17 +36,17 @@
 						<audio id="acertou">	
 			            	<source src='sons/geral/acertou.mp3' type='audio/mpeg'>													  
 						</audio>
-	            		<div class="col l6 center-align" style="margin-left: 27%;">
-		            		<div class="card card-imagens small">
-						        <div  id="logoTime">			        	
+	            		<div class="col s12 l12 xl12">
+		            		<div class="card card-imagens small image-center">
+						        <div id="logoTime">			        	
 									
 						        </div>							
 				     		</div>
 			     		</div>
-			     		<div class="col l12" id="divResp">
+			     		<div class="col l12 xl12" id="divResp">
 	            			
 	            		</div>
-	            		<div class="col l12">	            			
+	            		<div class="col l12 xl12">	            			
 	            			<h5 id="dica"></h5>
 	            		</div>
 	            	</div>
@@ -71,17 +71,31 @@
 					</div>
 	            	
             	</div> 
-            	<div class="row left-align">
-					<div class="col l4 ">
-						<a class="waves-effect waves-light btn background btnControl" onClick="voltar()"><i class="material-icons"> arrow_back </i></a>
-					</div>	
-					<div class="col l4">
-						<a class="waves-effect waves-light btn background btnControl" onClick="jogarNovamente()" id="jogarNovamente" display="">Jogar Novamente</a>
-					</div>				
-				</div>	           	
+            	         	
             </div>            
         </div>
     </div>
 </div>
+
+<!-- GANHOU -->
+	<div class="col l10 offset-l1" id="ganhou-jogo" display>
+		<div class="card transparent darken-1">
+	        <div class="card-content deep-purple-text"> 
+		        <div class="row">
+		        	<div class="titulo col l10 offset-l1 center-align">
+			        	<h3 style="font-size: 3vw; margin-top: 5%" class="blue-text">PARABÉNS!!</h3>
+			        	<div class="row left-align">
+						<div class="col l5 ">
+							<a class="waves-effect waves-light btn background btnControl" onClick="voltar()"><i class="material-icons"> arrow_back </i></a>
+						</div>	
+						<div class="col l7">
+							<a class="waves-effect waves-light btn background btnControl" onClick="jogarNovamente()" id="jogarNovamente" display="">Jogar Novamente</a>
+						</div>				
+				</div>	  
+					</div>				
+		        </div>
+		    </div>
+		</div>	
+	</div>
 
 <script src="jogos/js/frmTimes.js" type="text/javascript"></script>
