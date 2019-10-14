@@ -72,24 +72,22 @@ $imgTexture = "img/bkg-texture-". COR . ".jpg";
 
 					<ul id="slide-out" class="side-nav fixed">
 						<li class='logo-li'> 
-							<div class="topSideNav"></div>
+							<div class="topSideNav">
+							</div>
 						</li>
 
 						<?php
 						try{
 							require_once "classes/Menu.Class.php";
 							$menu->renderLink('Home', './jogos/menu-principal/', 'home');
-
-							$menu = new Menu('Jogos', 'games');
-							$menu->append('Ver Todos', 								'./jogos/menu-principal/');
+							$menu = new Menu('Jogos', 'games');							
 							$menu->append('Alfabeto',  								'./jogos/alfabeto/');
 							$menu->append('Animais', 								'./jogos/animais');
 							$menu->append('Antes e Depois', 						'./jogos/antes-depois/');
 							$menu->append('Brasileiro',  							'./jogos/brasileiro/');
 							$menu->append('Brincando com Monteiro Lobato', 	  		'./jogos/monteiro-lobato/');
 							$menu->append('Casa do S', 	  							'./jogos/casa-s/');
-							$menu->append('Descubra a Palavra', 					'./jogos/descubra-palavra/');
-							$menu->append('Quadrado', 								'./jogos/quadrado/');
+							$menu->append('Descubra a Palavra', 					'./jogos/descubra-palavra/');					
 							$menu->append('Matemática', 							'./jogos/matematica/');
 							$menu->append('O que é o que é?', 						'./jogos/charadas');
 							$menu->append('Tabuada',  								'./jogos/tabuada/');

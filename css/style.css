@@ -1,17 +1,29 @@
 
-		html,body{width:100%}
+		html,body{
+			margin: 0;
+		    padding: 0;
+		    font-size: 14px; 
+		    min-height: 100% ;
+		}
 		.side-nav{width:300px;}
 		.side-nav > .logo-li{height:75px}
 
 			
 		body {
 		    display: flex;
-		    min-height: 100vh;
 		    flex-direction: column;
 		}
 
 		main {
 		    flex: 1 0 auto;
+		}
+
+		footer{
+			position:fixed;
+			height: 80px;
+		    bottom:0;
+		    width:100%;	
+		    margin-top: auto; 	    
 		}
 
 		.userView{height:75px; }
