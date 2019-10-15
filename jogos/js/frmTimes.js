@@ -10,6 +10,7 @@ var resp = "",
 
 audioErrou = document.getElementById('errou');
 audioAcertou = document.getElementById('acertou');
+audioGanhou = document.getElementById('ganhou');
 
 function comecarJogo(){
 	pontuacao = 0;
@@ -175,6 +176,7 @@ function verificaTimes(){
 	if(sorteados.length >= 10){
 		clearTimeout(tempo);
 		$("#ganhou-jogo").show();
+		audioGanhou.play();
 		$("#jogo").hide();	
 		$("#nomeTime").prop('disabled', true);
 
@@ -202,7 +204,7 @@ function verificaResposta(nomeTime){
 
 }
 function jogarNovamente(){		
-	$("#jogarNovamente").hide();
+	$("#tempo-esgotado").hide();	
 	$("#nomeTime").prop('disabled', false);
 	comecarJogo();
 }
@@ -223,7 +225,8 @@ function atualizaTempo(){
 	}
 	else{
 		$("#nomeTime").prop('disabled', true);
-		$("#jogarNovamente").show();
+		$("#jogo").hide();
+		$("#tempo-esgotado").show();
 		clearTimeout(tempo);
 	}
 	if(count == 6){
@@ -240,7 +243,7 @@ function atualizaTempo(){
 	}
 	else if(count == 29){
 		$("#min").append("&nbsp;&nbsp;&nbsp;<p>5 min</p>");
-	}
+	}	
 	$("#countTempo").append("<div style='background-color:"+color+"'></div>");
 	count ++;	
 }
@@ -248,5 +251,6 @@ function atualizaTempo(){
 $(document).ready(function(){
 	$("#jogo").hide();
 	$("#ganhou-jogo").hide();	
+	$("#tempo-esgotado").hide();
 	
 });

@@ -77,10 +77,31 @@
     </div>
 </div>
 
+<!-- Tempo esgotado -->
+	<div class="col l10 offset-l1" id="tempo-esgotado" display>
+		<div class="card transparent darken-1">
+	        <div class="card-content deep-purple-text"> 
+		        <div class="row">
+		        	<div class="titulo col l10 offset-l1 center-align">
+			        	<h3 style="font-size: 3vw; margin-top: 5%" class="blue-text">Seu tempo acabou, tente novamente</h3>
+			        	<div class="row left-align">						
+						<div class="col l7">
+							<a class="waves-effect waves-light btn background btnControl" onClick="jogarNovamente()" display="">Jogar Novamente</a>
+						</div>				
+				</div>	  
+					</div>				
+		        </div>
+		    </div>
+		</div>	
+	</div>
+
 <!-- GANHOU -->
 	<div class="col l10 offset-l1" id="ganhou-jogo" display>
 		<div class="card transparent darken-1">
 	        <div class="card-content deep-purple-text"> 
+	        	<audio id="ganhou">	
+		            <source src='sons/geral/ganhou.mp3' type='audio/mpeg'>
+				</audio>
 		        <div class="row">
 		        	<div class="titulo col l10 offset-l1 center-align">
 			        	<h3 style="font-size: 3vw; margin-top: 5%" class="blue-text">PARABÉNS!!</h3>

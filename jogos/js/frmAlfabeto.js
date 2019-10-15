@@ -11,6 +11,11 @@ var resp = "",
 	resposta = "";
 	letra = "";
 
+audioErrou = document.getElementById('audio-errou');
+audioAcertou = document.getElementById('audio-acertou');
+
+audioGanhou = document.getElementById('audio-ganhou');
+
 function comecarJogo(){
 	vidas = 3;
 	pontuacao = 0;
@@ -39,7 +44,7 @@ function sorteiaPerguntas(){
 		case 1:
 			resp = "POLEGAR";
 			letra = "O";	
-			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/polegar.png'>");
+			$("#pergunta").html("<img class='width-50 alfabeto-img-height ' src='imagens/alfabeto/polegar.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\" data-next=\"#resposta"+(i+1)+"\" >");			
 			}						
@@ -47,7 +52,7 @@ function sorteiaPerguntas(){
 		case 2:			
 			resp = "PORCO";
 			letra = "O";	
-			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/porco.png'>");
+			$("#pergunta").html("<img class='width-50 alfabeto-img-height' src='imagens/alfabeto/porco.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}			
@@ -55,7 +60,7 @@ function sorteiaPerguntas(){
 		case 3:
 			resp = "BOCA";
 			letra = "O";	
-			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/boca.png'>");
+			$("#pergunta").html("<img class='width-50 alfabeto-img-height' src='imagens/alfabeto/boca.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}			
@@ -63,7 +68,7 @@ function sorteiaPerguntas(){
 		case 4:
 			resp = "TOMATE";
 			letra = "O";	
-			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/tomate.png'>");
+			$("#pergunta").html("<img class='width-50 alfabeto-img-height' src='imagens/alfabeto/tomate.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}			
@@ -71,7 +76,7 @@ function sorteiaPerguntas(){
 		case 5:
 			resp = "BOLA";
 			letra = "O";	
-			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/bola.png'>");
+			$("#pergunta").html("<img class='width-50 alfabeto-img-height' src='imagens/alfabeto/bola.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}			
@@ -79,7 +84,7 @@ function sorteiaPerguntas(){
 		case 6:
 			resp = "PIPA";
 			letra = "I";	
-			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/pipa.png'>");
+			$("#pergunta").html("<img class='width-50 alfabeto-img-height' src='imagens/alfabeto/pipa.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}			
@@ -87,7 +92,7 @@ function sorteiaPerguntas(){
 		case 7:
 			resp = "BANANA";
 			letra = "A";	
-			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/banana.png'>");
+			$("#pergunta").html("<img class='width-50 alfabeto-img-height' src='imagens/alfabeto/banana.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}			
@@ -95,7 +100,7 @@ function sorteiaPerguntas(){
 		case 8:
 			resp = "BOLO";
 			letra = "O";	
-			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/bolo.png'>");
+			$("#pergunta").html("<img class='width-50 alfabeto-img-height' src='imagens/alfabeto/bolo.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}			
@@ -103,7 +108,7 @@ function sorteiaPerguntas(){
 		case 9:
 			resp = "PEIXE";
 			letra = "E";	
-			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/peixe.png'>");
+			$("#pergunta").html("<img class='width-50 alfabeto-img-height' src='imagens/alfabeto/peixe.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");			
 			}			
@@ -111,7 +116,7 @@ function sorteiaPerguntas(){
 		case 10:
 			resp = "PENA";
 			letra = "E";	
-			$("#pergunta").html("<img class='width-50' src='imagens/alfabeto/pena.png'>");
+			$("#pergunta").html("<img class='width-50 alfabeto-img-height' src='imagens/alfabeto/pena.png'>");
 			for(var i=0; i < resp.length; i++){
 				$("#divResp").append("<input type=\"text\" name=\"resposta\" id=\"resposta"+i+"\" value=\"\" class=\"input-times\" maxlength=\"1\">");						
 			}			
@@ -134,6 +139,7 @@ function sorteiaPerguntas(){
 function verificaSorteados(){
 	if(sorteados.length >= 10){		
 		$("#ganhou-jogo").show();
+		audioGanhou.play();
 		$("#jogo").hide();
 		$("#resposta").prop('disabled', true);
 		$("#jogarNovamente").show();
@@ -158,11 +164,13 @@ function verificaResposta(resposta){
 		vidas = 3;
 		$("#vidas").html(vidas);
 		$('td[name=resposta]').addClass("acerto");
+		audioAcertou.play();
 		clearTimeout(tempo);
 		setTimeout("sorteiaPerguntas()", 2000);		
 	}else{
 		vidas-=1;
 		$("#vidas").html(vidas);
+		audioErrou.play();
 		verificaVidas();	
 	}
 

@@ -30,6 +30,12 @@
             <div class="card-content "> 
 	            <div class="row">
 	            	<div class="col s7 l7  xl6 offset-xl2 center-align" >
+	            		<audio id="audio-errou">	
+				            <source src='sons/geral/errou.mp3' type='audio/mpeg'>
+						</audio>
+						<audio id="audio-acertou">	
+				            <source src='sons/geral/acertou.mp3' type='audio/mpeg'>
+						</audio>
 	            		<div class="col s12 l12 center-align">		            		
 					        <div  id="pergunta">			        	
 								
@@ -64,25 +70,13 @@
     </div>
 </div>
 
-<!-- GAME OVER -->
-<div class="row">
-	<div class="col s12 l10 offset-l1 xl10 offset-xl1" id="fim-do-jogo" display>
-		<div class="card transparent darken-1">
-	        <div class="card-content deep-purple-text text-darken-2"> 
-		        <div class="row">
-		        	<div class="titulo s12 col l10 offset-l1 xl10 offset-xl1 center-align">
-			        	<h3 style="font-size: 3vw; margin-top: 5%" class="blue-text">FIM DO JOGO</h3>
-			        	<a style="margin-top: 5%" class="waves-effect waves-light btn background btnControl" onClick="comecarJogo()" id="jogarNovamente" display="">Jogar Novamente</a>
-					</div>				
-		        </div>
-		    </div>
-		</div>	
-	</div>
-
 	<!-- GANHOU -->
 	<div class="col s12 l10 offset-l1 xl10 offset-xl1" id="ganhou-jogo" display>
 		<div class="card transparent darken-1">
 	        <div class="card-content deep-purple-text"> 
+	        	<audio id="audio-ganhou">	
+		            <source src='sons/geral/ganhou.mp3' type='audio/mpeg'>
+				</audio>
 		        <div class="row">
 		        	<div class="titulo col s12 l10 offset-l1 xl10 offset-xl1 center-align">
 			        	<h3 style="font-size: 3vw; margin-top: 5%" class="blue-text">PARABÉNS!!</h3>
