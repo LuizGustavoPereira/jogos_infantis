@@ -73,7 +73,18 @@
 						    </div>							
 				     	</div>			     		
 	            	</div>
+	            	<div class="col s5 l5 xl3 offset-xl1 center-align">
+						<fieldset>
+							<legend>Acertos</legend>
+							<h5><b id="acertos">0</b></h5>
+						</fieldset>
+						<fieldset>
+							<legend>Erros</legend>
+							<h5><b class="red-text" id="erros">0</b></h5>
+						</fieldset>						
+					</div>
 	            	<div class="col l5 xl3 offset-xl1 center-align">
+
 						<fieldset>
 							<legend>Tempo</legend>
 							<fieldset class="tempo">

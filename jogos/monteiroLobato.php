@@ -89,7 +89,8 @@
 	        <div class="card-content blue-text"> 
 		        <div class="row">
 		        	<div class="titulo col s12 l10 offset-l1 center-align">
-			        	<h3 style="color: #00a1ff; font-size: 3vw; margin-top: 5%">PARABÉNS!!</h3>
+			        	<h3 style="color: #00a1ff; font-size: 3vw; margin-top: 5%" >PARABÉNS!!<h3>
+			        	<h3 style="color: #00a1ff; font-size: 3vw; margin-top: 5%"> Você ganhou <span id='qtdCoracoes'></span> <i class="material-icons md-48 red-text">favorite</i>.</h3>
 			        	<a style="margin-top: 5%" class="waves-effect waves-light btn background btnControl" onClick="comecarJogo()" id="jogarNovamente" display="">Jogar Novamente</a>
 					</div>				
 		        </div>

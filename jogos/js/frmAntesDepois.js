@@ -19,6 +19,7 @@ function comecarJogo(){
 	clearTimeout(tempo);
 	tempo = setInterval("atualizaTempo()", 10000);
 	$("#jogo").show();
+	$("#min").html("<p>inicio</p>");
 	$("#ganhou-jogo").hide();
 	$("#fim-do-jogo").hide();
 	$("#telaInicial").hide();
@@ -38,7 +39,8 @@ function atualizaTempo(){
 	}
 	else{
 		$(".resposta-antes-depois").prop('disabled', true);
-		$("#jogarNovamente").show();
+		$("#jogo").hide();
+		$("#fim-do-jogo").show();
 		clearTimeout(tempo);
 	}
 	if(count == 6){

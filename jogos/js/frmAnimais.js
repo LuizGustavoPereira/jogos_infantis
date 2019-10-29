@@ -2,8 +2,8 @@ var resp = "",
 	array_index=[]
 	sorteados = [],
 	animal = "",
-	pontuacao = 0,
-	vidas = 3;	
+	acertos = 0,
+	erros = 0,
 	audio = "";
 	tempo = 0;
 
@@ -21,24 +21,25 @@ ganhou = document.getElementById('ganhou');
 
 function comecarJogo(){
 	clearTimeout(tempo);
+	erros = 0;
+	acertos = 0;
 	tempo = setInterval("atualizaTempo()", 10000);
-	pontuacao = 0;
 	sorteados = [];	
 	count = 0;
 	$("#jogarNovamente").hide();
 	$("#fim-do-jogo").hide();
 	$("#ganhou-jogo").hide();
 	$("#min").html("<p>inicio</p>");
-	$("#pontuacao").html(pontuacao);
+	$("#acertos").html(acertos);
 	$("#jogo").show();
-	$("#vidas").html(vidas);
+	$("#erros").html(erros);
 	$("#telaInicial").hide();
 	$("#nomeTime").focus();
 	sorteiaAnimais();
 }
 
-function sorteiaAnimais(){
-	$("#pontuacao").html(pontuacao);	
+function sorteiaAnimais(){	
+	$("#acertos").html(acertos);	
 	verificaAnimais();		
 	switch (animal){
 		case 1:
@@ -101,29 +102,24 @@ function sorteiaAnimais(){
 function tecla(){	
 	audio.pause();
 	if(event.keyCode == resp){
-		pontuacao += 10;
+		acertos += 1;
+		sorteados.push(animal);
 		sorteiaAnimais();
 	}else{
-		if(vidas > 0){			
-			vidas -= 1;
-			$("#vidas").html(vidas);
-		}else{
-			$("#jogarNovamente").show();
-			$("#fim-do-jogo").show();
-			$("#jogo").hide();
-			perdeu.play();
-			audio = perdeu;
-			clearTimeout(tempo);
-		}
+			
+		erros += 1;
+		$("#erros").html(erros);		
+		sorteiaAnimais();
+		
 	}    
 }
 
 function verificaAnimais(){
 	if(sorteados.length >= 9){
 		audio.pause();
-		pontuacao = 0,
+		acertos = 0,
 		sorteados = [],
-		vidas = 3;
+		erros = 3;
 		$("#jogo").hide();
 		$("#ganhou-jogo").show();
 		ganhou.play();
@@ -132,9 +128,6 @@ function verificaAnimais(){
 		animal = Math.floor((Math.random() * 9) + 1);
 		if(sorteados.indexOf(animal) > -1){
 			verificaAnimais();
-
-		}else{	
-			sorteados.push(animal);			
 		}
 	}
 }
@@ -189,4 +182,5 @@ $(document).ready(function(){
 	$("#jogarNovamente").hide();
 	$("#ganhou-jogo").hide();
 	$("#fim-do-jogo").hide();
+	$("#acabou-o-tempo").hide();
 });

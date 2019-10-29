@@ -3,7 +3,8 @@ var cor = 1,
 	resposta = "",
 	perguntasFeitas = [],
 	vidas = 0,
-	textoTroca = "";
+	textoTroca = ""
+	flagAcerto = true;
 
 
 audio = document.getElementById('audio');
@@ -26,18 +27,14 @@ function verificaResposta(valor) {
 	if (valor == resposta){
 		$(".troca-imagem").html(textoTroca);
 		setTimeout("formularPergunta()", 3000);
-		vidas+=1		
+		if(flagAcerto){
+			vidas+=1		
+		}
 		$("#vidas").html(vidas);
 		$('#imagem').html(resposta)
 	}
 	else{
-		if( vidas < 0 ){			
-			audio.pause();
-			perdeu.play();
-			$("#jogo").hide();
-			$("#fim-do-jogo").show();
-			$("#jogarNovamente").show();
-		}
+		flagAcerto = false;
 	}
 }
 
@@ -211,16 +208,18 @@ function formularPergunta(){
 
 function sorteiaPergunta(){	
 	if(perguntasFeitas.length >= 10){
-		perguntasFeitas = [],
-		vidas = 3;		
-		bool = true;
+		perguntasFeitas = [],		
 		musica();
 		$("#jogo").hide();
 		$("#ganhou-jogo").show();
+		$("#qtdCoracoes").html(vidas);
 		audio.pause();
 		ganhou.play();
+		vidas = 3;		
+		bool = true;
 
 	}else{
+		flagAcerto = true;
 		pergunta = Math.floor((Math.random() * 10) + 1);		
 		if(perguntasFeitas.indexOf(pergunta) > -1){
 			sorteiaPergunta();

@@ -23,11 +23,14 @@ function comecarJogo(){
 	acertos = 0;
 	sorteados = [];	
 	count = 0;
+	respondidos = 0;
 	$("#min").html("<p>inicio</p>");	
+	$("#ganhou-jogo").hide();
 	$("#jogo").show();
 	$("#acertos").html(acertos);
 	$("#telaInicial").hide();
 	$(".input-resposta-descubra-palavra").val("");
+	$("input").prop("disabled", false);
 	if(idAtual != ""){
 		$("#"+idAtual).removeClass("input-descubra-palavra-clique");	
 	}	
@@ -44,7 +47,7 @@ function clicaSilaba(grupo, numero) {
 }
 
 function verificaSilaba(id,grupo) {
-	if(respondidos <= 23){
+	if(respondidos < 23){
 		if(id == silaba && grupoAtual == grupo){
 			$("#"+idAtual).removeClass("input-descubra-palavra-clique");
 			$("#"+id+grupo).val(id);
@@ -61,12 +64,14 @@ function verificaSilaba(id,grupo) {
 		}else{
 			$("#"+idAtual).removeClass("input-descubra-palavra-clique");
 			$("#"+id+grupo).val(silaba);
+			$("#"+id+grupo).removeClass("acerto");
 			$("#"+id+grupo).addClass("erro");
 		}
 	}else{
 		$("#jogo").hide();
 		audio.play();
 		$("#ganhou-jogo").show();
+
 	}	
 }
 
