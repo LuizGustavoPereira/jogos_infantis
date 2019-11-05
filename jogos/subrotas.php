@@ -29,6 +29,10 @@ $routerContent->addRoutes(array(
 	array('GET', '/rosto/', 	'/rosto.php', ''),
 	array('GET', '/rosto/[*]', 	'/rosto.php', ''),
 
+	array('GET', '/info', 		'/info.php', 'info'),
+	array('GET', '/info/', 	'/info.php', ''),
+	array('GET', '/info/[*]', 	'/info.php', ''),
+
 	array('GET','/menu-principal',  	'/paginaInicial.php', 'menu'),
 	array('GET','/menu-principal/',  	'/paginaInicial.php', ''),
 	array('GET','/menu-principal/[*]',  '/paginaInicial.php', ''),

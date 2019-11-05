@@ -72,14 +72,16 @@ $imgTexture = "img/bkg-texture-". COR . ".jpg";
 
 					<ul id="slide-out" class="side-nav fixed">
 						<li class='logo-li'> 
-							<div class="topSideNav">
+							<div class="topSideNav center-align">
+								<img class="width-50 logo-img" src="imagens/unitau-logo.png">
 							</div>
 						</li>
 
 						<?php
 						try{
 							require_once "classes/Menu.Class.php";
-							$menu->renderLink('Home', './jogos/menu-principal/', 'home');
+							$menu->renderLink('Ver Todos', './jogos/menu-principal/', 'border_all');
+
 							$menu = new Menu('Jogos', 'games');							
 							$menu->append('Alfabeto',  								'./jogos/alfabeto/');
 							$menu->append('Animais', 								'./jogos/animais');
@@ -94,8 +96,9 @@ $imgTexture = "img/bkg-texture-". COR . ".jpg";
 							$menu->append('Times', 	  								'./jogos/times/');
 							$menu->append('Salada de Frutas', 	  					'./jogos/salada-fruta/');
 
-
 							$menu->render();
+
+							$menu->renderLink('Info', './jogos/info/', 'info');
 
 					// $menu->renderLink('Sair', './logOut/', '');
 						}catch(Excepition $e){
@@ -106,7 +109,7 @@ $imgTexture = "img/bkg-texture-". COR . ".jpg";
 				</div>
 			</nav>
 		
-		<section class="main-content" style='padding:15px; z-index: 1'>
+		<section class="main-content" style='padding:15px; z-index: 1; padding-bottom: 56px;'>
 			<?php
 			try{
 				$routerContent = new AltoRouter();
