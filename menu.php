@@ -109,7 +109,7 @@ $imgTexture = "img/bkg-texture-". COR . ".jpg";
 				</div>
 			</nav>
 		
-		<section class="main-content" style='padding:15px; z-index: 1; padding-bottom: 56px;'>
+		<section class="main-content">
 			<?php
 			try{
 				$routerContent = new AltoRouter();
@@ -135,10 +135,10 @@ $imgTexture = "img/bkg-texture-". COR . ".jpg";
 			}
 			?>
 
+			<?php
+			require __DIR__ ."/pages/footer.html";
+			?>
 		</section>
-	<?php
-	require __DIR__ ."/pages/footer.html";
-	?>
 	<script>
 		$(".button-collapse").sideNav();
 		$(document).ready(function($) {

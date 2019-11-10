@@ -24,8 +24,8 @@
 		footer{
 			height: 80px;
 		    bottom:0;
-		    width: 100%;	
-		    position: fixed;    
+		    width: 100%;			    
+		    margin: 0;
 		}
 
 		.userView{height:75px; }
