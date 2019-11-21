@@ -10,7 +10,7 @@
             <div class="card-content blue-text"> 
 	            <div class="row">
 	            	<div class="col s12 l10 offset-l1 center-align">
-						<img src="imagens/descubra-palavra/detetive.gif">
+						<img class="width-100" src="imagens/casa-do-s/casa do s.png">
 	            	</div>
             	</div> 
             	<div class="row center-align">
