@@ -98,6 +98,9 @@
 	<div class="col l10 offset-l1" id="ganhou-jogo" display>
 		<div class="card transparent darken-1">
 	        <div class="card-content deep-purple-text"> 
+	        	<audio id="audio-ganhou">	
+		            <source src='sons/geral/ganhou.mp3' type='audio/mpeg'>
+				</audio>
 		        <div class="row">
 		        	<div class="titulo col l10 offset-l1 center-align">
 			        	<h3 style="font-size: 3vw; margin-top: 5%" class="amber-text">PARABÉNS!!</h3>

@@ -59,7 +59,7 @@
 		    	<a href="./jogos/casa-s">
 			      	<div class="card card-imagens small ">
 				        <div class="card-image card-ver-todos" >			        	
-							<img src="imagens/descubra-palavra/detetive.gif">
+							<img src="imagens/casa-do-s/casa do s.png">
 				        </div>		        
 						<span class="titulo card-title amber-text">Casa do S</span>
 			     	</div>

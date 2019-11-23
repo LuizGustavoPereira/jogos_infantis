@@ -11,6 +11,7 @@ var resp = "",
 	grupoAtual = "";
 	acertos = 0;
 
+audioGanhou = document.getElementById('ganhou');
 
 $(document).ready(function(){
 	$("#jogo").hide();
@@ -53,6 +54,7 @@ function corrigir(){
 	if(erro == 0){
 		$("#jogo").hide();
 		$("#ganhou-jogo").show();
+		audioGanhou.play();
 	}
 }
 

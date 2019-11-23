@@ -8,6 +8,8 @@ var resp = "",
 	resposta = "",
 	tempo;
 
+audioGanhou = document.getElementById('audio-ganhou');
+
 function comecarJogo(){
 	pontuacao = 0;
 	sorteados = [];	
@@ -167,6 +169,7 @@ function sorteiaPerguntas(perguntaRepetida){
 function verificaSorteados(){
 	if(sorteados.length >= 10){
 		clearTimeout(tempo);
+		audioGanhou.play();
 		$("#ganhou-jogo").show();
 		$("#jogo").hide();
 		$("#resposta").prop('disabled', true);

@@ -4,6 +4,10 @@ var numero = 0,
 	entradaTec = "",
 	valTabuada = 0;
 
+audioGanhou = document.getElementById('audio-ganhou');
+audioErrou = document.getElementById('audio-errou');
+audioAcertou = document.getElementById('audio-acertou');
+
 function comecarJogo(){
 	$("#ganhou-jogo").hide();
 	$("#fim-do-jogo").hide();
@@ -13,6 +17,10 @@ function comecarJogo(){
 	var tabuada = $("input[name=tabuada]:checked").val();
 	entradaTec = entrada;
 	valTabuada = tabuada;
+
+	if(entradaTec == "enter"){
+		tempo = setInterval( "incrementaValor()", 3000 );
+	}
 
 	$("#tituloJogo").html("<h3>TABUADA DO "+valTabuada+"</h3>");
 	if(valTabuada == 2){
@@ -94,10 +102,7 @@ function calculaTabuada(valor = ""){
 			if(e.keyCode == '13'){
 				verificaResposta( $(this).data('tabuada')) ;
 			}
-		});
-		if(entradaTec == "enter"){
-			tempo = setTimeout( "incrementaValor()", 3000 );
-		}
+		});		
 	}
 
 	$(".resposta").focus();
@@ -125,20 +130,17 @@ function verificaResposta(){
 		multiplicador+=1;
 		chave = 1;
 		valor = 0;
+		audioAcertou.play()
 		calculaTabuada();
 	}else{
 		valor = 0;
-		alert("Você errou, tente novamente.");
+		audioErrou.play()
 		$(".resposta").val("");
 		chave = 0;
 
-		if( vidas < 0 ){
-			$(".resposta").prop('disabled', true);
-			$("#fim-do-jogo").show();
-			$("#jogo").hide();
-		}
 	}
 	if(multiplicador > 10 && chave == 1){
+		audioGanhou.play()
 		$("#ganhou-jogo").show();
 		$("#jogo").hide();		
 		numero = 0;

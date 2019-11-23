@@ -4744,8 +4744,9 @@ small {
 }
 
 .card.small .card-image, .card.medium .card-image, .card.large .card-image {
-  max-height: 60%;
+  height: 60%;
   overflow: hidden;
+  margin: 25px;
 }
 
 .card.small .card-image + .card-content, .card.medium .card-image + .card-content, .card.large .card-image + .card-content {

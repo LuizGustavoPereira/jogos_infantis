@@ -153,17 +153,17 @@
 			     		<div class="col s12 l12 xl12">	    
 			     			<input id="1-a" class="input-casa-s-com-borda 13 caixa3" maxlength="1" onclick="dica(1,3)" type="text">
 						   	<input id="2-o" class="input-casa-s-com-borda 12 caixa6" maxlength="1" onclick="dica(2,6)" type="text">
-						   	<input id="3-o" class="input-casa-s-com-borda 11 caixa9" maxlength="1" onclick="dica(3,9)">
-						   	<input id="4-o" class="input-casa-s-com-borda 10 caixa13" maxlength="1" onclick="dica(4,13)">
-						   	<input id="5-o" class="input-casa-s-com-borda 9 caixa18"  maxlength="1" onclick="dica(5,18)">
-						   	<input id="6-o" class="input-casa-s-com-borda 8 caixa24"  maxlength="1" onclick="dica(6,24)">
-						   	<input id="7-e" class="input-casa-s-com-borda 7 caixa31"  maxlength="1" onclick="dica(7,31)">
-						   	<input id="8-o" class="input-casa-s-com-borda 6 caixa37"  maxlength="1" onclick="dica(8,37)">
-						   	<input id="9-o" class="input-casa-s-com-borda 5 caixa42"  maxlength="1" onclick="dica(9,42)">
-						   	<input id="10-o" class="input-casa-s-com-borda 4 caixa46" maxlength="1" onclick="dica(10,46)">
-						   	<input id="11-a" class="input-casa-s-com-borda 3 caixa49" maxlength="1" onclick="dica(11,49)">
-						   	<input id="12-o" class="input-casa-s-com-borda 2 caixa52" maxlength="1" onclick="dica(12,52)">
-						   	<input id="13-o" class="input-casa-s-com-borda 1 caixa55" maxlength="1"  onclick="dica(13,55)">
+						   	<input id="3-o" class="input-casa-s-com-borda 11 caixa9" maxlength="1" onclick="dica(3,9)" type="text">
+						   	<input id="4-o" class="input-casa-s-com-borda 10 caixa13" maxlength="1" onclick="dica(4,13)" type="text">
+						   	<input id="5-o" class="input-casa-s-com-borda 9 caixa18"  maxlength="1" onclick="dica(5,18)" type="text">
+						   	<input id="6-o" class="input-casa-s-com-borda 8 caixa24"  maxlength="1" onclick="dica(6,24)" type="text">
+						   	<input id="7-e" class="input-casa-s-com-borda 7 caixa31"  maxlength="1" onclick="dica(7,31)" type="text">
+						   	<input id="8-o" class="input-casa-s-com-borda 6 caixa37"  maxlength="1" onclick="dica(8,37)" type="text">
+						   	<input id="9-o" class="input-casa-s-com-borda 5 caixa42"  maxlength="1" onclick="dica(9,42)" type="text">
+						   	<input id="10-o" class="input-casa-s-com-borda 4 caixa46" maxlength="1" onclick="dica(10,46)" type="text">
+						   	<input id="11-a" class="input-casa-s-com-borda 3 caixa49" maxlength="1" onclick="dica(11,49)" type="text">
+						   	<input id="12-o" class="input-casa-s-com-borda 2 caixa52" maxlength="1" onclick="dica(12,52)" type="text">
+						   	<input id="13-o" class="input-casa-s-com-borda 1 caixa55" maxlength="1"  onclick="dica(13,55)" type="text">
 			     		</div>			     			        
 	            	</div>
 	            	<div class="col s12 l12 xl12 margin-top-5">
@@ -191,6 +191,9 @@
     <div class="col l10 offset-l1" id="ganhou-jogo">
 		<div class="card transparent darken-1">
 	        <div class="card-content blue-text"> 
+	        	<audio id="ganhou">	
+		            <source src='sons/geral/ganhou.mp3' type='audio/mpeg'>
+				</audio>
 		        <div class="row">
 		        	<div class="titulo col l10 offset-l1 center-align">
 			        	<h3 style="color: #00a1ff; font-size: 3vw; margin-top: 5%">PARABÉNS!!</h3>

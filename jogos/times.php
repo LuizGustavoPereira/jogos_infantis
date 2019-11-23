@@ -75,16 +75,14 @@
             </div>            
         </div>
     </div>
-</div>
-
-<!-- Tempo esgotado -->
+    <!-- Tempo esgotado -->
 	<div class="col l10 offset-l1" id="tempo-esgotado" display>
 		<div class="card transparent darken-1">
 	        <div class="card-content deep-purple-text"> 
 		        <div class="row">
 		        	<div class="titulo col l10 offset-l1 center-align">
-			        	<h3 style="font-size: 3vw; margin-top: 5%" class="blue-text">Seu tempo acabou, tente novamente</h3>
-			        	<div class="row left-align">						
+			        	<h3 style="font-size: 3vw; margin-top: 9rem" class="blue-text">Seu tempo acabou, tente novamente</h3>
+			        	<div class="row left-align" style="margin-top: 10rem">						
 						<div class="col l7">
 							<a class="waves-effect waves-light btn background btnControl" onClick="jogarNovamente()" display="">Jogar Novamente</a>
 						</div>				
@@ -104,8 +102,8 @@
 				</audio>
 		        <div class="row">
 		        	<div class="titulo col l10 offset-l1 center-align">
-			        	<h3 style="font-size: 3vw; margin-top: 5%" class="blue-text">PARABÉNS!!</h3>
-			        	<div class="row left-align">
+			        	<h3 style="font-size: 3vw; margin-top: 9rem" class="blue-text">PARABÉNS!!</h3>
+			        	<div class="row left-align" style="margin-top: 10rem">
 						<div class="col l5 ">
 							<a class="waves-effect waves-light btn background btnControl" onClick="voltar()"><i class="material-icons"> arrow_back </i></a>
 						</div>	
@@ -118,5 +116,8 @@
 		    </div>
 		</div>	
 	</div>
+</div>
+
+
 
 <script src="jogos/js/frmTimes.js" type="text/javascript"></script>

@@ -58,7 +58,7 @@ function formularPergunta(){
 		break;
 		case 2:
 			resposta = "BOLO";
-			textoTroca = "<div>A tia Anastácia faz um do <b>BOLO</b> muito gostoso.</div>"
+			textoTroca = "<div>A tia Anastácia faz um <b>BOLO</b> muito gostoso.</div>"
 			$("#perguntas").html("<div style='margin-top: 5%' class='col-md-8 pergunta-monteiro'>"+
 					 		"<div class='troca-imagem'> A Tia Anastacia faz um "+
 					 		"<img id='imagemEnigma' src='imagens/monteiro-lobato/bolo.png'>"+
