@@ -8,7 +8,8 @@ var resp = "",
 	resposta = "",
 	tempo;
 
-audioGanhou = document.getElementById('audio-ganhou');
+audioErrou = document.getElementById('audio-errou');
+audioAcertou = document.getElementById('audio-acertou');
 
 function comecarJogo(){
 	pontuacao = 0;
@@ -189,10 +190,12 @@ function verificaResposta(resposta){
 	var resposta  = resposta.toUpperCase();
 	$("#resposta").val("");
 	if( resposta == resp ){
+		audioAcertou.play();
 		pontuacao += 10;
 		$("#pontuacao").html(pontuacao)
 		passarPalavra();
 	}else{
+		audioErrou.play();
 		for(i = 1; i < resposta.length; i ++){
 			$("#resposta"+i).val("")
 		}

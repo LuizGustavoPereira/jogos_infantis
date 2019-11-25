@@ -73,7 +73,7 @@ $imgTexture = "img/bkg-texture-". COR . ".jpg";
 					<ul id="slide-out" class="side-nav fixed">
 						<li class='logo-li'> 
 							<div class="topSideNav center-align">
-								<img class="width-50 logo-img" src="imagens/unitau-logo.png">
+								<img class="logo-img" src="imagens/unitau-logo.png">
 							</div>
 						</li>
 

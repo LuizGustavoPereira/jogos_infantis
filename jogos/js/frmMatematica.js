@@ -8,7 +8,8 @@ var cor         	= 1,
 	perguntasFeitas = [],
 	vidas           = 3;
 
-
+audioErrou = document.getElementById('audio-errou');
+audioAcertou = document.getElementById('audio-acertou');
 audio = document.getElementById('audio');
 var bool = true
 
@@ -37,16 +38,16 @@ function verificaResposta(valor) {
 		resultado = primeiroNumero * segundoNumero;
 	}
 	if(resultado == valorFinal){
+		audioAcertou.play();
 		$("#resp").removeClass("erro")
 		$("#resp").addClass("acerto")
 		$("#resp").html(valor)
 		index = 1;
-		setTimeout("formularPergunta()", 1000);
-		
+		setTimeout("formularPergunta()", 1000);		
 	}else{
+		audioErrou.play();
 		$("#resp").removeClass("acerto")
 		$("#resp").addClass("erro");
-		$("#resp").html(valor)		
 	}	
 
 }

@@ -29,6 +29,12 @@
         <div class="card transparent darken-1">
             <div class="card-content "> 
 	            <div class="row">
+	            	<audio id="audio-errou">	
+			            <source src='sons/geral/errou.mp3' type='audio/mpeg'>
+					</audio>
+					<audio id="audio-acertou">	
+			            <source src='sons/geral/acertou.mp3' type='audio/mpeg'>
+					</audio>
 	            	<div class="col l7  xl6 offset-xl2 center-align" >
 	            		<div class="col l12 center-align">		            		
 					        <div class="pergunta-o-que-e"  id="pergunta">			        	

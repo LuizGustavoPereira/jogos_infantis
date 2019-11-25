@@ -30,6 +30,12 @@
 	            	<audio id="audio">	
 			            <source src='sons/geral/ganhou.mp3' type='audio/mpeg'>
 					</audio>
+					<audio id="audio-errou">	
+			            <source src='sons/geral/errou.mp3' type='audio/mpeg'>
+					</audio>
+					<audio id="audio-acertou">	
+			            <source src='sons/geral/acertou.mp3' type='audio/mpeg'>
+					</audio>
 		            <div class="col l10" id="perguntas">
 							
 					</div>					
